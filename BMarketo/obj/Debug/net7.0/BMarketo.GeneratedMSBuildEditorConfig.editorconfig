@@ -1,0 +1,105 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = BMarketo
+build_property.RootNamespace = BMarketo
+build_property.ProjectDir = C:\Users\Svart\Source\Repos\Webbutveckling\ViewsAndPartialViews\BMarketo\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Svart\Source\Repos\Webbutveckling\ViewsAndPartialViews\BMarketo
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Svart/Source/Repos/Webbutveckling/ViewsAndPartialViews/BMarketo/Views/Contacts/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdHNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Svart/Source/Repos/Webbutveckling/ViewsAndPartialViews/BMarketo/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Svart/Source/Repos/Webbutveckling/ViewsAndPartialViews/BMarketo/Views/Partials/Forms/_Contactform.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFydGlhbHNcRm9ybXNcX0NvbnRhY3Rmb3JtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Svart/Source/Repos/Webbutveckling/ViewsAndPartialViews/BMarketo/Views/Partials/Forms/_NewsLetter.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFydGlhbHNcRm9ybXNcX05ld3NMZXR0ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Svart/Source/Repos/Webbutveckling/ViewsAndPartialViews/BMarketo/Views/Partials/ProductDetails/_ProductDetailsDescription.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFydGlhbHNcUHJvZHVjdERldGFpbHNcX1Byb2R1Y3REZXRhaWxzRGVzY3JpcHRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Svart/Source/Repos/Webbutveckling/ViewsAndPartialViews/BMarketo/Views/Partials/ProductDetails/_ProductDetailsInfo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFydGlhbHNcUHJvZHVjdERldGFpbHNcX1Byb2R1Y3REZXRhaWxzSW5mby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Svart/Source/Repos/Webbutveckling/ViewsAndPartialViews/BMarketo/Views/Partials/ProductDetails/_RelatedProducts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFydGlhbHNcUHJvZHVjdERldGFpbHNcX1JlbGF0ZWRQcm9kdWN0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Svart/Source/Repos/Webbutveckling/ViewsAndPartialViews/BMarketo/Views/Partials/ProductDetails/_SmallCards.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFydGlhbHNcUHJvZHVjdERldGFpbHNcX1NtYWxsQ2FyZHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Svart/Source/Repos/Webbutveckling/ViewsAndPartialViews/BMarketo/Views/Partials/_BestCollection.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFydGlhbHNcX0Jlc3RDb2xsZWN0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Svart/Source/Repos/Webbutveckling/ViewsAndPartialViews/BMarketo/Views/Partials/_Breadcrumb.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFydGlhbHNcX0JyZWFkY3J1bWIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Svart/Source/Repos/Webbutveckling/ViewsAndPartialViews/BMarketo/Views/Partials/_Discount.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFydGlhbHNcX0Rpc2NvdW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Svart/Source/Repos/Webbutveckling/ViewsAndPartialViews/BMarketo/Views/Partials/_Footer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFydGlhbHNcX0Zvb3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Svart/Source/Repos/Webbutveckling/ViewsAndPartialViews/BMarketo/Views/Partials/_GoogleMaps.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFydGlhbHNcX0dvb2dsZU1hcHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Svart/Source/Repos/Webbutveckling/ViewsAndPartialViews/BMarketo/Views/Partials/_Header.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFydGlhbHNcX0hlYWRlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Svart/Source/Repos/Webbutveckling/ViewsAndPartialViews/BMarketo/Views/Partials/_ShowCase.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFydGlhbHNcX1Nob3dDYXNlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Svart/Source/Repos/Webbutveckling/ViewsAndPartialViews/BMarketo/Views/Partials/_TopSelling.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFydGlhbHNcX1RvcFNlbGxpbmcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Svart/Source/Repos/Webbutveckling/ViewsAndPartialViews/BMarketo/Views/ProductDetails/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdERldGFpbHNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Svart/Source/Repos/Webbutveckling/ViewsAndPartialViews/BMarketo/Views/Products/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Svart/Source/Repos/Webbutveckling/ViewsAndPartialViews/BMarketo/Views/Products/Search.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcU2VhcmNoLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Svart/Source/Repos/Webbutveckling/ViewsAndPartialViews/BMarketo/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Svart/Source/Repos/Webbutveckling/ViewsAndPartialViews/BMarketo/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Svart/Source/Repos/Webbutveckling/ViewsAndPartialViews/BMarketo/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
