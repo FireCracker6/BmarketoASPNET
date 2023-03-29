@@ -1,0 +1,7 @@
+C:\Users\Svart\Source\Repos\Webbutveckling\ViewsAndPartialViews\BMarketo\obj\Release\net7.0\PubTmp\Out\BMarketo.exe
+C:\Users\Svart\Source\Repos\Webbutveckling\ViewsAndPartialViews\BMarketo\obj\Release\net7.0\PubTmp\Out\appsettings.Development.json
+C:\Users\Svart\Source\Repos\Webbutveckling\ViewsAndPartialViews\BMarketo\obj\Release\net7.0\PubTmp\Out\appsettings.json
+C:\Users\Svart\Source\Repos\Webbutveckling\ViewsAndPartialViews\BMarketo\obj\Release\net7.0\PubTmp\Out\BMarketo.dll
+C:\Users\Svart\Source\Repos\Webbutveckling\ViewsAndPartialViews\BMarketo\obj\Release\net7.0\PubTmp\Out\BMarketo.deps.json
+C:\Users\Svart\Source\Repos\Webbutveckling\ViewsAndPartialViews\BMarketo\obj\Release\net7.0\PubTmp\Out\BMarketo.runtimeconfig.json
+C:\Users\Svart\Source\Repos\Webbutveckling\ViewsAndPartialViews\BMarketo\obj\Release\net7.0\PubTmp\Out\BMarketo.pdb

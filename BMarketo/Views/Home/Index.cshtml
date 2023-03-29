@@ -1,6 +1,12 @@
 ﻿
 <!-- showcase start -->
-<partial name="/Views/Partials/_ShowCase.cshtml" />
+
+@model HomeIndexViewModel
+
+
+<partial name="/Views/Partials/_ShowCase.cshtml"model="@Model.Showcase_1" />
+
+@*<partial name="/Views/Partials/_ShowCase.cshtml" model="@Model.Showcase_2" />*@
 
 <!-- showcase end -->
 <!-- start best collection -->

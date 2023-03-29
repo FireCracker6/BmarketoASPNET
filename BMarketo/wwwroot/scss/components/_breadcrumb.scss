@@ -1,0 +1,65 @@
+.breadcrumb {
+    display: block;
+   
+    @include lg {
+        display: block;
+        justify-content: center;
+    }
+
+    .container {
+        display: none;
+       // max-width: 1290px;
+        background-color: $color-dark-4;
+        justify-content: center;
+        align-items: center;
+        background-image: url(/images/placeholders/breadcrumb-bg.jpg);
+        background-position: center center;
+        
+       
+
+        h2 {
+            margin-top: 40px;
+            text-align: center;
+            color: $color-dark-2;
+            font-weight: $font-weight-semibold;
+            font-size: 24px;
+            letter-spacing: 3px;
+        }
+        @include lg {
+            display: flex;
+       
+            justify-content: center;
+        align-items: center;
+
+        }
+    }
+
+    ul.breadcrumb {
+        padding: 10px 16px;
+        list-style: none;
+       // background-color: #eee;
+      
+      
+      }
+      ul.breadcrumb li {
+        display: inline;
+        font-size: 14px;
+        
+      }
+      ul.breadcrumb li+li:before {
+        padding: 8px;
+        color: black;
+        content: ".\00a0";
+        
+      }
+      ul.breadcrumb li a {
+        color: $color-dark-1;
+        text-decoration: none;
+        font-size: 14px;
+      }
+      ul.breadcrumb li a:hover {
+        color: $color-theme-1;
+        text-decoration: underline;
+        font-size: 14px;
+      }
+}
