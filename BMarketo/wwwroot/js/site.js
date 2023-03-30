@@ -2,7 +2,7 @@
 
     try {
         const _element = document.querySelector('footer')
-        const isTallerThanScreen = scrollHeight >= innerHeight
+        const isTallerThanScreen = scrollHeight >= (innerHeight + _element.scrollHeight)
 
         _element.classList.toggle('position-fixed', !isTallerThanScreen)
         _element.classList.toggle('position-static', isTallerThanScreen)

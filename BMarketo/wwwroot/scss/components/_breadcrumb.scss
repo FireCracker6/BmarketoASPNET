@@ -1,3 +1,7 @@
+@import '../core/_colors.scss';
+@import '../core/_mixins.scss';
+@import '../core/_fonts.scss';
+
 .breadcrumb {
     display: block;
    
@@ -8,7 +12,6 @@
 
     .container {
         display: none;
-       // max-width: 1290px;
         background-color: $color-dark-4;
         justify-content: center;
         align-items: center;

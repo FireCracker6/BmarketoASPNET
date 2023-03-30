@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "bX2SD8n+7BWo96+SXkU+SCDGDjZ5U4i9pmaUh0MFH/t1JqSZQ5AQMJLp/dyizTm4DcWs69CMXKdP/qFvW1ofIw==",
+  "dgSpecHash": "G5flkWQZSbkXXHFyPLTHvnflz8mlHgr3tW6tSYyAvdCHjUC8BXXKmgV8wG2zn1/fZPRWulnhxCYz2sNhDu9DSg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Svart\\Source\\Repos\\Webbutveckling\\ViewsAndPartialViews\\BMarketo\\BMarketo.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Svart\\.nuget\\packages\\abstractions.sass.cibuild\\1.1.52\\abstractions.sass.cibuild.1.1.52.nupkg.sha512"
+  ],
   "logs": []
 }

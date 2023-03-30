@@ -1,0 +1,26 @@
+﻿[
+  {
+    "outputFile": "wwwroot/scss/components/_bestCollection.css",
+    "inputFile": "wwwroot/scss/components/_bestCollection.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/core/_colors.css",
+    "inputFile": "wwwroot/scss/core/_colors.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/style.css",
+    "inputFile": "wwwroot/scss/style.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/components/_showcase.css",
+    "inputFile": "wwwroot/scss/components/_showcase.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/components/_gridcollection.css",
+    "inputFile": "wwwroot/scss/components/_gridcollection.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/components/_breadcrumb.css",
+    "inputFile": "wwwroot/scss/components/_breadcrumb.scss"
+  }
+]

@@ -8,34 +8,28 @@ public class HomeController : Controller
 {
 	public IActionResult Index()
 	{
-		ViewData["Title"] = "Home";
-
-
-
 
 		var viewModel = new HomeIndexViewModel
 		{
-			Showcase_1 = new ShowcaseViewModel()
-			{
-				Ingress = "WELCOME TO BMARKETO SHOP",
-				Title = "Exclusive Chair gold Collection",
-				LinkContent = "SHOP NOW",
-				LinkUrl = "/ProductDetails",
-				ImageUrl = "images/placeholders/625x647.svg"
+			BestCollection = new GridCollectionViewModel 
+			{ 
+				Title = "Best Collection",
+				Categories = new List<string> { "All", "Bag", "Dress", "Decoration", "Essentials", "Interior", "Laptops", "Mobile", "Beauty"},
+				GridItems = new List<GridCollectionItemViewModel> {
+					new GridCollectionItemViewModel { Id = "1" , Title = "Apple Watch Series", Price = 10, ImageUrl = "images/placeholders/270x295.svg" },
+					new GridCollectionItemViewModel { Id = "2" , Title = "Apple Watch Series", Price = 20, ImageUrl = "images/placeholders/270x295.svg" },
+                    new GridCollectionItemViewModel { Id = "3" , Title = "Apple Watch Series", Price = 30, ImageUrl = "images/placeholders/270x295.svg" },
+                    new GridCollectionItemViewModel { Id = "4" , Title = "Apple Watch Series", Price = 40, ImageUrl = "images/placeholders/270x295.svg" },
+                    new GridCollectionItemViewModel { Id = "5" , Title = "Apple Watch Series", Price = 50, ImageUrl = "images/placeholders/270x295.svg" },
+                    new GridCollectionItemViewModel { Id = "6" , Title = "Apple Watch Series", Price = 60, ImageUrl = "images/placeholders/270x295.svg" },
+                    new GridCollectionItemViewModel { Id = "7" , Title = "Apple Watch Series", Price = 70, ImageUrl = "images/placeholders/270x295.svg" },
+                    new GridCollectionItemViewModel { Id = "8" , Title = "Apple Watch Series", Price = 80, ImageUrl = "images/placeholders/270x295.svg" },
 
+
+                }
 			},
-			Showcase_2 = new ShowcaseViewModel()
-			{
-				Ingress = "WELCOME TO SHOP SHOP",
-				Title = "Exclusive Chair gold Collection",
-				LinkContent = "SHOP NOW",
-				LinkUrl = "/ProductDetails",
-				ImageUrl = "images/placeholders/625x647.svg"
-
-			}
+			//SummerCollection = new GridCollectionViewModel { Title = "Summer Collection" }
 		};
-
-
 		return View(viewModel);
 	}
 }
