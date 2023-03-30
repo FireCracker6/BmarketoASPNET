@@ -9,6 +9,7 @@
     ".NETCoreApp,Version=v7.0/win-x86": {
       "BMarketo/1.0.0": {
         "dependencies": {
+          "Abstractions.Sass.CIBuild": "1.1.52",
           "runtimepack.Microsoft.NETCore.App.Runtime.win-x86": "7.0.3",
           "runtimepack.Microsoft.AspNetCore.App.Runtime.win-x86": "7.0.3"
         },
@@ -1284,7 +1285,8 @@
             "fileVersion": "17.0.23030.3"
           }
         }
-      }
+      },
+      "Abstractions.Sass.CIBuild/1.1.52": {}
     }
   },
   "libraries": {
@@ -1302,6 +1304,13 @@
       "type": "runtimepack",
       "serviceable": false,
       "sha512": ""
+    },
+    "Abstractions.Sass.CIBuild/1.1.52": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-SdfC9d5YKO6sPtTH/kN6EgASWgSu6VzuhS6Ls2gICI4j/236Q3rlFiGzPPEe4gq3EWH6bj/V6hTuWjENzLWjZw==",
+      "path": "abstractions.sass.cibuild/1.1.52",
+      "hashPath": "abstractions.sass.cibuild.1.1.52.nupkg.sha512"
     }
   },
   "runtimes": {

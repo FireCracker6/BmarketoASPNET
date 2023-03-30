@@ -1,0 +1,151 @@
+@import '../core/_colors.scss';
+@import '../core/_mixins.scss';
+@import '../core/_fonts.scss';
+
+._collection {
+    background-color: $color-white;
+
+    .container {
+        display: block;
+
+        @include lg {
+            display: flex;
+            justify-content: center;
+            background-color: $color-white;
+        }
+    }
+
+    ._header {
+        width: 100%;
+        display: block;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        justify-content: center;
+        font-size: 40px;
+        font-weight: $font-weight-semibold;
+        font-family: $font-poppins;
+        text-align: center;
+        color: $color-dark-2;
+
+        @include lg {
+            font-size: 48px;
+        }
+    }
+
+   .categories {
+        display: none;
+        justify-content: center;
+        list-style: none;
+        margin: 0;
+        margin-bottom: 40px;
+        padding: 0
+    }
+
+    @media(min-width: 992px) {
+     .categories {
+            display: flex
+        }
+    }
+
+   .categories .category-item {
+        margin-right: 5px
+    }
+
+     .categories .category-item + li::before {
+        content: "/";
+        margin-right: 5px
+    }
+
+    ._cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+
+        @include lg {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-column-gap: 20px; // Adjust the space between cards as needed
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        a:hover {
+            color: $color-dark-2;
+            text-decoration: none;
+
+
+        }
+    }
+
+    .card {
+        border: none;
+        font-family: $font-poppins;
+        position: relative;
+        margin: 0 0 20px;
+
+        @include lg {
+            display: flex;
+        }
+
+        &:hover {
+            .shopping-cart-icon {
+                display: inline;
+            }
+        }
+
+
+        .card-image {
+            display: inline-block;
+            padding: 5px;
+
+            @include md {
+                padding: 5px;
+            }
+
+            @include lg {
+                padding: 0;
+            }
+
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .shopping-cart-icon {
+            display: none;
+            position: absolute;
+            font-size: 24px;
+            bottom: 15px;
+            right: 15px;
+
+
+            @include md {
+                display: none;
+            }
+        }
+
+        .card-title {
+            margin: -10px 0 -0 -10px !important;
+            font-size: 18px;
+            color: $color-dark-1;
+
+            @include mobile {
+                font-size: 14px;
+            }
+        }
+
+        .card-price {
+            margin: 5px 0 0 -10px !important;
+            font-size: 14px;
+            color: $color-dark-2;
+        }
+    }
+
+    .loadmore {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 40px;
+    }
+}    

@@ -1,12 +1,103 @@
 {
   "version": 3,
   "targets": {
-    "net7.0": {},
-    "net7.0/win-x86": {}
+    "net7.0": {
+      "Abstractions.Sass.CIBuild/1.1.52": {
+        "type": "package",
+        "contentFiles": {
+          "contentFiles/any/netstandard2.0/logo.ico": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        },
+        "build": {
+          "build/Abstractions.Sass.CIBuild.targets": {}
+        }
+      }
+    },
+    "net7.0/win-x86": {
+      "Abstractions.Sass.CIBuild/1.1.52": {
+        "type": "package",
+        "contentFiles": {
+          "contentFiles/any/netstandard2.0/logo.ico": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        },
+        "build": {
+          "build/Abstractions.Sass.CIBuild.targets": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Abstractions.Sass.CIBuild/1.1.52": {
+      "sha512": "SdfC9d5YKO6sPtTH/kN6EgASWgSu6VzuhS6Ls2gICI4j/236Q3rlFiGzPPEe4gq3EWH6bj/V6hTuWjENzLWjZw==",
+      "type": "package",
+      "path": "abstractions.sass.cibuild/1.1.52",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "abstractions.sass.cibuild.1.1.52.nupkg.sha512",
+        "abstractions.sass.cibuild.nuspec",
+        "build/Abstractions.Sass.CIBuild.targets",
+        "content/logo.ico",
+        "contentFiles/any/net48/logo.ico",
+        "contentFiles/any/netstandard2.0/logo.ico",
+        "logo-small-white.png",
+        "logo-small.png",
+        "tools/net48/Abstractions.Sass.Compiler.dll",
+        "tools/net48/AdvancedStringBuilder.dll",
+        "tools/net48/LibSassHost.dll",
+        "tools/net48/Microsoft.Bcl.AsyncInterfaces.dll",
+        "tools/net48/System.Buffers.dll",
+        "tools/net48/System.Collections.Immutable.dll",
+        "tools/net48/System.Configuration.ConfigurationManager.dll",
+        "tools/net48/System.Linq.Async.dll",
+        "tools/net48/System.Memory.dll",
+        "tools/net48/System.Numerics.Vectors.dll",
+        "tools/net48/System.Runtime.CompilerServices.Unsafe.dll",
+        "tools/net48/System.Security.AccessControl.dll",
+        "tools/net48/System.Security.Permissions.dll",
+        "tools/net48/System.Security.Principal.Windows.dll",
+        "tools/net48/System.Text.Encodings.Web.dll",
+        "tools/net48/System.Text.Json.dll",
+        "tools/net48/System.Threading.Tasks.Extensions.dll",
+        "tools/net48/System.ValueTuple.dll",
+        "tools/net48/libsass.dll",
+        "tools/net48/libsass.so",
+        "tools/netstandard2.0/Abstractions.Sass.Compiler.dll",
+        "tools/netstandard2.0/AdvancedStringBuilder.dll",
+        "tools/netstandard2.0/LibSassHost.dll",
+        "tools/netstandard2.0/Microsoft.Bcl.AsyncInterfaces.dll",
+        "tools/netstandard2.0/System.Buffers.dll",
+        "tools/netstandard2.0/System.Collections.Immutable.dll",
+        "tools/netstandard2.0/System.Configuration.ConfigurationManager.dll",
+        "tools/netstandard2.0/System.Linq.Async.dll",
+        "tools/netstandard2.0/System.Memory.dll",
+        "tools/netstandard2.0/System.Numerics.Vectors.dll",
+        "tools/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "tools/netstandard2.0/System.Security.AccessControl.dll",
+        "tools/netstandard2.0/System.Security.Cryptography.ProtectedData.dll",
+        "tools/netstandard2.0/System.Security.Permissions.dll",
+        "tools/netstandard2.0/System.Security.Principal.Windows.dll",
+        "tools/netstandard2.0/System.Text.Encodings.Web.dll",
+        "tools/netstandard2.0/System.Text.Json.dll",
+        "tools/netstandard2.0/System.Threading.Tasks.Extensions.dll",
+        "tools/netstandard2.0/System.Threading.dll",
+        "tools/netstandard2.0/libsass.dll",
+        "tools/netstandard2.0/libsass.so"
+      ]
+    }
+  },
   "projectFileDependencyGroups": {
-    "net7.0": []
+    "net7.0": [
+      "Abstractions.Sass.CIBuild >= 1.1.52"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Svart\\.nuget\\packages\\": {},
@@ -52,6 +143,12 @@
     "frameworks": {
       "net7.0": {
         "targetAlias": "net7.0",
+        "dependencies": {
+          "Abstractions.Sass.CIBuild": {
+            "target": "Package",
+            "version": "[1.1.52, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",

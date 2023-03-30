@@ -65,8 +65,12 @@
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "C:\\Users\\Svart\\Source\\Repos\\Webbutveckling\\ViewsAndPartialViews\\BMarketo\\wwwroot\\scss\\components\\_bestCollection.scss",
-      "PackagePath": "staticwebassets\\scss\\components\\_bestCollection.scss"
+      "Id": "C:\\Users\\Svart\\Source\\Repos\\Webbutveckling\\ViewsAndPartialViews\\BMarketo\\wwwroot\\scss\\components\\_breadcrumb.css",
+      "PackagePath": "staticwebassets\\scss\\components\\_breadcrumb.css"
+    },
+    {
+      "Id": "C:\\Users\\Svart\\Source\\Repos\\Webbutveckling\\ViewsAndPartialViews\\BMarketo\\wwwroot\\scss\\components\\_breadcrumb.min.css",
+      "PackagePath": "staticwebassets\\scss\\components\\_breadcrumb.min.css"
     },
     {
       "Id": "C:\\Users\\Svart\\Source\\Repos\\Webbutveckling\\ViewsAndPartialViews\\BMarketo\\wwwroot\\scss\\components\\_breadcrumb.scss",
@@ -89,6 +93,18 @@
       "PackagePath": "staticwebassets\\scss\\components\\_forms.scss"
     },
     {
+      "Id": "C:\\Users\\Svart\\Source\\Repos\\Webbutveckling\\ViewsAndPartialViews\\BMarketo\\wwwroot\\scss\\components\\_gridcollection.css",
+      "PackagePath": "staticwebassets\\scss\\components\\_gridcollection.css"
+    },
+    {
+      "Id": "C:\\Users\\Svart\\Source\\Repos\\Webbutveckling\\ViewsAndPartialViews\\BMarketo\\wwwroot\\scss\\components\\_gridcollection.min.css",
+      "PackagePath": "staticwebassets\\scss\\components\\_gridcollection.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Svart\\Source\\Repos\\Webbutveckling\\ViewsAndPartialViews\\BMarketo\\wwwroot\\scss\\components\\_gridcollection.scss",
+      "PackagePath": "staticwebassets\\scss\\components\\_gridcollection.scss"
+    },
+    {
       "Id": "C:\\Users\\Svart\\Source\\Repos\\Webbutveckling\\ViewsAndPartialViews\\BMarketo\\wwwroot\\scss\\components\\_header.scss",
       "PackagePath": "staticwebassets\\scss\\components\\_header.scss"
     },
@@ -99,6 +115,14 @@
     {
       "Id": "C:\\Users\\Svart\\Source\\Repos\\Webbutveckling\\ViewsAndPartialViews\\BMarketo\\wwwroot\\scss\\components\\_productDetails.scss",
       "PackagePath": "staticwebassets\\scss\\components\\_productDetails.scss"
+    },
+    {
+      "Id": "C:\\Users\\Svart\\Source\\Repos\\Webbutveckling\\ViewsAndPartialViews\\BMarketo\\wwwroot\\scss\\components\\_showcase.css",
+      "PackagePath": "staticwebassets\\scss\\components\\_showcase.css"
+    },
+    {
+      "Id": "C:\\Users\\Svart\\Source\\Repos\\Webbutveckling\\ViewsAndPartialViews\\BMarketo\\wwwroot\\scss\\components\\_showcase.min.css",
+      "PackagePath": "staticwebassets\\scss\\components\\_showcase.min.css"
     },
     {
       "Id": "C:\\Users\\Svart\\Source\\Repos\\Webbutveckling\\ViewsAndPartialViews\\BMarketo\\wwwroot\\scss\\components\\_showcase.scss",
@@ -117,6 +141,18 @@
       "PackagePath": "staticwebassets\\scss\\components\\_utilities.scss"
     },
     {
+      "Id": "C:\\Users\\Svart\\Source\\Repos\\Webbutveckling\\ViewsAndPartialViews\\BMarketo\\wwwroot\\scss\\core\\_base.scss",
+      "PackagePath": "staticwebassets\\scss\\core\\_base.scss"
+    },
+    {
+      "Id": "C:\\Users\\Svart\\Source\\Repos\\Webbutveckling\\ViewsAndPartialViews\\BMarketo\\wwwroot\\scss\\core\\_colors.css",
+      "PackagePath": "staticwebassets\\scss\\core\\_colors.css"
+    },
+    {
+      "Id": "C:\\Users\\Svart\\Source\\Repos\\Webbutveckling\\ViewsAndPartialViews\\BMarketo\\wwwroot\\scss\\core\\_colors.min.css",
+      "PackagePath": "staticwebassets\\scss\\core\\_colors.min.css"
+    },
+    {
       "Id": "C:\\Users\\Svart\\Source\\Repos\\Webbutveckling\\ViewsAndPartialViews\\BMarketo\\wwwroot\\scss\\core\\_colors.scss",
       "PackagePath": "staticwebassets\\scss\\core\\_colors.scss"
     },
@@ -127,6 +163,14 @@
     {
       "Id": "C:\\Users\\Svart\\Source\\Repos\\Webbutveckling\\ViewsAndPartialViews\\BMarketo\\wwwroot\\scss\\core\\_mixins.scss",
       "PackagePath": "staticwebassets\\scss\\core\\_mixins.scss"
+    },
+    {
+      "Id": "C:\\Users\\Svart\\Source\\Repos\\Webbutveckling\\ViewsAndPartialViews\\BMarketo\\wwwroot\\scss\\style.css",
+      "PackagePath": "staticwebassets\\scss\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\Svart\\Source\\Repos\\Webbutveckling\\ViewsAndPartialViews\\BMarketo\\wwwroot\\scss\\style.min.css",
+      "PackagePath": "staticwebassets\\scss\\style.min.css"
     },
     {
       "Id": "C:\\Users\\Svart\\Source\\Repos\\Webbutveckling\\ViewsAndPartialViews\\BMarketo\\wwwroot\\scss\\style.scss",

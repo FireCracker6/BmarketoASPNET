@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "yWJRdJMYM+358eddtXnPFetKIse9egEit6jIJvXiyGwxbaTl3pgE8O3ivN2CtOVnvK57bxP7x5CGzGxisqptPg==",
+  "dgSpecHash": "GjHVFwP3ceeawOU7/cIcRwyhz6atbTL9S/IOQfCSdcEKMZrMDP4zp1EwR6xPYP5Sy116UCIZkgnzKRgIY9/KIw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Svart\\Source\\Repos\\Webbutveckling\\ViewsAndPartialViews\\BMarketo\\BMarketo.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Svart\\.nuget\\packages\\abstractions.sass.cibuild\\1.1.52\\abstractions.sass.cibuild.1.1.52.nupkg.sha512",
     "C:\\Users\\Svart\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x86\\7.0.3\\microsoft.netcore.app.runtime.win-x86.7.0.3.nupkg.sha512",
     "C:\\Users\\Svart\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x86\\7.0.3\\microsoft.windowsdesktop.app.runtime.win-x86.7.0.3.nupkg.sha512",
     "C:\\Users\\Svart\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x86\\7.0.3\\microsoft.aspnetcore.app.runtime.win-x86.7.0.3.nupkg.sha512"

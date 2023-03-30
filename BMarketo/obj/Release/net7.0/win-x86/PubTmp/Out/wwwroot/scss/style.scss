@@ -1,6 +1,7 @@
 
 @import './core/fonts';
 @import './core/colors';
+@import './core/base';
 @import './core/mixins';
 
 
@@ -12,7 +13,7 @@
 @import './components/header';
 
 @import './components/showcase';
-@import './components/bestCollection';
+@import './components/gridcollection';
 
 @import './components/discount';
 @import './components/topSelling';

@@ -1,3 +1,6 @@
+@import '../core/_colors.scss';
+@import '../core/_mixins.scss';
+@import '../core/_fonts.scss';
 .showcase {
     background-color: $color-theme-3;
     padding: 60px 0;
@@ -5,6 +8,7 @@
     @include lg {
         padding: 0 0 60px 0;
     }
+
     .container {
         display: block;
         text-align: center;
@@ -14,31 +18,28 @@
             align-items: center;
             justify-content: space-between;
         }
-
     }
 
     .content {
-       
         font-family: $font-poppins;
         color: $color-dark-2;
-       
+
 
         @include lg {
             flex: 3;
-           text-align: left;
-           padding-right: 20px;
-           padding-top: 20px;
-          
+            text-align: left;
+            padding-right: 20px;
+            padding-top: 20px;
         }
+
         @include xl {
             flex: 2;
-           
             padding-top: 0
         }
+
         .ingress {
             font-size: 18px;
             font-weight: $font-weight-regular;
-           
             letter-spacing: 5px;
             margin-bottom: 20px;
 
@@ -46,53 +47,58 @@
                 font-size: 14px;
                 letter-spacing: 2px;
             }
-            
         }
+
         .title {
             font-size: 40px;
             font-weight: bold;
             line-height: 1.2;
             margin-bottom: 20px;
-           
+
 
             @include lg {
                 font-size: 60px;
                 line-height: 1.5;
             }
         }
+
         .btn-theme {
             background-color: $color-theme-1;
             border: none;
             color: $color-white;
             letter-spacing: 5px;
             text-align: center;
-        &:hover {
-            background-color: $color-dark-2;
+
+            &:hover {
+                background-color: $color-dark-2;
+            }
         }
-           
-         } 
-        
     }
+
     .content-image {
-     /*    border: 1px solid black; */
+        /*    border: 1px solid black; */
         display: none;
-       
-       
+
+
 
         @include lg {
             display: block;
-           
             flex: 1;
+
+            .img {
+                width: 100%;
+                height: auto;
+            }
         }
-        
+
         @include xl {
             display: block;
-           
-            flex: 2;
+            flex: 1;
         }
     }
+
     img {
-       width: 100%;
-       height: auto;
+        width: 100%;
+        height: auto;
     }
 }

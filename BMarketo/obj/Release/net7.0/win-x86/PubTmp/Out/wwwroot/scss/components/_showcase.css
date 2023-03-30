@@ -1,0 +1,97 @@
+﻿@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600;700;900&family=Roboto:wght@300;400;500;700;900&display=swap");
+.showcase {
+  background-color: #F3F2F2;
+  padding: 60px 0;
+}
+@media (min-width: 992px) {
+  .showcase {
+    padding: 0 0 60px 0;
+  }
+}
+.showcase .container {
+  display: block;
+  text-align: center;
+}
+@media (min-width: 992px) {
+  .showcase .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+.showcase .content {
+  font-family: "Poppins", sans-serif;
+  color: #292929;
+}
+@media (min-width: 992px) {
+  .showcase .content {
+    flex: 3;
+    text-align: left;
+    padding-right: 20px;
+    padding-top: 20px;
+  }
+}
+@media (min-width: 1200px) {
+  .showcase .content {
+    flex: 2;
+    padding-top: 0;
+  }
+}
+.showcase .content .ingress {
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 5px;
+  margin-bottom: 20px;
+}
+@media (max-width: 767px) {
+  .showcase .content .ingress {
+    font-size: 14px;
+    letter-spacing: 2px;
+  }
+}
+.showcase .content .title {
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+@media (min-width: 992px) {
+  .showcase .content .title {
+    font-size: 60px;
+    line-height: 1.5;
+  }
+}
+.showcase .content .btn-theme {
+  background-color: #FA3150;
+  border: none;
+  color: #ffffff;
+  letter-spacing: 5px;
+  text-align: center;
+}
+.showcase .content .btn-theme:hover {
+  background-color: #292929;
+}
+.showcase .content-image {
+  /*    border: 1px solid black; */
+  display: none;
+}
+@media (min-width: 992px) {
+  .showcase .content-image {
+    display: block;
+    flex: 1;
+  }
+  .showcase .content-image .img {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (min-width: 1200px) {
+  .showcase .content-image {
+    display: block;
+    flex: 1;
+  }
+}
+.showcase img {
+  width: 100%;
+  height: auto;
+}
