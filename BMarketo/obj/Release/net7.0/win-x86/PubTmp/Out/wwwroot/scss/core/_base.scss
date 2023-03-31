@@ -1,3 +1,4 @@
+@import '../core/_colors.scss';
 .position-static {
     position: static;
 }
@@ -7,4 +8,10 @@
     bottom: 0;
     left: 0;
     right: 0;
+}
+.gridcollection-item {
+    a:hover {
+        color: $color-dark-2;
+        text-decoration: none;
+    }
 }

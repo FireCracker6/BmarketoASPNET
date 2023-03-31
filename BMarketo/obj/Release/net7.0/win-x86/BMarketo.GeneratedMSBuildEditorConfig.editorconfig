@@ -76,6 +76,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFydGlhbHNcX0dyaWRDb2xsZWN0aW9uSXRlbS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Svart/Source/Repos/Webbutveckling/ViewsAndPartialViews/BMarketo/Views/Partials/_GridDiscountItem.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFydGlhbHNcX0dyaWREaXNjb3VudEl0ZW0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Svart/Source/Repos/Webbutveckling/ViewsAndPartialViews/BMarketo/Views/Partials/_Header.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFydGlhbHNcX0hlYWRlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -86,6 +90,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Svart/Source/Repos/Webbutveckling/ViewsAndPartialViews/BMarketo/Views/Partials/_TopSelling.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFydGlhbHNcX1RvcFNlbGxpbmcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Svart/Source/Repos/Webbutveckling/ViewsAndPartialViews/BMarketo/Views/Partials/_TopSellingCollection.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFydGlhbHNcX1RvcFNlbGxpbmdDb2xsZWN0aW9uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Svart/Source/Repos/Webbutveckling/ViewsAndPartialViews/BMarketo/Views/ProductDetails/Index.cshtml]

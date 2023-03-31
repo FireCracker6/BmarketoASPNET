@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600;700;900&family=Roboto:wght@300;400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600;700;900&family=Roboto:wght@300;400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600;700;900&family=Roboto:wght@300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600;700;900&family=Roboto:wght@300;400;500;700;900&display=swap");
 .position-static {
   position: static;
 }
@@ -12,6 +13,11 @@
   bottom: 0;
   left: 0;
   right: 0;
+}
+
+.gridcollection-item a:hover {
+  color: #292929;
+  text-decoration: none;
 }
 
 .btn-toggle {
@@ -439,7 +445,7 @@ header .toggle {
 @media (min-width: 1200px) {
   .showcase .content-image {
     display: block;
-    flex: 1;
+    flex: 2;
   }
 }
 .showcase img {
@@ -775,6 +781,10 @@ header .toggle {
     grid-auto-flow: column;
   }
 }
+._topSelling .content a:hover {
+  color: #292929;
+  text-decoration: none;
+}
 ._topSelling .card {
   border: none;
   font-family: "Poppins", sans-serif;
@@ -879,9 +889,17 @@ header .toggle {
 ._topSelling ._bDiscount {
   margin-top: 60px;
   display: grid;
+  grid-template-columns: repeat(3, 1fr);
   grid-auto-flow: column;
   gap: 20px;
   justify-content: center;
+}
+._topSelling ._bDiscount a.gridcollection-item {
+  color: #292929;
+}
+._topSelling ._bDiscount a.gridcollection-item:hover {
+  color: #292929;
+  text-decoration: none;
 }
 @media (max-width: 767px) {
   ._topSelling ._bDiscount .shopping-cart-icon {

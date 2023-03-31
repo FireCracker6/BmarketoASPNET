@@ -22,5 +22,21 @@
   {
     "outputFile": "wwwroot/scss/components/_breadcrumb.css",
     "inputFile": "wwwroot/scss/components/_breadcrumb.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/components/_topSelling.css",
+    "inputFile": "wwwroot/scss/components/_topSelling.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/components/_discount.css",
+    "inputFile": "wwwroot/scss/components/_discount.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/components/_header.css",
+    "inputFile": "wwwroot/scss/components/_header.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/components/_subscribe.css",
+    "inputFile": "wwwroot/scss/components/_subscribe.scss"
   }
 ]

@@ -1,0 +1,51 @@
+﻿@model TopSellingCollectionViewModel
+
+<section class="_topSelling">
+
+    <div class="_header">
+        @Model.Title
+    </div>
+
+    <div class="content container">
+        @if (Model.GridItems != null)
+        {
+          
+
+                @foreach (var item in Model.GridItems)
+                {
+                    <partial name="/Views/Partials/_GridCollectionItem.cshtml" model="item" />
+                }
+
+
+          
+        }
+        </div>
+    @if (Model.Arrows != false)
+    {
+        <div class="arrowslide">
+
+            <button class="btn btn-arrow-white"><i class="fa-thin fa-chevron-left"></i></button>&nbsp;<button class="btn btn-arrow-white"><i class="fa-thin fa-chevron-right"></i></button>
+
+        </div>
+    }
+   
+  @*  discount*@
+    <div class="container">
+    <div class="_bDiscount">
+        @if (Model.GridDiscountItems != null)
+        {
+
+
+            @foreach (var item in Model.GridDiscountItems)
+            {
+                <partial name="/Views/Partials/_GridDiscountItem.cshtml" model="item" />
+            }
+
+
+
+        }
+
+    </div>
+    </div>
+       
+</section>

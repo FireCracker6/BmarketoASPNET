@@ -1,0 +1,47 @@
+﻿@model GridCollectionItemViewModel
+
+<a asp-controller="products" asp-action="details" asp-route-id="@Model.Id" class="gridDisount-item">
+    <div class="card">
+        <div class="sell-items">
+    <div class="card-image">
+        <img src="@Model.ImageUrl" alt="@Model.Title">
+        <div class="shopping-cart-icon">
+         
+        </div>
+    </div>
+
+    <div class="card-body">
+     
+            <h5 class="card-title">@Model.Title</h5>
+         <div class="discount-priceoptions">
+
+             @if (Model.Price != 0) {
+             <div class="prices">
+             <h4 class="card-oldprice">$@Model.OldPrice</h4>
+            <h4 class="card-price">$@Model.Price</h4>
+                </div>
+            <i class="fa-regular fa-cart-plus"></i>
+                }
+            </div>
+       
+        </div>
+        </div>
+        @if (Model.HeaderTitle != "" )
+        {
+            <div class="dcard">
+                <div class="uptosell-content">
+                    <h5>@Model.HeaderTitle</h5>
+                    <h1>@Model.HeaderText</h1>
+                    <h3>@Model.HeaderSlogan</h3>
+                    <div class="bText">@Model.DiscountDescription</div>
+                        <div class="discountlink">@Model.DiscountLink</div>
+                </div>
+
+            </div>
+        }
+      
+    </div>
+
+</a>
+
+

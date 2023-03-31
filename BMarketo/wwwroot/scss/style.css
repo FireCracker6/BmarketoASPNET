@@ -3,6 +3,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600;700;900&family=Roboto:wght@300;400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600;700;900&family=Roboto:wght@300;400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600;700;900&family=Roboto:wght@300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600;700;900&family=Roboto:wght@300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600;700;900&family=Roboto:wght@300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600;700;900&family=Roboto:wght@300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600;700;900&family=Roboto:wght@300;400;500;700;900&display=swap");
 .position-static {
   position: static;
 }
@@ -12,6 +16,11 @@
   bottom: 0;
   left: 0;
   right: 0;
+}
+
+.gridcollection-item a:hover {
+  color: #292929;
+  text-decoration: none;
 }
 
 .btn-toggle {
@@ -232,6 +241,11 @@ header .container {
   grid-template-columns: 1fr 1fr;
   grid-template-areas: "logo toggle";
 }
+@media (max-width: 767px) {
+  header .container {
+    padding-right: 10px;
+  }
+}
 @media (min-width: 992px) {
   header .container {
     grid-template-columns: 4fr 4fr;
@@ -439,7 +453,7 @@ header .toggle {
 @media (min-width: 1200px) {
   .showcase .content-image {
     display: block;
-    flex: 1;
+    flex: 2;
   }
 }
 .showcase img {
@@ -590,17 +604,28 @@ header .toggle {
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 767px) {
+  ._discount .container {
+    padding-top: 0;
+  }
+}
 @media (min-width: 992px) {
   ._discount .container {
     display: flex;
     justify-content: center;
-    height: 590px;
   }
+}
+._discount a {
+  color: #292929;
+}
+._discount :hover {
+  text-decoration: none;
 }
 ._discount ._cards {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   justify-content: center;
+  align-items: center;
 }
 @media (min-width: 992px) {
   ._discount ._cards {
@@ -608,18 +633,36 @@ header .toggle {
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     justify-content: space-between;
+    height: 570px;
+  }
+}
+._discount ._cards .sell-items {
+  display: none;
+}
+@media (min-width: 992px) {
+  ._discount ._cards .sell-items {
+    display: grid;
+    align-items: center;
+    width: 100%;
   }
 }
 ._discount .card {
-  display: none;
+  display: block;
   border: none;
+  border-radius: 0;
   font-family: "Poppins", sans-serif;
   margin: 0 0 20px;
   background-color: #ffffff;
 }
+@media (max-width: 767px) {
+  ._discount .card {
+    margin: 15px 0 0 0;
+  }
+}
 @media (min-width: 992px) {
   ._discount .card {
     display: grid;
+    height: 550px;
   }
 }
 ._discount .card h5 {
@@ -632,18 +675,46 @@ header .toggle {
 ._discount .card .card-title {
   text-align: center;
 }
-._discount .card button {
-  border: none;
-  display: flex;
-  justify-content: space-between;
+._discount .card .gridDisount-item {
+  display: none;
   width: 100%;
   height: 75px;
   align-items: center;
 }
-._discount .card button h4 {
+._discount .card .discount-priceoptions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+._discount .card h5 {
+  display: block;
+}
+._discount .card .card-body {
+  display: block;
+}
+._discount .card .prices {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 80px;
+  width: 100%;
   margin: 0 !important;
+  margin-top: 0;
+}
+._discount .card h4 {
+  display: flex;
+  margin-top: 0;
+}
+._discount .card .card-price {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
 }
 ._discount .card .card-oldprice {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  margin-top: 0 !important;
   text-decoration: line-through;
 }
 ._discount .card-image {
@@ -666,82 +737,72 @@ header .toggle {
 }
 
 .dcard {
-  display: block;
-  grid-column: 1/-1;
+  display: flex;
+  grid-column: 1/1;
   border: none;
   font-family: "Poppins", sans-serif;
   justify-content: center;
   margin: 0 0 20px;
   background-color: #ffffff;
+  width: 100%;
+}
+@media (max-width: 767px) {
+  .dcard {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+@media (min-width: 768px) {
+  .dcard {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
 }
 @media (min-width: 992px) {
   .dcard {
-    display: block;
-    grid-column: 2/2;
-  }
-}
-.dcard .dcard-content {
-  max-height: 300px;
-  height: 100%;
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-@media (min-width: 1200px) {
-  .dcard .dcard-content {
-    max-height: 300px;
+    display: flex;
+    grid-row: 1/-1;
+    margin-top: 100px;
+    align-content: center;
+    width: 100%;
     height: 100%;
   }
 }
-.dcard h5 {
-  margin-top: 40px;
+.dcard .uptosell-content {
+  display: grid;
+  justify-content: start;
+  align-items: center;
+}
+.dcard .uptosell-content h5 {
   color: #FA3150;
   text-align: center;
   font-size: 18px;
   font-weight: 700;
 }
-.dcard h1 {
+.dcard .uptosell-content h1 {
   text-align: center;
   font-size: 48px;
   font-family: "Playfair Display", serif;
 }
-.dcard h3 {
+.dcard .uptosell-content h3 {
   text-align: center;
   font-family: "Poppins", sans-serif;
   font-size: 24px;
   font-weight: 700;
 }
-.dcard .bText {
+.dcard .uptosell-content .bText {
   justify-content: center;
   text-align: center;
-  padding: 0;
-  font-size: 14px;
+  font-size: 12px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
-.dcard .card-body {
+.dcard .uptosell-content .discountlink {
+  margin-top: 20px;
   display: flex;
   justify-content: center;
-  align-items: center;
   width: 100%;
-  font-size: 12px;
-  margin-bottom: 20px;
-}
-@media (min-width: 992px) {
-  .dcard .card-body {
-    margin-top: 40px;
-  }
-}
-.dcard .card-body button {
-  border: none;
-  width: 100%;
-  height: 75px;
-  font-size: 16px;
-}
-.dcard .card-body button:hover {
-  background-color: #ffffff;
-  text-decoration: underline;
-  outline: none;
-  color: #FA3150;
+  text-align: center;
 }
 
 ._topSelling {
@@ -774,6 +835,10 @@ header .toggle {
     grid-template-columns: repeat(6, 1fr);
     grid-auto-flow: column;
   }
+}
+._topSelling .content a:hover {
+  color: #292929;
+  text-decoration: none;
 }
 ._topSelling .card {
   border: none;
@@ -879,9 +944,17 @@ header .toggle {
 ._topSelling ._bDiscount {
   margin-top: 60px;
   display: grid;
+  grid-template-columns: repeat(3, 1fr);
   grid-auto-flow: column;
   gap: 20px;
   justify-content: center;
+}
+._topSelling ._bDiscount a.gridcollection-item {
+  color: #292929;
+}
+._topSelling ._bDiscount a.gridcollection-item:hover {
+  color: #292929;
+  text-decoration: none;
 }
 @media (max-width: 767px) {
   ._topSelling ._bDiscount .shopping-cart-icon {

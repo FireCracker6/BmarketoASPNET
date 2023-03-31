@@ -23,7 +23,7 @@ public class ShowcaseService
         {
             Ingress = "BMARKETO THE BEST A PERSON CAN GET",
             Title = "Now with ALL new MC CLOTHING",
-            ImageUrl = "images/placeholders/625x647.svg",
+            ImageUrl = "images/mc-clothing/mc-cover.webp",
             Button = new LinkButtonModel()
             {
                 Content = "SHOP NOW",

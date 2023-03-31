@@ -9,8 +9,28 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\Svart\\Source\\Repos\\Webbutveckling\\ViewsAndPartialViews\\BMarketo\\wwwroot\\images\\jackets-women-2560x850.webp",
+      "PackagePath": "staticwebassets\\images\\jackets-women-2560x850.webp"
+    },
+    {
       "Id": "C:\\Users\\Svart\\Source\\Repos\\Webbutveckling\\ViewsAndPartialViews\\BMarketo\\wwwroot\\images\\logo.svg",
       "PackagePath": "staticwebassets\\images\\logo.svg"
+    },
+    {
+      "Id": "C:\\Users\\Svart\\Source\\Repos\\Webbutveckling\\ViewsAndPartialViews\\BMarketo\\wwwroot\\images\\mc-clothing\\McJacket-W.webp",
+      "PackagePath": "staticwebassets\\images\\mc-clothing\\McJacket-W.webp"
+    },
+    {
+      "Id": "C:\\Users\\Svart\\Source\\Repos\\Webbutveckling\\ViewsAndPartialViews\\BMarketo\\wwwroot\\images\\mc-clothing\\WomanSuite.webp",
+      "PackagePath": "staticwebassets\\images\\mc-clothing\\WomanSuite.webp"
+    },
+    {
+      "Id": "C:\\Users\\Svart\\Source\\Repos\\Webbutveckling\\ViewsAndPartialViews\\BMarketo\\wwwroot\\images\\mc-clothing\\Xena-Jacket.webp",
+      "PackagePath": "staticwebassets\\images\\mc-clothing\\Xena-Jacket.webp"
+    },
+    {
+      "Id": "C:\\Users\\Svart\\Source\\Repos\\Webbutveckling\\ViewsAndPartialViews\\BMarketo\\wwwroot\\images\\mc-clothing\\mc-cover.webp",
+      "PackagePath": "staticwebassets\\images\\mc-clothing\\mc-cover.webp"
     },
     {
       "Id": "C:\\Users\\Svart\\Source\\Repos\\Webbutveckling\\ViewsAndPartialViews\\BMarketo\\wwwroot\\images\\placeholders\\120x113.svg",
@@ -85,6 +105,14 @@
       "PackagePath": "staticwebassets\\scss\\components\\_contactForm.scss"
     },
     {
+      "Id": "C:\\Users\\Svart\\Source\\Repos\\Webbutveckling\\ViewsAndPartialViews\\BMarketo\\wwwroot\\scss\\components\\_discount.css",
+      "PackagePath": "staticwebassets\\scss\\components\\_discount.css"
+    },
+    {
+      "Id": "C:\\Users\\Svart\\Source\\Repos\\Webbutveckling\\ViewsAndPartialViews\\BMarketo\\wwwroot\\scss\\components\\_discount.min.css",
+      "PackagePath": "staticwebassets\\scss\\components\\_discount.min.css"
+    },
+    {
       "Id": "C:\\Users\\Svart\\Source\\Repos\\Webbutveckling\\ViewsAndPartialViews\\BMarketo\\wwwroot\\scss\\components\\_discount.scss",
       "PackagePath": "staticwebassets\\scss\\components\\_discount.scss"
     },
@@ -103,6 +131,14 @@
     {
       "Id": "C:\\Users\\Svart\\Source\\Repos\\Webbutveckling\\ViewsAndPartialViews\\BMarketo\\wwwroot\\scss\\components\\_gridcollection.scss",
       "PackagePath": "staticwebassets\\scss\\components\\_gridcollection.scss"
+    },
+    {
+      "Id": "C:\\Users\\Svart\\Source\\Repos\\Webbutveckling\\ViewsAndPartialViews\\BMarketo\\wwwroot\\scss\\components\\_header.css",
+      "PackagePath": "staticwebassets\\scss\\components\\_header.css"
+    },
+    {
+      "Id": "C:\\Users\\Svart\\Source\\Repos\\Webbutveckling\\ViewsAndPartialViews\\BMarketo\\wwwroot\\scss\\components\\_header.min.css",
+      "PackagePath": "staticwebassets\\scss\\components\\_header.min.css"
     },
     {
       "Id": "C:\\Users\\Svart\\Source\\Repos\\Webbutveckling\\ViewsAndPartialViews\\BMarketo\\wwwroot\\scss\\components\\_header.scss",
@@ -129,8 +165,24 @@
       "PackagePath": "staticwebassets\\scss\\components\\_showcase.scss"
     },
     {
+      "Id": "C:\\Users\\Svart\\Source\\Repos\\Webbutveckling\\ViewsAndPartialViews\\BMarketo\\wwwroot\\scss\\components\\_subscribe.css",
+      "PackagePath": "staticwebassets\\scss\\components\\_subscribe.css"
+    },
+    {
+      "Id": "C:\\Users\\Svart\\Source\\Repos\\Webbutveckling\\ViewsAndPartialViews\\BMarketo\\wwwroot\\scss\\components\\_subscribe.min.css",
+      "PackagePath": "staticwebassets\\scss\\components\\_subscribe.min.css"
+    },
+    {
       "Id": "C:\\Users\\Svart\\Source\\Repos\\Webbutveckling\\ViewsAndPartialViews\\BMarketo\\wwwroot\\scss\\components\\_subscribe.scss",
       "PackagePath": "staticwebassets\\scss\\components\\_subscribe.scss"
+    },
+    {
+      "Id": "C:\\Users\\Svart\\Source\\Repos\\Webbutveckling\\ViewsAndPartialViews\\BMarketo\\wwwroot\\scss\\components\\_topSelling.css",
+      "PackagePath": "staticwebassets\\scss\\components\\_topSelling.css"
+    },
+    {
+      "Id": "C:\\Users\\Svart\\Source\\Repos\\Webbutveckling\\ViewsAndPartialViews\\BMarketo\\wwwroot\\scss\\components\\_topSelling.min.css",
+      "PackagePath": "staticwebassets\\scss\\components\\_topSelling.min.css"
     },
     {
       "Id": "C:\\Users\\Svart\\Source\\Repos\\Webbutveckling\\ViewsAndPartialViews\\BMarketo\\wwwroot\\scss\\components\\_topSelling.scss",

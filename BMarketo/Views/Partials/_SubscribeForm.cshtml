@@ -1,0 +1,15 @@
+﻿@model SubcribeNewsLetterViewModel
+
+@if (Model.SubscribeItem != null)
+{
+
+
+    @foreach (var item in Model.SubscribeItem)
+    {
+        <partial name="/Views/Partials/_SubscribeFormNewsLetter.cshtml" model="item" />
+    }
+
+
+
+}
+       

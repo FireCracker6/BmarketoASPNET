@@ -1,0 +1,15 @@
+﻿@model SubscribeItemViewModel
+
+@if (Model.InputPlaceHolder != null) {
+<section class="subscribe">
+    <div class="container">
+        <form action="">
+                <input class="mail-text" type="email" placeholder="@Model.InputPlaceHolder">
+                <input class="mail-text-m" type="email" placeholder="@Model.EmailPlaceHolder">
+                <button class="s_button" type="submit">@Model.SubmitText</button>
+            <button class="s_button-m" type="submit"><i class="fa-duotone fa-paper-plane"></i> @Model.SubcribeButton</button>
+
+        </form>
+    </div>
+</section>
+}
