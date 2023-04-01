@@ -346,3 +346,4 @@ C:\Users\Svart\Source\Repos\Webbutveckling\ViewsAndPartialViews\BMarketo\obj\Rel
 C:\Users\Svart\Source\Repos\Webbutveckling\ViewsAndPartialViews\BMarketo\obj\Release\net7.0\win-x86\BMarketo.pdb
 C:\Users\Svart\Source\Repos\Webbutveckling\ViewsAndPartialViews\BMarketo\obj\Release\net7.0\win-x86\BMarketo.genruntimeconfig.cache
 C:\Users\Svart\Source\Repos\Webbutveckling\ViewsAndPartialViews\BMarketo\obj\Release\net7.0\win-x86\ref\BMarketo.dll
+C:\Users\Svart\Source\Repos\Webbutveckling\ViewsAndPartialViews\BMarketo\bin\Release\net7.0\win-x86\wwwroot\images\mc-clothing\ducati-mountain.jpg

@@ -1,5 +1,9 @@
 
-  .product-detail-section {
+@import '../core/_colors.scss';
+@import '../core/_mixins.scss';
+@import '../core/_fonts.scss';
+
+.product-detail-section {
    display: block;
     justify-content: center;
 
@@ -509,7 +513,7 @@
           padding: 5px;
         }
         @include lg {
-          padding: 0;
+         
         }
    
     
@@ -568,34 +572,35 @@
 
     @include lg {
         display: flex;
-
     }
 
     .container {
-       
         display: flex;
         background-color: $color-dark-5;
-        
+
         @include lg {
             margin-top: 60px;
             display: flex;
             justify-content: center;
             align-items: center;
-           
+            background-color: $color-dark-5;
             height: 285px;
+            padding: 20px;
         }
 
         .card {
             border: none;
             margin: 0;
-            padding: 20px;
             background-color: $color-dark-5;
-     
+
+
             img {
                 width: 100%;
                 height: auto;
                 border: none;
                 border-radius: 0;
+                filter: grayscale(40%);
+                filter: hue-rotate(20%);
             }
         }
     }

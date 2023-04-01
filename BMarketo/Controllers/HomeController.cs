@@ -14,7 +14,7 @@ public class HomeController : Controller
             BestCollection = new GridCollectionViewModel
             {
                 Title = "Best Collection",
-                Categories = new List<string> { "All", "Bag", "Dress", "Decoration", "Essentials", "Interior", "Laptops", "Mobile", "Beauty" },
+                Categories = new List<string> { "All", "Mens", "Womens", "Jackets", "Pants", "Boots", "Helmets", "Gloves", "Accessories" },
                 GridItems = new List<GridCollectionItemViewModel>
                 {
                     new GridCollectionItemViewModel { Id = "1", Title = "Apple Watch Series", Price = 10, ImageUrl = "images/mc-clothing/WomanSuite.webp" },

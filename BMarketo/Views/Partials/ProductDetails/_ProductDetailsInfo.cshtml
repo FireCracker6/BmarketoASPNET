@@ -1,60 +1,64 @@
-﻿<section class='productDetail-Info'>
+﻿@{
+    var productDetailInfo = productDetailInfoService.GetLatest();
+}
+
+<section class='productDetail-Info'>
     <div class="container g-0">
         <nav>
             <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                <button class="nav-link active" id="nav-desc-tab" data-bs-toggle="tab" data-bs-target="#nav-desc" type="button" role="tab" aria-controls="nav-desc" aria-selected="true">DESCRIPTION</button>
-                <button class="nav-link" id="nav-additional-tab" data-bs-toggle="tab" data-bs-target="#nav-additional" type="button" role="tab" aria-controls="nav-additional" aria-selected="false">ADDITIONAL INFO</button>
-                <button class="nav-link" id="nav-reviews-tab" data-bs-toggle="tab" data-bs-target="#nav-reviews" type="button" role="tab" aria-controls="nav-reviews" aria-selected="false">REVIEWS(0)</button>
-                <button class="nav-link" id="nav-shopping-tab" data-bs-toggle="tab" data-bs-target="#nav-shopping" type="button" role="tab" aria-controls="nav-shopping" aria-selected="false">SHOPPING & DELIVERY</button>
+                <button class="nav-link active" id="nav-desc-tab" data-bs-toggle="tab" data-bs-target="#nav-desc" type="button" role="tab" aria-controls="nav-desc" aria-selected="true">@productDetailInfo.NavButton1</button>
+                <button class="nav-link" id="nav-additional-tab" data-bs-toggle="tab" data-bs-target="#nav-additional" type="button" role="tab" aria-controls="nav-additional" aria-selected="false">@productDetailInfo.NavButton2</button>
+                <button class="nav-link" id="nav-reviews-tab" data-bs-toggle="tab" data-bs-target="#nav-reviews" type="button" role="tab" aria-controls="nav-reviews" aria-selected="false">@productDetailInfo.NavButton3</button>
+                <button class="nav-link" id="nav-shopping-tab" data-bs-toggle="tab" data-bs-target="#nav-shopping" type="button" role="tab" aria-controls="nav-shopping" aria-selected="false">@productDetailInfo.NavButton4</button>
             </div>
         </nav>
         <div class="tab-content" id="nav-tabContent">
             <div class="tab-pane fade show active" id="nav-desc" role="tabpanel" aria-labelledby="nav-desc-tab" tabindex="0">
-                <h5>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie.</h5>
+                <h5>@productDetailInfo.NavContentTitle1</h5>
                 <div class="product-content-info">
                     <div class="info">
-                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et cusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata santus est Lorem ipsum dolor sit amet. Lorem ipsum dolor.</p>
-                        <p>accusantium laborum pretium hic excepturi harum repellat facilisis convallis potenti, adipiscing lectus aliqua. Asperiores repudiandae ipsam error erat, accusamus, cum taciti unde?</p>
-                        <p>Praesentium, pariatur, tempora consequuntur purus sapiente, iaculis vitae consequatur, rhoncus earum eleifend, hendrerit ipsum rhoncus ex error, impedit! Alias laboris sequi curae aptent? Eu sagittis eu, distinctio tortor? Dapibus delectus! Consequuntur luctus. </p>
-                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et cusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata santus est Lorem ipsum dolor sit amet. Lorem ipsum dolor.</p>
+                        <p>@productDetailInfo.NavContentDescription1</p>
+                        <p>@productDetailInfo.NavContentDescription2</p>
+                        <p>@productDetailInfo.NavContentDescription3</p>
+                        <p>@productDetailInfo.NavContentDescription4</p>
                     </div>
-                    <div class="product-info-image"> <img src="images/placeholders/469x356.svg" alt=""> </div>
+                    <div class="product-info-image"> <img src=@productDetailInfo.NavContentImage1 alt="@productDetailInfo.NavContentTitle1"> </div>
                 </div>
             </div>
             <div class="tab-pane fade" id="nav-additional" role="tabpanel" aria-labelledby="nav-additional-tab" tabindex="0">
-                <h5>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie.</h5>
+                <h5>@productDetailInfo.NavContentTitle2</h5>
                 <div class="product-content-info">
                     <div class="info">
-                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et cusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata santus est Lorem ipsum dolor sit amet. Lorem ipsum dolor.</p>
-                        <p>accusantium laborum pretium hic excepturi harum repellat facilisis convallis potenti, adipiscing lectus aliqua. Asperiores repudiandae ipsam error erat, accusamus, cum taciti unde?</p>
-                        <p>Praesentium, pariatur, tempora consequuntur purus sapiente, iaculis vitae consequatur, rhoncus earum eleifend, hendrerit ipsum rhoncus ex error, impedit! Alias laboris sequi curae aptent? Eu sagittis eu, distinctio tortor? Dapibus delectus! Consequuntur luctus. </p>
-                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et cusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata santus est Lorem ipsum dolor sit amet. Lorem ipsum dolor.</p>
+                        <p>@productDetailInfo.NavContentDescription1</p>
+                        <p>@productDetailInfo.NavContentDescription2</p>
+                        <p>@productDetailInfo.NavContentDescription3</p>
+                        <p>@productDetailInfo.NavContentDescription4</p>
                     </div>
-                    <div class="product-info-image"> <img src="images/placeholders/469x356.svg" alt=""> </div>
+                    <div class="product-info-image"> <img src=@productDetailInfo.NavContentImage2 alt="@productDetailInfo.NavContentTitle2"> </div>
                 </div>
             </div>
             <div class="tab-pane fade" id="nav-reviews" role="tabpanel" aria-labelledby="nav-reviews-tab" tabindex="0">
-                <h5>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie.</h5>
+                <h5>@productDetailInfo.NavContentTitle3</h5>
                 <div class="product-content-info">
                     <div class="info">
-                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et cusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata santus est Lorem ipsum dolor sit amet. Lorem ipsum dolor.</p>
-                        <p>accusantium laborum pretium hic excepturi harum repellat facilisis convallis potenti, adipiscing lectus aliqua. Asperiores repudiandae ipsam error erat, accusamus, cum taciti unde?</p>
-                        <p>Praesentium, pariatur, tempora consequuntur purus sapiente, iaculis vitae consequatur, rhoncus earum eleifend, hendrerit ipsum rhoncus ex error, impedit! Alias laboris sequi curae aptent? Eu sagittis eu, distinctio tortor? Dapibus delectus! Consequuntur luctus. </p>
-                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et cusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata santus est Lorem ipsum dolor sit amet. Lorem ipsum dolor.</p>
+                        <p>@productDetailInfo.NavContentDescription1</p>
+                        <p>@productDetailInfo.NavContentDescription2</p>
+                        <p>@productDetailInfo.NavContentDescription3</p>
+                        <p>@productDetailInfo.NavContentDescription4</p>
                     </div>
-                    <div class="product-info-image"> <img src="images/placeholders/469x356.svg" alt=""> </div>
+                    <div class="product-info-image"> <img src=@productDetailInfo.NavContentImage3 alt="@productDetailInfo.NavContentTitle3"> </div>
                 </div>
             </div>
             <div class="tab-pane fade" id="nav-shopping" role="tabpanel" aria-labelledby="nav-shopping-tab" tabindex="0">
-                <h5>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie.</h5>
+                <h5>@productDetailInfo.NavContentTitle4</h5>
                 <div class="product-content-info">
                     <div class="info">
-                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et cusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata santus est Lorem ipsum dolor sit amet. Lorem ipsum dolor.</p>
-                        <p>accusantium laborum pretium hic excepturi harum repellat facilisis convallis potenti, adipiscing lectus aliqua. Asperiores repudiandae ipsam error erat, accusamus, cum taciti unde?</p>
-                        <p>Praesentium, pariatur, tempora consequuntur purus sapiente, iaculis vitae consequatur, rhoncus earum eleifend, hendrerit ipsum rhoncus ex error, impedit! Alias laboris sequi curae aptent? Eu sagittis eu, distinctio tortor? Dapibus delectus! Consequuntur luctus. </p>
-                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et cusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata santus est Lorem ipsum dolor sit amet. Lorem ipsum dolor.</p>
+                        <p>@productDetailInfo.NavContentDescription1</p>
+                        <p>@productDetailInfo.NavContentDescription2</p>
+                        <p>@productDetailInfo.NavContentDescription3</p>
+                        <p>@productDetailInfo.NavContentDescription4</p>
                     </div>
-                    <div class="product-info-image"> <img src="images/placeholders/469x356.svg" alt=""> </div>
+                    <div class="product-info-image"> <img src=@productDetailInfo.NavContentImage4 alt="@productDetailInfo.NavContentTitle4"> </div>
                 </div>
             </div>
         </div>

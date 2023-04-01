@@ -4,7 +4,7 @@
 
 .breadcrumb {
     display: block;
-   
+
     @include lg {
         display: block;
         justify-content: center;
@@ -15,10 +15,31 @@
         background-color: $color-dark-4;
         justify-content: center;
         align-items: center;
-        background-image: url(/images/placeholders/breadcrumb-bg.jpg);
-        background-position: center center;
-        
-       
+
+
+
+        #breadcrumb {
+            width: 100%;
+            //   height: 160px;
+            position: relative;
+            text-align: center;
+            color: $color-dark-2;
+        }
+
+        #breadcrumb::before {
+            content: "";
+            //   background-image: url('/images/mc-clothing/Xena-Breadcrumb.webp');
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            width: 100%;
+            //  height: 160px;
+            opacity: 0.8; /* set the opacity of the background image */
+        }
+
 
         h2 {
             margin-top: 40px;
@@ -28,41 +49,56 @@
             font-size: 24px;
             letter-spacing: 3px;
         }
+
+        @include mobile {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 120px;
+        }
+
+
+        @include md {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 150px;
+        }
+
         @include lg {
             display: flex;
-       
             justify-content: center;
-        align-items: center;
-
+            align-items: center;
+            height: 200px;
         }
     }
 
     ul.breadcrumb {
         padding: 10px 16px;
         list-style: none;
-       // background-color: #eee;
-      
-      
-      }
-      ul.breadcrumb li {
+        //  background-color: #eee;
+    }
+
+    ul.breadcrumb li {
         display: inline;
         font-size: 14px;
-        
-      }
-      ul.breadcrumb li+li:before {
+    }
+
+    ul.breadcrumb li + li:before {
         padding: 8px;
-        color: black;
+        color: $color-dark-1;
         content: ".\00a0";
-        
-      }
-      ul.breadcrumb li a {
+    }
+
+    ul.breadcrumb li a {
         color: $color-dark-1;
         text-decoration: none;
         font-size: 14px;
-      }
-      ul.breadcrumb li a:hover {
+    }
+
+    ul.breadcrumb li a:hover {
         color: $color-theme-1;
         text-decoration: underline;
         font-size: 14px;
-      }
+    }
 }

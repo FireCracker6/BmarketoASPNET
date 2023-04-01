@@ -1,65 +1,22 @@
-﻿<section class="_relatedProducts">
+﻿@model RelatedProductsViewModel
+<section class="_relatedProducts">
     <div class="container no-gutter">
         <div class="header ">
-            <h5>Related Products</h5>
+            <h5>@Model.Title</h5>
         </div>
         <div class="_cards">
-            <div class="card">
-                <div class="card-image">
-                    <img src="images/placeholders/270x295.svg" alt="">
-                    <div class="shopping-cart-icon">
-                        <i class="fa-regular fa-cart-plus"></i>
-                    </div>
-                </div>
+            @if (Model.GridItems != null)
+            {
+               
 
-                <div class="card-body">
-                    <h5 class="card-title">Apple Watch Series</h5>
-                    <h4 class="card-price">€30:00</h4>
-                    <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-image">
-                    <img src="images/placeholders/270x295.svg" alt="">
-                    <div class="shopping-cart-icon">
-                        <i class="fa-regular fa-cart-plus"></i>
-                    </div>
-                </div>
+                @foreach (var item in Model.GridItems)
+                {
+                    <partial name="/Views/Partials/_GridCollectionItem.cshtml" model="item" />
+                }
 
-                <div class="card-body">
-                    <h5 class="card-title">Apple Watch Series</h5>
-                    <h4 class="card-price">€30:00</h4>
-                    <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-image">
-                    <img src="images/placeholders/270x295.svg" alt="">
-                    <div class="shopping-cart-icon">
-                        <i class="fa-regular fa-cart-plus"></i>
-                    </div>
-                </div>
 
-                <div class="card-body">
-                    <h5 class="card-title">Apple Watch Series</h5>
-                    <h4 class="card-price">€30:00</h4>
-                    <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-image">
-                    <img src="images/placeholders/270x295.svg" alt="">
-                    <div class="shopping-cart-icon">
-                        <i class="fa-regular fa-cart-plus"></i>
-                    </div>
-                </div>
 
-                <div class="card-body">
-                    <h5 class="card-title">Apple Watch Series</h5>
-                    <h4 class="card-price">€30:00</h4>
-                    <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-                </div>
-            </div>
+            }
         </div>
     </div>
 

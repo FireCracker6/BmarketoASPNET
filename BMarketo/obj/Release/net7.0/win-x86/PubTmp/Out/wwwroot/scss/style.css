@@ -4,6 +4,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600;700;900&family=Roboto:wght@300;400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600;700;900&family=Roboto:wght@300;400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600;700;900&family=Roboto:wght@300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600;700;900&family=Roboto:wght@300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600;700;900&family=Roboto:wght@300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600;700;900&family=Roboto:wght@300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600;700;900&family=Roboto:wght@300;400;500;700;900&display=swap");
+a:hover {
+  text-decoration: none;
+}
+
 .position-static {
   position: static;
 }
@@ -113,8 +121,23 @@
   background-color: #AEAEAE;
   justify-content: center;
   align-items: center;
-  background-image: url(/images/placeholders/breadcrumb-bg.jpg);
-  background-position: center center;
+}
+.breadcrumb .container #breadcrumb {
+  width: 100%;
+  position: relative;
+  text-align: center;
+  color: #292929;
+}
+.breadcrumb .container #breadcrumb::before {
+  content: "";
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  opacity: 0.8; /* set the opacity of the background image */
 }
 .breadcrumb .container h2 {
   margin-top: 40px;
@@ -124,11 +147,28 @@
   font-size: 24px;
   letter-spacing: 3px;
 }
+@media (max-width: 767px) {
+  .breadcrumb .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+  }
+}
+@media (min-width: 768px) {
+  .breadcrumb .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+  }
+}
 @media (min-width: 992px) {
   .breadcrumb .container {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 200px;
   }
 }
 .breadcrumb ul.breadcrumb {
@@ -141,7 +181,7 @@
 }
 .breadcrumb ul.breadcrumb li + li:before {
   padding: 8px;
-  color: black;
+  color: #000000;
   content: ". ";
 }
 .breadcrumb ul.breadcrumb li a {
@@ -237,6 +277,11 @@ header .container {
   align-items: center;
   grid-template-columns: 1fr 1fr;
   grid-template-areas: "logo toggle";
+}
+@media (max-width: 767px) {
+  header .container {
+    padding-right: 10px;
+  }
 }
 @media (min-width: 992px) {
   header .container {
@@ -342,6 +387,7 @@ header .menu-icons .link {
 }
 header .menu-icons .link:hover {
   color: #292929;
+  text-decoration: none;
 }
 header .toggle {
   grid-area: toggle;
@@ -427,6 +473,7 @@ header .toggle {
 }
 .showcase .content .btn-theme:hover {
   background-color: #292929;
+  text-decoration: none;
 }
 .showcase .content-image {
   /*    border: 1px solid black; */
@@ -596,17 +643,28 @@ header .toggle {
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 767px) {
+  ._discount .container {
+    padding-top: 0;
+  }
+}
 @media (min-width: 992px) {
   ._discount .container {
     display: flex;
     justify-content: center;
-    height: 590px;
   }
+}
+._discount a {
+  color: #292929;
+}
+._discount :hover {
+  text-decoration: none;
 }
 ._discount ._cards {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   justify-content: center;
+  align-items: center;
 }
 @media (min-width: 992px) {
   ._discount ._cards {
@@ -614,18 +672,36 @@ header .toggle {
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     justify-content: space-between;
+    height: 570px;
+  }
+}
+._discount ._cards .sell-items {
+  display: none;
+}
+@media (min-width: 992px) {
+  ._discount ._cards .sell-items {
+    display: grid;
+    align-items: center;
+    width: 100%;
   }
 }
 ._discount .card {
-  display: none;
+  display: block;
   border: none;
+  border-radius: 0;
   font-family: "Poppins", sans-serif;
   margin: 0 0 20px;
   background-color: #ffffff;
 }
+@media (max-width: 767px) {
+  ._discount .card {
+    margin: 15px 0 0 0;
+  }
+}
 @media (min-width: 992px) {
   ._discount .card {
     display: grid;
+    height: 550px;
   }
 }
 ._discount .card h5 {
@@ -638,18 +714,46 @@ header .toggle {
 ._discount .card .card-title {
   text-align: center;
 }
-._discount .card button {
-  border: none;
-  display: flex;
-  justify-content: space-between;
+._discount .card .gridDisount-item {
+  display: none;
   width: 100%;
   height: 75px;
   align-items: center;
 }
-._discount .card button h4 {
+._discount .card .discount-priceoptions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+._discount .card h5 {
+  display: block;
+}
+._discount .card .card-body {
+  display: block;
+}
+._discount .card .prices {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 80px;
+  width: 100%;
   margin: 0 !important;
+  margin-top: 0;
+}
+._discount .card h4 {
+  display: flex;
+  margin-top: 0;
+}
+._discount .card .card-price {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
 }
 ._discount .card .card-oldprice {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  margin-top: 0 !important;
   text-decoration: line-through;
 }
 ._discount .card-image {
@@ -672,82 +776,72 @@ header .toggle {
 }
 
 .dcard {
-  display: block;
-  grid-column: 1/-1;
+  display: flex;
+  grid-column: 1/1;
   border: none;
   font-family: "Poppins", sans-serif;
   justify-content: center;
   margin: 0 0 20px;
   background-color: #ffffff;
+  width: 100%;
+}
+@media (max-width: 767px) {
+  .dcard {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+@media (min-width: 768px) {
+  .dcard {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
 }
 @media (min-width: 992px) {
   .dcard {
-    display: block;
-    grid-column: 2/2;
-  }
-}
-.dcard .dcard-content {
-  max-height: 300px;
-  height: 100%;
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-@media (min-width: 1200px) {
-  .dcard .dcard-content {
-    max-height: 300px;
+    display: flex;
+    grid-row: 1/-1;
+    margin-top: 100px;
+    align-content: center;
+    width: 100%;
     height: 100%;
   }
 }
-.dcard h5 {
-  margin-top: 40px;
+.dcard .uptosell-content {
+  display: grid;
+  justify-content: start;
+  align-items: center;
+}
+.dcard .uptosell-content h5 {
   color: #FA3150;
   text-align: center;
   font-size: 18px;
   font-weight: 700;
 }
-.dcard h1 {
+.dcard .uptosell-content h1 {
   text-align: center;
   font-size: 48px;
   font-family: "Playfair Display", serif;
 }
-.dcard h3 {
+.dcard .uptosell-content h3 {
   text-align: center;
   font-family: "Poppins", sans-serif;
   font-size: 24px;
   font-weight: 700;
 }
-.dcard .bText {
+.dcard .uptosell-content .bText {
   justify-content: center;
   text-align: center;
-  padding: 0;
-  font-size: 14px;
+  font-size: 12px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
-.dcard .card-body {
+.dcard .uptosell-content .discountlink {
+  margin-top: 20px;
   display: flex;
   justify-content: center;
-  align-items: center;
   width: 100%;
-  font-size: 12px;
-  margin-bottom: 20px;
-}
-@media (min-width: 992px) {
-  .dcard .card-body {
-    margin-top: 40px;
-  }
-}
-.dcard .card-body button {
-  border: none;
-  width: 100%;
-  height: 75px;
-  font-size: 16px;
-}
-.dcard .card-body button:hover {
-  background-color: #ffffff;
-  text-decoration: underline;
-  outline: none;
-  color: #FA3150;
+  text-align: center;
 }
 
 ._topSelling {
@@ -1482,11 +1576,6 @@ header .toggle {
     padding: 5px;
   }
 }
-@media (min-width: 992px) {
-  ._relatedProducts .card-image {
-    padding: 0;
-  }
-}
 ._relatedProducts .card-image img {
   width: 100%;
   height: auto;
@@ -1546,13 +1635,14 @@ header .toggle {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #FAFAFA;
     height: 285px;
+    padding: 20px;
   }
 }
 .small_cards .container .card {
   border: none;
   margin: 0;
-  padding: 20px;
   background-color: #FAFAFA;
 }
 .small_cards .container .card img {
@@ -1560,6 +1650,8 @@ header .toggle {
   height: auto;
   border: none;
   border-radius: 0;
+  filter: grayscale(40%);
+  filter: hue-rotate(20%);
 }
 
 .contact-form {

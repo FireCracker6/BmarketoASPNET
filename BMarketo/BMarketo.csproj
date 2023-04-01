@@ -22,4 +22,10 @@
     <PackageReference Include="Abstractions.Sass.CIBuild" Version="1.1.52" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Update="wwwroot\images\mc-clothing\ducati-mountain.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
 </Project>

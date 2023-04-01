@@ -14,8 +14,23 @@
   background-color: #AEAEAE;
   justify-content: center;
   align-items: center;
-  background-image: url(/images/placeholders/breadcrumb-bg.jpg);
-  background-position: center center;
+}
+.breadcrumb .container #breadcrumb {
+  width: 100%;
+  position: relative;
+  text-align: center;
+  color: #292929;
+}
+.breadcrumb .container #breadcrumb::before {
+  content: "";
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  opacity: 0.8; /* set the opacity of the background image */
 }
 .breadcrumb .container h2 {
   margin-top: 40px;
@@ -25,11 +40,28 @@
   font-size: 24px;
   letter-spacing: 3px;
 }
+@media (max-width: 767px) {
+  .breadcrumb .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+  }
+}
+@media (min-width: 768px) {
+  .breadcrumb .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+  }
+}
 @media (min-width: 992px) {
   .breadcrumb .container {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 200px;
   }
 }
 .breadcrumb ul.breadcrumb {
@@ -42,7 +74,7 @@
 }
 .breadcrumb ul.breadcrumb li + li:before {
   padding: 8px;
-  color: black;
+  color: #000000;
   content: ". ";
 }
 .breadcrumb ul.breadcrumb li a {

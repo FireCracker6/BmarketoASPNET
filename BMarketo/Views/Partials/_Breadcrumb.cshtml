@@ -1,11 +1,15 @@
-﻿<section class="breadcrumb">
-    <div class="container">
-        <div class="breadcrumb">
-            <h2>SHOP</h2>
+﻿@{
+    var breadcrumb = breadcrumbService.GetLatest();
+}
+<section class="breadcrumb">
+    <div class="container breadcrumb" style="background-image: url('@breadcrumb.BreadCrumbImageURL'); position: relative;">
+        <div class="breadcrumb-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(100, 100, 100, 0.6);">
+        </div>
+        <div class="breadcrumb" id="breadcrumb" style="position: relative; z-index: 1;">
+            <h2>@breadcrumb.MainTitle</h2>
             <ul class="breadcrumb">
-                <li><a asp-controller="Home" asp-action="Index">HOME</a></li>
-                <li>PRODUCT DETAILS</a></li>
-
+                <li><a asp-controller="@breadcrumb.HomeLink" asp-action="Index">@breadcrumb.HomeLink</a></li>
+                <li>@breadcrumb.PageTitle</a></li>
             </ul>
         </div>
     </div>

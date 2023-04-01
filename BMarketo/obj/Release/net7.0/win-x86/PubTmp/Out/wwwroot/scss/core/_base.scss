@@ -1,7 +1,12 @@
 @import '../core/_colors.scss';
+
+a:hover {
+    text-decoration: none;
+}
 .position-static {
     position: static;
 }
+
 
 .position-fixed {
     position: fixed;

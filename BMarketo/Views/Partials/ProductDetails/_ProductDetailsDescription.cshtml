@@ -1,4 +1,8 @@
-﻿<section class="product-detail-section">
+﻿@{
+    var productDetail = productDetailService.GetLatest();
+}
+
+<section class="product-detail-section">
     <div class="container">
 
 
@@ -12,11 +16,11 @@
 
             <div class="prod-images-container">
                 <div class="prod-images">
-                    <div class="item-1"> <img src=images/placeholders/starshoes.jpg alt={product.imageURL} /></div>
-                    <div class="item-2"><img src=images/placeholders/120x113.svg alt={product.imageURL} /></div>
-                    <div class="item-3"><img src=images/placeholders/120x113.svg alt={product.imageURL} /></div>
-                    <div class="item-4"><img src=images/placeholders/120x113.svg alt={product.imageURL} /></div>
-                    <div class="item-5"><img src=images/placeholders/120x113.svg alt={product.imageURL} /></div>
+                    <div class="item-1"><img src=@productDetail.MainImage alt=@productDetail.ProductDetailTitle /></div>
+                    <div class="item-2"><img src=@productDetail.UnderImage1 alt="@productDetail.ProductDetailTitle"/></div>
+                    <div class="item-3"><img src=@productDetail.UnderImage2 alt="@productDetail.ProductDetailTitle" /></div>
+                    <div class="item-4"><img src=@productDetail.UnderImage3 alt="@productDetail.ProductDetailTitle" /></div>
+                    <div class="item-5"><img src=@productDetail.UnderImage4 alt="@productDetail.ProductDetailTitle" /></div>
 
                 </div>
             </div>
@@ -26,18 +30,18 @@
 
         <div class="product-detail-description">
     <div class="prod-desc-1">
-        <h2>Young Star Smart Shoe in Fashion</h2>
+        <h2>@productDetail.ProductDetailTitle</h2>
 
-        <p>Lirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.<br /> <br /></p>
+        <p>@productDetail.ProductDescription</p>
         <div class="text-theme">
             <i class="fa-sharp fa-solid fa-star"></i>
             <i class="fa-sharp fa-solid fa-star"></i>
             <i class="fa-sharp fa-solid fa-star"></i>
             <i class="fa-sharp fa-solid fa-star"></i>
             <i class="fa-sharp fa-solid fa-star"></i>
-            <span>16 reviews</span>
+            <span>@productDetail.ProductDetailReviews</span>
         </div>
-        <h3>$30</h3>
+        <h3>$ @productDetail.Price</h3>
 
     </div>
     <div class="prod-desc-2">
@@ -62,10 +66,10 @@
                     <div><i class="fa-solid fa-circle"></i></div>
                     <div><i class="fa-solid fa-circle"></i></div>
                     <div><i class="fa-solid fa-circle"></i></div>
-                    <div class="sku">SKU: N/A</div>
+                    <div class="sku">SKU: @productDetail.SKUNumber</div>
                 </div>
                 <div class="cart-wishlist"> <button class="wish-button">Add To wishlist</button></div>
-                <div class="category">Category: Table Lamp, Light</div>
+                <div class="category">@productDetail.Category</div>
 
 
             </div>

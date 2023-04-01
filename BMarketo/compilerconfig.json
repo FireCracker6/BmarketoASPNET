@@ -38,5 +38,9 @@
   {
     "outputFile": "wwwroot/scss/components/_subscribe.css",
     "inputFile": "wwwroot/scss/components/_subscribe.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/components/_productDetails.css",
+    "inputFile": "wwwroot/scss/components/_productDetails.scss"
   }
 ]
