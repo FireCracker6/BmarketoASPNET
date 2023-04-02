@@ -9,6 +9,8 @@ builder.Services.AddScoped<ShowcaseService>();
 builder.Services.AddScoped<HeaderService>();
 builder.Services.AddScoped<ProductDetailService>();
 builder.Services.AddScoped<ProductDetailInfoService>();
+builder.Services.AddScoped<ContactFormService>();
+builder.Services.AddScoped<GoogleMapsService>();
 
 var app = builder.Build();
 app.UseHsts();

@@ -42,5 +42,13 @@
   {
     "outputFile": "wwwroot/scss/components/_productDetails.css",
     "inputFile": "wwwroot/scss/components/_productDetails.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/components/_contactForm.css",
+    "inputFile": "wwwroot/scss/components/_contactForm.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/components/_forms.css",
+    "inputFile": "wwwroot/scss/components/_forms.scss"
   }
 ]

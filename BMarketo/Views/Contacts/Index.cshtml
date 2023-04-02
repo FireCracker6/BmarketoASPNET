@@ -1,18 +1,4 @@
 ﻿
-<!-- start breadcrumb -->
-<section class="breadcrumb">
-    <div class="container">
-        <div class="breadcrumb">
-            <h2>SHOP</h2>
-            <ul class="breadcrumb">
-                <li><a asp-controller="Home" asp-action="Index">HOME</a></li>
-                <li>CONTACTS</li>
-
-            </ul>
-        </div>
-    </div>
-</section>
-
-<!-- end breadcrumb -->
+<partial name="/Views/Partials/_Breadcrumb.cshtml" />
 <partial name="/Views/Partials/Forms/_Contactform.cshtml" />
 <partial name="/Views/Partials/_GoogleMaps.cshtml" />

@@ -1,25 +1,8 @@
 ﻿@model ProductDetailsIndexViewModel
-<!-- start breadcrumb -->
+
 <partial name="/Views/Partials/_Breadcrumb.cshtml" />
-<!-- end breadcrumb -->
-<!-- product details info -->
-
-
-
-
-    <partial name="/Views/Partials/ProductDetails/_ProductDetailsDescription.cshtml" />
-
-
-
-
+<partial name="/Views/Partials/ProductDetails/_ProductDetailsDescription.cshtml" />
 <partial name="/Views/Partials/ProductDetails/_ProductDetailsInfo.cshtml" />
-<!-- end product details info -->
-<!-- related products -->
-
 <partial name="/Views/Partials/ProductDetails/_RelatedProducts.cshtml" model="@Model.RelatedProducts" />
-
-
-<!-- end related products -->
-<!-- small card section -->
 <partial name="/Views/Partials/ProductDetails/_SmallCards.cshtml" model="@Model.SmallCards" />
-<!-- end small card section -->
+

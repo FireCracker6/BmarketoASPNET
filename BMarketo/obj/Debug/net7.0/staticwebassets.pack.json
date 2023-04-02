@@ -105,6 +105,10 @@
       "PackagePath": "staticwebassets\\images\\placeholders\\starshoes.jpg"
     },
     {
+      "Id": "C:\\Users\\Svart\\Source\\Repos\\Webbutveckling\\ViewsAndPartialViews\\BMarketo\\wwwroot\\js\\contact-form.js",
+      "PackagePath": "staticwebassets\\js\\contact-form.js"
+    },
+    {
       "Id": "C:\\Users\\Svart\\Source\\Repos\\Webbutveckling\\ViewsAndPartialViews\\BMarketo\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
@@ -125,6 +129,14 @@
       "PackagePath": "staticwebassets\\scss\\components\\_buttons.scss"
     },
     {
+      "Id": "C:\\Users\\Svart\\Source\\Repos\\Webbutveckling\\ViewsAndPartialViews\\BMarketo\\wwwroot\\scss\\components\\_contactForm.css",
+      "PackagePath": "staticwebassets\\scss\\components\\_contactForm.css"
+    },
+    {
+      "Id": "C:\\Users\\Svart\\Source\\Repos\\Webbutveckling\\ViewsAndPartialViews\\BMarketo\\wwwroot\\scss\\components\\_contactForm.min.css",
+      "PackagePath": "staticwebassets\\scss\\components\\_contactForm.min.css"
+    },
+    {
       "Id": "C:\\Users\\Svart\\Source\\Repos\\Webbutveckling\\ViewsAndPartialViews\\BMarketo\\wwwroot\\scss\\components\\_contactForm.scss",
       "PackagePath": "staticwebassets\\scss\\components\\_contactForm.scss"
     },
@@ -139,6 +151,14 @@
     {
       "Id": "C:\\Users\\Svart\\Source\\Repos\\Webbutveckling\\ViewsAndPartialViews\\BMarketo\\wwwroot\\scss\\components\\_discount.scss",
       "PackagePath": "staticwebassets\\scss\\components\\_discount.scss"
+    },
+    {
+      "Id": "C:\\Users\\Svart\\Source\\Repos\\Webbutveckling\\ViewsAndPartialViews\\BMarketo\\wwwroot\\scss\\components\\_forms.css",
+      "PackagePath": "staticwebassets\\scss\\components\\_forms.css"
+    },
+    {
+      "Id": "C:\\Users\\Svart\\Source\\Repos\\Webbutveckling\\ViewsAndPartialViews\\BMarketo\\wwwroot\\scss\\components\\_forms.min.css",
+      "PackagePath": "staticwebassets\\scss\\components\\_forms.min.css"
     },
     {
       "Id": "C:\\Users\\Svart\\Source\\Repos\\Webbutveckling\\ViewsAndPartialViews\\BMarketo\\wwwroot\\scss\\components\\_forms.scss",
