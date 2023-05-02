@@ -1,0 +1,102 @@
+﻿
+@model UserRegisterViewModel
+
+
+@{
+	ViewData["Title"] = "Create a new Account";
+}
+
+
+<section class="register-form">
+    <div class="container">
+        <div class="title">@ViewData["Title"]</div>
+
+        <form method="post" enctype="multipart/form-data" novalidate>
+
+            <div asp-validation-summary="ModelOnly" class="form-group error"></div>
+
+
+            <div class="firstname form-group">
+                <label asp-for="FirstName"></label>
+                <input asp-for="FirstName" />
+                <small><span asp-validation-for="FirstName" class="error"></span></small>
+            </div>
+
+            <div class="lastname form-group">
+                <label asp-for="LastName"></label>
+                <input asp-for="LastName" />
+                <small><span asp-validation-for="LastName" class="error"></span></small>
+            </div>
+
+            <div class="streetname form-group">
+                <label asp-for="StreetName"></label>
+                <input asp-for="StreetName" />
+                <small><span asp-validation-for="StreetName" class="error"></span></small>
+            </div>
+
+
+            <div class="postalcode form-group">
+                <label asp-for="PostalCode"></label>
+                <input asp-for="PostalCode" />
+                <small><span asp-validation-for="Email" class="error"></span></small>
+            </div>
+
+
+            <div class="city form-group">
+                <label asp-for="City"></label>
+                <input asp-for="City" />
+                <small><span asp-validation-for="City" class="error"></span></small>
+            </div>
+
+
+            <div class="mobile form-group">
+                <label asp-for="Mobile"></label>
+                <input asp-for="Mobile" />
+                <small><span asp-validation-for="Mobile" class="error"></span></small>
+            </div>
+
+            <div class="company form-group">
+                <label asp-for="Company"></label>
+                <input asp-for="Company" />
+                <small><span asp-validation-for="Company" class="error"></span></small>
+            </div>
+
+            <div class="email form-group">
+                <label asp-for="Email"></label>
+                <input asp-for="Email" />
+                <small><span asp-validation-for="Email" class="error"></span></small>
+            </div>
+
+            <div class="password form-group">
+                <label asp-for="Password">Password*</label>
+                <input asp-for="Password" />
+                <small><span asp-validation-for="Password" class="error"></span></small>
+            </div>
+
+
+            <div class="confirmPassword form-group">
+                <label asp-for="ConfirmPassword">Password*</label>
+                <input asp-for="ConfirmPassword" />
+                <small><span asp-validation-for="ConfirmPassword" class="error"></span></small>
+            </div>
+
+            <div class="userImage form-group">
+                <label asp-for="ImageFile"></label>
+                <input asp-for="ImageFile" />
+                <small><span asp-validation-for="ImageFile" class="error"></span></small>
+            </div>
+
+            <div class="terms form-checkbox-group">
+                <label class="custom-checkbox">
+                    <label asp-for="TermsAndConditions"></label>
+                    <input asp-for="TermsAndConditions">
+                    <span class="checkmark"></span>
+                </label>
+                <span asp-validation-for="TermsAndConditions" class="error"></span>
+            </div>
+
+            <button class="btn-theme" type="submit">Register</button>
+
+        </form>
+    </div>
+</section>

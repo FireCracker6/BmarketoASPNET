@@ -1,3 +1,7 @@
+@import '../core/_colors.scss';
+@import '../core/_mixins.scss';
+@import '../core/_fonts.scss';
+
 textarea,
 input,
 input:not([type="checkbox"]) {
@@ -22,7 +26,7 @@ input:not([type="checkbox"]) {
     position: relative;
     padding-left: 35px;
     cursor: pointer;
-  //  user-select: none;
+   user-select: none;
 
     input {
         position: absolute;

@@ -1,42 +1,53 @@
 ﻿@model GridCollectionViewModel
+@using System.Linq
 
-@if (Model != null) {
+@if (Model != null)
+{
     <section class="_collection">
         <div class="container">
             @if (!string.IsNullOrEmpty(Model.Title))
             {
                 <div class="_header">@Model.Title</div>
             }
-          
+
         </div>
-        <div class="container">
-            @if (Model.Categories != null)
+      
+            @if (Model.ShowCategoryFilter)
             {
-                <ul class="categories">
-                    @foreach (var category in Model.Categories)
-                    {
-                        <li class="category-item">@category</li>
-                    }
-                </ul>
+            <div class="container d-flex p-4">
+                <form asp-action="Index" method="get">
+                    <div class="container d-flex justify-content-center ">
+                        <div class="d-flex flex-row align-items-center">
+                            <div class="p-2"> <label asp-for="SelectedCategoryId">Filter by Category:</label></div>
+                            <div class="mr-auto p-2">  <select asp-for="SelectedCategoryId" asp-items="@Model.CategoriesSelected" class="form-control"></select></div>
+                            <div class="pl-2"> <button type="submit" class="btn btn-dark">Filter</button></div>
+                        </div>
+                    </div>
+                  
+                   
+
+                </form>
+            </div>
             }
+      
+            
 
-
-        </div>
         <div class="container">
             @if (Model.GridItems != null)
             {
                 <div class="_cards">
-                   
-                        @foreach (var item in Model.GridItems)
-                        {
-                         <partial name="/Views/Partials/_GridCollectionItem.cshtml" model="item"/>
-                        }
-               
-
+                    @{
+                        int totalItems = Model.GridItems.Count();
+                    }
+                    @foreach (var itemWithIndex in Model.GridItems.Select((item, index) => new { Item = item, Index = index }))
+                    {
+                        var item = itemWithIndex.Item;
+                        var itemIndex = itemWithIndex.Index;
+                        var viewData = new ViewDataDictionary(ViewData) { { "ItemIndex", itemIndex }, { "TotalItems", totalItems } };
+                        <partial name="/Views/Partials/_GridCollectionItem.cshtml" model="item" view-data="viewData" />
+                    }
                 </div>
             }
-
-
         </div>
         @if (Model.LoadMore)
         {
@@ -44,6 +55,5 @@
                 <button class="btn-white">LOAD MORE <i class="fa-regular fa-arrow-rotate-right"></i></button>
             </div>
         }
-
     </section>
 }

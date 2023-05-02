@@ -6,6 +6,7 @@
 	ViewData["Title"] = Model.Title;
 }
 
+
 <partial name="/Views/Partials/_ShowCase.cshtml" />
 <partial name="/Views/Partials/_GridCollection.cshtml" model="@Model.BestCollection" />
 <partial name="/Views/Partials/_DiscountCollection.cshtml" model="@Model.DiscountCards" />
@@ -13,18 +14,3 @@
 <partial name="/Views/Partials/_SubscribeForm.cshtml" model="@Model.SubcribeNewsLetter" />
 
 
-
-<!-- showcase end -->
-<!-- start best collection -->
-@*<partial name="/Views/Partials/_BestCollection.cshtml" />*@
-
-<!-- end best collection -->
-<!-- start discount section -->
-@*<partial name="/Views/Partials/_Discount.cshtml" />*@
-<!-- end discount section -->
-<!-- start topselling -->
-@*<partial name="/Views/Partials/_TopSelling.cshtml" />*@
-<!-- end topselling -->
-<!-- subribe section -->
-@*<partial name="/Views/Partials/Forms/_NewsLetter.cshtml" />*@
-<!-- end subscribe section -->

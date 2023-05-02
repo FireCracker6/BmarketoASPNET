@@ -1,0 +1,91 @@
+﻿
+@model ProductFormViewModel
+
+
+<div class="container mb-5 d-grid justify-content-space-between">
+    <form method="post" enctype="multipart/form-data">
+        <h1>@ProductService.GetLatest().Title</h1>
+        <div asp-validation-summary="All" class="text-danger"></div>
+
+        <div class="form-group">
+            <label for="title">@ProductService.GetLatest().NameLabel</label>
+            <input type="text" class="form-control" id="title" name="title" required>
+            <span asp-validation-for="Title" class="text-danger"></span>
+        </div>
+        <div class="form-group mb-2">
+            <label asp-for="SelectedCategoryId" class="control-label"></label>
+            <select asp-for="SelectedCategoryId" asp-items="@Model.CategoryOptions" class="form-control"></select>
+            <span asp-validation-for="SelectedCategoryId" class="text-danger"></span>
+        </div>
+       
+      
+         <div class="form-group mb-3">
+            <label for="title">@ProductService.GetLatest().TagsLabel</label>
+            @Html.DropDownListFor(m => m.SelectedTagIds, new MultiSelectList(Model.TagsItems, "Id", "TagName"), new { @class = "form-control" })
+            </div>
+
+
+
+        <div class="form-group mb-2">
+            <label for="description">@ProductService.GetLatest().DescriptionLabel</label>
+            <textarea class="form-control" id="description" name="description" required></textarea>
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label for="price">@ProductService.GetLatest().PriceLabel</label>
+            <input type="number" class="form-control" id="price" name="price" required>
+            <span asp-validation-for="Price" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label for="oldPrice">@ProductService.GetLatest().OldPriceLabel</label>
+            <input type="number" class="form-control" id="oldPrice" name="oldPrice">
+        </div>
+        <div class="form-group">
+            <label for="image">@ProductService.GetLatest().ImageLabel</label>
+            <input type="file" class="form-control-file" id="image" name="ImageFile">
+
+            <span asp-validation-for="ImageFile" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="ProductImages">Product Images</label>
+            <input asp-for="ProductImages" type="file" multiple class="form-control-file" />
+        </div>
+        <div class="form-group">
+            <label for="DescriptionText">Description(optional)</label>
+            <textarea class="form-control" id="DescriptionText" name="DescriptionText" rows="3"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="AdditionalDescriptionImage">Additional Description Image(optional)</label>
+            <input type="file" class="form-control-file" id="AdditionalDescriptionImage" name="AdditionalDescriptionImage">
+        </div>
+
+        <div class="form-group">
+            <label for="AdditionalInfoText">Additional Info(optional)</label>
+            <textarea class="form-control" id="AdditionalInfoText" name="AdditionalInfoText" rows="3"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="AdditionalInfoImage">Additional Info Image(optional)</label>
+            <input type="file" class="form-control-file" id="AdditionalInfoImage" name="AdditionalInfoImage">
+        </div>
+        <div class="form-group">
+            <label for="Reviews">Reviews(optional)</label>
+            <textarea class="form-control" id="ReviewsText" name="ReviewsText" rows="3"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="ReviewsImage">Reviews Image(optional)</label>
+            <input type="file" class="form-control-file" id="ReviewsImage" name="ReviewsImage">
+        </div>
+        <div class="form-group">
+            <label for="ShoppingAndDelivery">Shopping And Delivery (optional)</label>
+            <textarea class="form-control" id="ShoppingDeliveryText" name="ShoppingDeliveryText" rows="3"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="ShoppingDeliveryImage">Shopping and Delivery Image(optional)</label>
+            <input type="file" class="form-control-file" id="ShoppingDeliveryImage" name="ShoppingDeliveryImage">
+
+        </div>
+        <div class="d-grid my-4">
+        <button type="submit" class="btn btn-primary">@ProductService.GetLatest().SubmitButton</button>
+        </div>
+    </form>
+</div>

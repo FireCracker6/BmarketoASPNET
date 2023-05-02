@@ -1,0 +1,41 @@
+﻿@model UserLoginViewModel
+
+
+@{
+	ViewData["Title"] = "Please Login to Your Account";
+}
+
+
+<section class="login-form">
+    <div class="container">
+        <div class="title">@ViewData["Title"]</div>
+
+        <form method="post" novalidate asp-route-ReturnUrl = "@Model.ReturnUrl">
+
+            <div asp-validation-summary="ModelOnly" class="form-group error"></div>
+            <div class="email form-group">
+                <label asp-for="Email">E-Mail*
+                    <a asp-action="index" asp-controller="Register">Don't have an Account yet?</a>
+                </label>
+                <input asp-for="Email" />
+                <small><span asp-validation-for="Email" class="error"></span></small>
+            </div>
+            <div class="password form-group">
+                <label asp-for="Password">Password*</label>
+                <input asp-for="Password" />
+                <small><span asp-validation-for="Password" class="error"></span></small>
+            </div>
+          
+            <div class="rememberme form-checkbox-group">
+                <label  class="custom-checkbox">
+                    <label asp-for="RememberMe"></label>
+                    <input asp-for="RememberMe">
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+          
+            <button class="btn-theme" type="submit">Submit</button>
+         
+        </form>
+    </div>
+</section>

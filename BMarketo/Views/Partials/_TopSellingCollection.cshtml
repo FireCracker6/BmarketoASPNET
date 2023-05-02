@@ -5,7 +5,7 @@
     <div class="_header">
         @Model.Title
     </div>
-
+   
     <div class="content container">
         @if (Model.GridItems != null)
         {
@@ -28,24 +28,18 @@
 
         </div>
     }
-   
-  @*  discount*@
+
     <div class="container">
-    <div class="_bDiscount">
-        @if (Model.GridDiscountItems != null)
-        {
-
-
-            @foreach (var item in Model.GridDiscountItems)
+        <div class="_bDiscount">
+            @if (Model.GridDiscountItems != null)
             {
-                <partial name="/Views/Partials/_GridDiscountItem.cshtml" model="item" />
+                @foreach (var item in Model.GridDiscountItems.Take(3))
+                {
+                    <partial name="/Views/Partials/_GridDiscountItem.cshtml" model="item" />
+                }
             }
-
-
-
-        }
-
+        </div>
     </div>
-    </div>
+
        
 </section>

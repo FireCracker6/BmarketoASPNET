@@ -1,8 +1,10 @@
-﻿namespace BMarketo.Models
+﻿using BMarketo.Models.Entities.Products;
+
+namespace BMarketo.Models
 {
     public class ProductDetailModel
     {
-
+        public List<ProductImagesEntity> Images { get; set; } = new List<ProductImagesEntity>();
         public string MainImage { get; set; } = "";
         public string UnderImage1 { get; set; } = "";
         public string UnderImage2 { get; set; } = "";

@@ -1,0 +1,73 @@
+﻿@{
+    var signUpInfo = signUpFormService.GetLatest();
+}
+
+
+<section class="contact-form">
+    <div class="container">
+        <div class="title">@signUpInfo.Title</div>
+
+        <form novalidate>
+            <div class="name form-group">
+                <label for="name">@signUpInfo.FirstNameLabel</label>
+                <input id="name" type="text" class="invalid" required>
+                <span class="error">@signUpInfo.FirstNameError</span>
+            </div>
+
+            <div class="name form-group">
+                <label for="name">@signUpInfo.LastNameLabel</label>
+                <input id="name" type="text" class="invalid" required>
+                <span class="error">@signUpInfo.LastNameError</span>
+            </div>
+
+            <div class="name form-group">
+                <label for="name">@signUpInfo.StreetNameLabel</label>
+                <input id="name" type="text" class="invalid" required>
+                <span class="error">@signUpInfo.StreetNameError</span>
+            </div>
+
+
+            <div class="name form-group">
+                <label for="name">@signUpInfo.PostalCodeLabel</label>
+                <input id="name" type="text" class="invalid" required>
+                <span class="error">@signUpInfo.PostalCodeError</span>
+            </div>
+
+
+            <div class="name form-group">
+                <label for="name">@signUpInfo.CityLabel</label>
+                <input id="name" type="text" class="invalid" required>
+                <span class="error">@signUpInfo.CityError</span>
+            </div>
+
+            <div class="name form-group">
+                <label for="name">@signUpInfo.PhoneLabel</label>
+                <input id="name" type="text" class="invalid">
+              
+            </div>
+
+            <div class="email form-group">
+                <label for="email">@signUpInfo.EmailLabel</label>
+                <input id="email" type="email" class="invalid" required>
+                <span class="error">@signUpInfo.EmailError</span>
+            </div>
+            <div class="phoneNumber form-group">
+                <label for="phone">Phone Number (optional)</label>
+                <input id="phone" type="text">
+            </div>
+            <div class="companyName form-group">
+                <label for="company">@signUpInfo.CompanyNameLabel</label>
+                <input id="company" type="text">
+            </div>
+          
+            <div class="terms form-checkbox-group">
+                <label class="custom-checkbox">
+                    @signUpInfo.AgreementLabel
+                    <input type="checkbox" checked="checked">
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+            <button class="btn-theme" type="submit">@signUpInfo.SubmitButton</button>
+        </form>
+    </div>
+</section>

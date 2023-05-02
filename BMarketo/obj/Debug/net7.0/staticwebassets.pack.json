@@ -25,6 +25,10 @@
       "PackagePath": "staticwebassets\\images\\mc-clothing\\OIP.jfif"
     },
     {
+      "Id": "C:\\Users\\Svart\\Source\\Repos\\Webbutveckling\\ViewsAndPartialViews\\BMarketo\\wwwroot\\images\\mc-clothing\\ShoesArrowsLadies.webp",
+      "PackagePath": "staticwebassets\\images\\mc-clothing\\ShoesArrowsLadies.webp"
+    },
+    {
       "Id": "C:\\Users\\Svart\\Source\\Repos\\Webbutveckling\\ViewsAndPartialViews\\BMarketo\\wwwroot\\images\\mc-clothing\\WomanSuite.webp",
       "PackagePath": "staticwebassets\\images\\mc-clothing\\WomanSuite.webp"
     },
@@ -189,6 +193,18 @@
       "PackagePath": "staticwebassets\\scss\\components\\_header.scss"
     },
     {
+      "Id": "C:\\Users\\Svart\\Source\\Repos\\Webbutveckling\\ViewsAndPartialViews\\BMarketo\\wwwroot\\scss\\components\\_loginform.css",
+      "PackagePath": "staticwebassets\\scss\\components\\_loginform.css"
+    },
+    {
+      "Id": "C:\\Users\\Svart\\Source\\Repos\\Webbutveckling\\ViewsAndPartialViews\\BMarketo\\wwwroot\\scss\\components\\_loginform.min.css",
+      "PackagePath": "staticwebassets\\scss\\components\\_loginform.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Svart\\Source\\Repos\\Webbutveckling\\ViewsAndPartialViews\\BMarketo\\wwwroot\\scss\\components\\_loginform.scss",
+      "PackagePath": "staticwebassets\\scss\\components\\_loginform.scss"
+    },
+    {
       "Id": "C:\\Users\\Svart\\Source\\Repos\\Webbutveckling\\ViewsAndPartialViews\\BMarketo\\wwwroot\\scss\\components\\_map.scss",
       "PackagePath": "staticwebassets\\scss\\components\\_map.scss"
     },
@@ -203,6 +219,18 @@
     {
       "Id": "C:\\Users\\Svart\\Source\\Repos\\Webbutveckling\\ViewsAndPartialViews\\BMarketo\\wwwroot\\scss\\components\\_productDetails.scss",
       "PackagePath": "staticwebassets\\scss\\components\\_productDetails.scss"
+    },
+    {
+      "Id": "C:\\Users\\Svart\\Source\\Repos\\Webbutveckling\\ViewsAndPartialViews\\BMarketo\\wwwroot\\scss\\components\\_registerForm.css",
+      "PackagePath": "staticwebassets\\scss\\components\\_registerForm.css"
+    },
+    {
+      "Id": "C:\\Users\\Svart\\Source\\Repos\\Webbutveckling\\ViewsAndPartialViews\\BMarketo\\wwwroot\\scss\\components\\_registerForm.min.css",
+      "PackagePath": "staticwebassets\\scss\\components\\_registerForm.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Svart\\Source\\Repos\\Webbutveckling\\ViewsAndPartialViews\\BMarketo\\wwwroot\\scss\\components\\_registerForm.scss",
+      "PackagePath": "staticwebassets\\scss\\components\\_registerForm.scss"
     },
     {
       "Id": "C:\\Users\\Svart\\Source\\Repos\\Webbutveckling\\ViewsAndPartialViews\\BMarketo\\wwwroot\\scss\\components\\_showcase.css",

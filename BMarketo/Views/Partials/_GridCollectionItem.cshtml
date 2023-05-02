@@ -1,9 +1,22 @@
 ﻿@model GridCollectionItemViewModel
+<a href="@Url.Action("ProductDetails", "Products", new { Id = Model.Id })" class="gridcollection-item">
 
-<a asp-controller="products" asp-action="details" asp-route-id="@Model.Id" class="gridcollection-item">
-<div class="card">
+
+
+
+
+
+
+
+    <div class="card">
     <div class="card-image">
-        <img src="@Model.ImageUrl" alt="@Model.Title">
+            @if (Model.Image != null)
+            {
+                <img src="data:@Model.MimeType;base64,@Convert.ToBase64String(Model.Image)" alt="@Model.Title" />
+            }
+
+
+      
         <div class="shopping-cart-icon">
             <i class="fa-regular fa-cart-plus"></i>
         </div>

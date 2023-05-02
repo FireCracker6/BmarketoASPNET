@@ -50,5 +50,13 @@
   {
     "outputFile": "wwwroot/scss/components/_forms.css",
     "inputFile": "wwwroot/scss/components/_forms.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/components/_loginform.css",
+    "inputFile": "wwwroot/scss/components/_loginform.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/components/_registerForm.css",
+    "inputFile": "wwwroot/scss/components/_registerForm.scss"
   }
 ]

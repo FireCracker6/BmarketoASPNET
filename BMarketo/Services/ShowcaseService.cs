@@ -15,7 +15,7 @@ public class ShowcaseService
             Button = new LinkButtonModel()
             {
                 Content = "SHOP NOW",
-                Url = "/ProductDetails"
+                Url = "/Products"
             }
 
         },
@@ -27,7 +27,7 @@ public class ShowcaseService
             Button = new LinkButtonModel()
             {
                 Content = "SHOP NOW",
-                Url = "/ProductDetails"
+                Url = "/Products"
             }
 
         }

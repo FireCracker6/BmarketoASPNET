@@ -6,9 +6,9 @@
 <header>
     <div class="container g-0 ">
        @* <div class="logo"> <img class="logo" src="https://saxeit.se/images/logo.svg" alt="logo"></div>*@
-
+       <a class="link" asp-controller="Home" asp-action="Index">
         <div class="logo g-0"> <img class="logo" src="@headermenu.Logo" alt="logo"></div>
-
+        </a>
         <nav id="menu" class="menu-links">
             <a class="link" asp-controller="Home" asp-action="Index">@headermenu.HomeLink</a>
             <a class="link" asp-controller="Products" asp-action="Index">@headermenu.ProductsLink</a>
@@ -16,8 +16,23 @@
         </nav>
         <nav class="menu-icons">
             <a class="link" asp-controller="Products" asp-action="Search"><i class="fa-regular fa-search"></i></a>
-            <a class="link" asp-controller="Account" asp-action="Login">@headermenu.LoginLink</a>
-            <a class="link" asp-controller="Cart" asp-action="Index"><i class="fa-solid fa-cart-shopping"></i></a>
+
+            @if (signInManager.IsSignedIn(User))
+            {
+                <a class="link me-4" asp-controller="Cart" asp-action="Index"><i class="fa-solid fa-cart-shopping"></i></a>
+                <a class="link" asp-controller="Account" asp-action="Index">@User.Identity?.Name</a>
+              
+                <a class="link" asp-controller="Logout" asp-action="Index">LogOut</a>
+            }
+            else
+            {
+                <a class="link" asp-controller="Login" asp-action="Index">@headermenu.LoginLink</a>
+                <a class="link" asp-controller="Cart" asp-action="Index"><i class="fa-solid fa-cart-shopping"></i></a>
+            }
+           
+
+
+           
         </nav>
 
         <div class="toggle">

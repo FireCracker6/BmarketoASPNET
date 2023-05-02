@@ -1,47 +1,56 @@
 ﻿@model GridCollectionItemViewModel
 
-<a asp-controller="products" asp-action="details" asp-route-id="@Model.Id" class="gridDisount-item">
+@{
+    int itemIndex = ViewData.ContainsKey("ItemIndex") ? (int)ViewData["ItemIndex"] : 0;
+    int totalItems = ViewData.ContainsKey("TotalItems") ? (int)ViewData["TotalItems"] : 0;
+    bool isMiddleItem = itemIndex == totalItems / 2;
+}
+
+<a href="@Url.Action("ProductDetails", "Products", new { Id = Model.Id })" class="gridcollection-item">
     <div class="card">
         <div class="sell-items">
-    <div class="card-image">
-        <img src="@Model.ImageUrl" alt="@Model.Title">
-        <div class="shopping-cart-icon">
-         
-        </div>
-    </div>
-
-    <div class="card-body">
-     
-            <h5 class="card-title">@Model.Title</h5>
-         <div class="discount-priceoptions">
-
-             @if (Model.Price != 0) {
-             <div class="prices">
-             <h4 class="card-oldprice">$@Model.OldPrice</h4>
-            <h4 class="card-price">$@Model.Price</h4>
-                </div>
-            <i class="fa-regular fa-cart-plus"></i>
+            <div class="card-image">
+                @if (Model.Image != null)
+                {
+                    <img src="data:@Model.MimeType;base64,@Convert.ToBase64String(Model.Image)" alt="@Model.Title" />
                 }
-            </div>
-       
-        </div>
-        </div>
-        @if (Model.HeaderTitle != "" )
-        {
-            <div class="dcard">
-                <div class="uptosell-content">
-                    <h5>@Model.HeaderTitle</h5>
-                    <h1>@Model.HeaderText</h1>
-                    <h3>@Model.HeaderSlogan</h3>
-                    <div class="bText">@Model.DiscountDescription</div>
-                        <div class="discountlink">@Model.DiscountLink</div>
+                <div class="shopping-cart-icon">
                 </div>
-
             </div>
-        }
-      
-    </div>
 
+            <div class="card-body">
+                <h5 class="card-title">@Model.Title</h5>
+                <div class="discount-priceoptions">
+                    @if (Model.Price != 0)
+                    {
+                        <div class="prices">
+                            <h4 class="card-oldprice">$@Model.OldPrice</h4>
+                            <h4 class="card-price">$@Model.Price</h4>
+                        </div>
+                        <i class="fa-regular fa-cart-plus"></i>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
 </a>
 
+@if (isMiddleItem)
+{
 
+ 
+        <div class="dcard">
+            <div class="uptosell-content">
+                <h5>UP TO SELL</h5>
+                <h1>50% OFF</h1>
+                <h3>Get The Best Price</h3>
+                <div class="bText">Get the best daily offer et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren no sea taki</div>
+                <div class="button-body">
+                    <button>Discover More</button>
+                </div>
+            </div>
+
+       
+    </div>
+   
+}

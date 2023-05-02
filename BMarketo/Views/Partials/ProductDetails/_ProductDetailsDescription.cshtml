@@ -1,82 +1,81 @@
-﻿@{
-    var productDetail = productDetailService.GetLatest();
-}
+﻿@model ProductDetailViewModel
 
 <section class="product-detail-section">
     <div class="container">
 
-
-
-
-
-
         <div class="grid-container">
-
-
-
             <div class="prod-images-container">
                 <div class="prod-images">
-                    <div class="item-1"><img src=@productDetail.MainImage alt=@productDetail.ProductDetailTitle /></div>
-                    <div class="item-2"><img src=@productDetail.UnderImage1 alt="@productDetail.ProductDetailTitle"/></div>
-                    <div class="item-3"><img src=@productDetail.UnderImage2 alt="@productDetail.ProductDetailTitle" /></div>
-                    <div class="item-4"><img src=@productDetail.UnderImage3 alt="@productDetail.ProductDetailTitle" /></div>
-                    <div class="item-5"><img src=@productDetail.UnderImage4 alt="@productDetail.ProductDetailTitle" /></div>
-
+                    @if (Model.MainImage != null)
+                    {
+                        <div class="item-1"><img src="data:image;base64,@Convert.ToBase64String(Model.MainImage)" alt="@Model.ProductDetailTitle" /></div>
+                    }
+                    @if (Model.UnderImage1 != null)
+                    {
+                        <div class="item-2"><img src="data:image;base64,@Convert.ToBase64String(Model.UnderImage1)" alt="@Model.ProductDetailTitle" /></div>
+                    }
+                    @if (Model.UnderImage2 != null)
+                    {
+                        <div class="item-3"><img src="data:image;base64,@Convert.ToBase64String(Model.UnderImage2)" alt="@Model.ProductDetailTitle" /></div>
+                    }
+                    @if (Model.UnderImage3 != null)
+                    {
+                        <div class="item-4"><img src="data:image;base64,@Convert.ToBase64String(Model.UnderImage3)" alt="@Model.ProductDetailTitle" /></div>
+                    }
+                    @if (Model.UnderImage4 != null)
+                    {
+                        <div class="item-5"><img src="data:image;base64,@Convert.ToBase64String(Model.UnderImage4)" alt="@Model.ProductDetailTitle" /></div>
+                    }
                 </div>
             </div>
-
-
+        
         </div>
-
         <div class="product-detail-description">
-    <div class="prod-desc-1">
-        <h2>@productDetail.ProductDetailTitle</h2>
+            <div class="prod-desc-1">
+                <h2>@Model.ProductDetailTitle</h2>
 
-        <p>@productDetail.ProductDescription</p>
-        <div class="text-theme">
-            <i class="fa-sharp fa-solid fa-star"></i>
-            <i class="fa-sharp fa-solid fa-star"></i>
-            <i class="fa-sharp fa-solid fa-star"></i>
-            <i class="fa-sharp fa-solid fa-star"></i>
-            <i class="fa-sharp fa-solid fa-star"></i>
-            <span>@productDetail.ProductDetailReviews</span>
-        </div>
-        <h3>$ @productDetail.Price</h3>
-
-    </div>
-    <div class="prod-desc-2">
-
-        <div class="item-3">
-            <div class='quantity-group'>
-                <button class='qbtn' title='decrement' onClick={decrementCount}><i class="fa-regular fa-minus"></i></button>
-                <input type="text" class='q-text' data-testid="count" placeholder="2" disabled />
-                <button class='qbtn' title='increment' onClick={incrementCount}><i class="fa-regular fa-plus"></i></button>
-
-            </div>
-            <div class="cart-red-buttons ">
-                <button class="post-button">Add To Cart&nbsp;&nbsp; <i class="fa-regular fa-cart-plus"></i></button>
-            </div>
-
-        </div>
-
-        <div class="item-4">
-            <div class="share">
-
-                <div class="color">
-                    <div><i class="fa-solid fa-circle"></i></div>
-                    <div><i class="fa-solid fa-circle"></i></div>
-                    <div><i class="fa-solid fa-circle"></i></div>
-                    <div class="sku">SKU: @productDetail.SKUNumber</div>
+                <p>@Model.Description</p>
+                <div class="text-theme">
+                    <i class="fa-sharp fa-solid fa-star"></i>
+                    <i class="fa-sharp fa-solid fa-star"></i>
+                    <i class="fa-sharp fa-solid fa-star"></i>
+                    <i class="fa-sharp fa-solid fa-star"></i>
+                    <i class="fa-sharp fa-solid fa-star"></i>
+                    @*<span>@Model.ProductDetailReviews</span>*@
                 </div>
-                <div class="cart-wishlist"> <button class="wish-button">Add To wishlist</button></div>
-                <div class="category">@productDetail.Category</div>
+                <h3>$ @Model.Price</h3>
+
+            </div>
+            <div class="prod-desc-2">
+                <div class="item-3">
+                    <div class='quantity-group'>
+                        <button class='qbtn' title='decrement' onClick={decrementCount}><i class="fa-regular fa-minus"></i></button>
+                        <input type="text" class='q-text' data-testid="count" placeholder="2" disabled />
+                        <button class='qbtn' title='increment' onClick={incrementCount}><i class="fa-regular fa-plus"></i></button>
+                    </div>
+                    <div class="cart-red-buttons ">
+                        <button class="post-button">Add To Cart&nbsp;&nbsp; <i class="fa-regular fa-cart-plus"></i></button>
+                    </div>
+                </div>
+
+                <div class="item-4">
+                    <div class="share">
+                        <div class="color">
+                            <div><i class="fa-solid fa-circle"></i></div>
+                            <div><i class="fa-solid fa-circle"></i></div>
+                            <div><i class="fa-solid fa-circle"></i></div>
+                            <div class="sku">SKU: @Model.SKUNumber</div>
+
+
+                            <div class="cart-wishlist"> <button class="wish-button">Add To wishlist</button></div>
+                <div class="category">@Model.Category</div>
 
 
             </div>
         </div>
     </div>
 </div>
-
+</div>
 
     </div>
 

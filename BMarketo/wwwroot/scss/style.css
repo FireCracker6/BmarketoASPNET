@@ -10,6 +10,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600;700;900&family=Roboto:wght@300;400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600;700;900&family=Roboto:wght@300;400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600;700;900&family=Roboto:wght@300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600;700;900&family=Roboto:wght@300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600;700;900&family=Roboto:wght@300;400;500;700;900&display=swap");
 a:hover {
   text-decoration: none;
 }
@@ -28,6 +30,12 @@ a:hover {
 .gridcollection-item a:hover {
   color: #292929;
   text-decoration: none;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 1rem;
 }
 
 .btn-toggle {
@@ -667,6 +675,7 @@ header .toggle {
   grid-template-columns: 1fr;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 @media (min-width: 992px) {
   ._discount ._cards {
@@ -675,6 +684,7 @@ header .toggle {
     gap: 30px;
     justify-content: space-between;
     height: 570px;
+    overflow: hidden;
   }
 }
 ._discount ._cards .sell-items {
@@ -685,14 +695,35 @@ header .toggle {
     display: grid;
     align-items: center;
     width: 100%;
+    height: 500px;
   }
+}
+._discount ._cards .sell-items .card-image {
+  display: inline-block;
+  padding: 5px;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  ._discount ._cards .sell-items .card-image {
+    padding: 5px;
+  }
+}
+@media (min-width: 992px) {
+  ._discount ._cards .sell-items .card-image {
+    padding: 0;
+  }
+}
+._discount ._cards .sell-items .card-image img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
 }
 ._discount .card {
   display: block;
   border: none;
   border-radius: 0;
   font-family: "Poppins", sans-serif;
-  margin: 0 0 20px;
+  margin: 0 0 0;
   background-color: #ffffff;
 }
 @media (max-width: 767px) {
@@ -734,6 +765,7 @@ header .toggle {
 }
 ._discount .card .card-body {
   display: block;
+  width: 100%;
 }
 ._discount .card .prices {
   display: flex;
@@ -779,11 +811,11 @@ header .toggle {
 
 .dcard {
   display: flex;
-  grid-column: 1/1;
+  grid-column: 2/2;
   border: none;
   font-family: "Poppins", sans-serif;
   justify-content: center;
-  margin: 0 0 20px;
+  margin: 0 0 0;
   background-color: #ffffff;
   width: 100%;
 }
@@ -802,17 +834,28 @@ header .toggle {
 @media (min-width: 992px) {
   .dcard {
     display: flex;
-    grid-row: 1/-1;
-    margin-top: 100px;
+    grid-row: 1/1;
     align-content: center;
     width: 100%;
-    height: 100%;
+    height: 550px;
   }
 }
 .dcard .uptosell-content {
   display: grid;
   justify-content: start;
   align-items: center;
+  height: 100%;
+  width: 100%;
+}
+.dcard .uptosell-content .button-body {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.dcard .uptosell-content button {
+  display: flex;
+  justify-content: center;
+  align-self: center;
 }
 .dcard .uptosell-content h5 {
   color: #FA3150;
@@ -1656,6 +1699,74 @@ header .toggle {
   filter: hue-rotate(20%);
 }
 
+.description-limited {
+  max-width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.login-form {
+  padding: 20px 0 60px 0;
+}
+@media (min-width: 992px) {
+  .login-form {
+    padding: 60px 0;
+  }
+}
+.login-form .container {
+  border: 0px solid #FAFAFA;
+  padding: 30px;
+}
+@media (min-width: 768px) {
+  .login-form .container {
+    border: 1px solid #FAFAFA;
+    width: 80%;
+  }
+}
+.login-form .title {
+  margin-bottom: 40px;
+}
+.login-form form {
+  display: grid;
+  column-gap: 30px;
+  row-gap: 30px;
+  grid-template-columns: 1fr;
+  grid-template-areas: "message" "email" "password" "rememberme" "button";
+}
+.login-form form .validation-summary-errors {
+  grid-area: message;
+  margin: 10px 0;
+}
+.login-form form .validation-summary-errors ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  color: #FA3150;
+  font-size: 1.2rem;
+}
+.login-form form .email {
+  grid-area: email;
+}
+.login-form form .password {
+  grid-area: password;
+}
+.login-form form .rememberme {
+  grid-area: rememberme;
+  margin: 10px 0;
+}
+.login-form form button {
+  grid-area: button;
+}
+@media (min-width: 992px) {
+  .login-form form button {
+    display: flex;
+    justify-self: flex-start;
+  }
+}
+
 .contact-form {
   padding: 20px 0 60px 0;
 }
@@ -1717,6 +1828,102 @@ header .toggle {
 }
 @media (min-width: 992px) {
   .contact-form form button {
+    display: flex;
+    justify-self: flex-start;
+  }
+}
+
+.register-form {
+  padding: 20px 0 60px 0;
+}
+@media (min-width: 992px) {
+  .register-form {
+    padding: 60px 0;
+  }
+}
+.register-form .container {
+  border: 0px solid #FAFAFA;
+  padding: 30px;
+}
+@media (min-width: 768px) {
+  .register-form .container {
+    border: 1px solid #FAFAFA;
+  }
+}
+.register-form .title {
+  margin-bottom: 40px;
+}
+.register-form form {
+  display: grid;
+  column-gap: 30px;
+  row-gap: 30px;
+  grid-template-columns: 1fr;
+  grid-template-areas: "message" "firstname" "lastname" "streetname" "postalcode" "city" "mobile" "company" "email" "password" "confirmPassword" "userImage" "terms" "button";
+}
+@media (min-width: 992px) {
+  .register-form form {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "message message" "firstname lastname" "streetname streetname" "postalcode city" "mobile company" "email email" "password password" "confirmPassword confirmPassword" "userImage userImage" "terms terms" "button button";
+  }
+}
+.register-form form .validation-summary-errors {
+  grid-area: message;
+  margin: 10px 0;
+}
+.register-form form .validation-summary-errors ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  color: #FA3150;
+  font-size: 1.2rem;
+}
+.register-form form .message {
+  grid-area: message;
+}
+.register-form form .firstname {
+  grid-area: firstname;
+}
+.register-form form .lastname {
+  grid-area: lastname;
+}
+.register-form form .streetname {
+  grid-area: streetname;
+}
+.register-form form .postalcode {
+  grid-area: postalcode;
+}
+.register-form form .city {
+  grid-area: city;
+}
+.register-form form .mobile {
+  grid-area: mobile;
+}
+.register-form form .company {
+  grid-area: company;
+}
+.register-form form .email {
+  grid-area: email;
+}
+.register-form form .password {
+  grid-area: password;
+}
+.register-form form .confirmPassword {
+  grid-area: confirmPassword;
+}
+.register-form form .userImage {
+  grid-area: userImage;
+}
+.register-form form .terms {
+  grid-area: terms;
+  margin: 10px 0;
+}
+.register-form form button {
+  grid-area: button;
+}
+@media (min-width: 992px) {
+  .register-form form button {
     display: flex;
     justify-self: flex-start;
   }

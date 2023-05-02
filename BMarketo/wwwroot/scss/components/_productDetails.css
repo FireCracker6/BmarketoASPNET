@@ -500,3 +500,10 @@
   filter: grayscale(40%);
   filter: hue-rotate(20%);
 }
+
+.description-limited {
+  max-width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

@@ -31,6 +31,7 @@
   grid-template-columns: 1fr;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 @media (min-width: 992px) {
   ._discount ._cards {
@@ -39,6 +40,7 @@
     gap: 30px;
     justify-content: space-between;
     height: 570px;
+    overflow: hidden;
   }
 }
 ._discount ._cards .sell-items {
@@ -49,14 +51,35 @@
     display: grid;
     align-items: center;
     width: 100%;
+    height: 500px;
   }
+}
+._discount ._cards .sell-items .card-image {
+  display: inline-block;
+  padding: 5px;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  ._discount ._cards .sell-items .card-image {
+    padding: 5px;
+  }
+}
+@media (min-width: 992px) {
+  ._discount ._cards .sell-items .card-image {
+    padding: 0;
+  }
+}
+._discount ._cards .sell-items .card-image img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
 }
 ._discount .card {
   display: block;
   border: none;
   border-radius: 0;
   font-family: "Poppins", sans-serif;
-  margin: 0 0 20px;
+  margin: 0 0 0;
   background-color: #ffffff;
 }
 @media (max-width: 767px) {
@@ -98,6 +121,7 @@
 }
 ._discount .card .card-body {
   display: block;
+  width: 100%;
 }
 ._discount .card .prices {
   display: flex;
@@ -143,11 +167,11 @@
 
 .dcard {
   display: flex;
-  grid-column: 1/1;
+  grid-column: 2/2;
   border: none;
   font-family: "Poppins", sans-serif;
   justify-content: center;
-  margin: 0 0 20px;
+  margin: 0 0 0;
   background-color: #ffffff;
   width: 100%;
 }
@@ -166,17 +190,28 @@
 @media (min-width: 992px) {
   .dcard {
     display: flex;
-    grid-row: 1/-1;
-    margin-top: 100px;
+    grid-row: 1/1;
     align-content: center;
     width: 100%;
-    height: 100%;
+    height: 550px;
   }
 }
 .dcard .uptosell-content {
   display: grid;
   justify-content: start;
   align-items: center;
+  height: 100%;
+  width: 100%;
+}
+.dcard .uptosell-content .button-body {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.dcard .uptosell-content button {
+  display: flex;
+  justify-content: center;
+  align-self: center;
 }
 .dcard .uptosell-content h5 {
   color: #FA3150;

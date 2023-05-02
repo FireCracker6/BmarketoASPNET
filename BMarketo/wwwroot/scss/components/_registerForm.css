@@ -1,0 +1,96 @@
+﻿@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600;700;900&family=Roboto:wght@300;400;500;700;900&display=swap");
+.register-form {
+  padding: 20px 0 60px 0;
+}
+@media (min-width: 992px) {
+  .register-form {
+    padding: 60px 0;
+  }
+}
+.register-form .container {
+  border: 0px solid #FAFAFA;
+  padding: 30px;
+}
+@media (min-width: 768px) {
+  .register-form .container {
+    border: 1px solid #FAFAFA;
+  }
+}
+.register-form .title {
+  margin-bottom: 40px;
+}
+.register-form form {
+  display: grid;
+  column-gap: 30px;
+  row-gap: 30px;
+  grid-template-columns: 1fr;
+  grid-template-areas: "message" "firstname" "lastname" "streetname" "postalcode" "city" "mobile" "company" "email" "password" "confirmPassword" "userImage" "terms" "button";
+}
+@media (min-width: 992px) {
+  .register-form form {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "message message" "firstname lastname" "streetname streetname" "postalcode city" "mobile company" "email email" "password password" "confirmPassword confirmPassword" "userImage userImage" "terms terms" "button button";
+  }
+}
+.register-form form .validation-summary-errors {
+  grid-area: message;
+  margin: 10px 0;
+}
+.register-form form .validation-summary-errors ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  color: #FA3150;
+  font-size: 1.2rem;
+}
+.register-form form .message {
+  grid-area: message;
+}
+.register-form form .firstname {
+  grid-area: firstname;
+}
+.register-form form .lastname {
+  grid-area: lastname;
+}
+.register-form form .streetname {
+  grid-area: streetname;
+}
+.register-form form .postalcode {
+  grid-area: postalcode;
+}
+.register-form form .city {
+  grid-area: city;
+}
+.register-form form .mobile {
+  grid-area: mobile;
+}
+.register-form form .company {
+  grid-area: company;
+}
+.register-form form .email {
+  grid-area: email;
+}
+.register-form form .password {
+  grid-area: password;
+}
+.register-form form .confirmPassword {
+  grid-area: confirmPassword;
+}
+.register-form form .userImage {
+  grid-area: userImage;
+}
+.register-form form .terms {
+  grid-area: terms;
+  margin: 10px 0;
+}
+.register-form form button {
+  grid-area: button;
+}
+@media (min-width: 992px) {
+  .register-form form button {
+    display: flex;
+    justify-self: flex-start;
+  }
+}

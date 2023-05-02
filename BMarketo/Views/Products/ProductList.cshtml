@@ -1,0 +1,50 @@
+﻿@using BMarketo.Models.Entities.Products;
+@model List<ProductListItemViewModel>
+
+<div class="container">
+    <table id="product-list" class="table">
+        <thead>
+            <tr>
+                <th scope="col">Image</th>
+                <th scope="col">Title</th>
+                <th scope="col">Description</th>
+                <th scope="col">Price</th>
+                <th scope="col">Tags</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var product in Model)
+            {
+                <tr>
+                    <td>
+                        @if (product.Image != null)
+                        {
+                            <img src="@Url.Action("GetImage", "Products", new { id = product.Id })" alt="Product Image" style="max-width: 100px" />
+                        }
+                    </td>
+                    <td>@product.Title</td>
+                    <td class="description-limited">@product.Description</td>
+
+                    <td>@product.Price</td>
+                    <td>@string.Join(", ", product.Tags)</td>
+                    <td>
+                        <a href="@Url.Action("Edit", "Products", new { id = product.Id })" class="btn btn-primary">Update</a>
+                        <form method="post" action="@Url.Action("Delete", "Products", new { id = product.Id })" style="display:inline;">
+                            @Html.AntiForgeryToken()
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $('#product-list').DataTable();
+        });
+    </script>
+}
