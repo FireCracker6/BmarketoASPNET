@@ -1,4 +1,5 @@
-﻿@{
+﻿@model ContactFormViewModel
+@{
     var contactInfo = contactFormService.GetLatest();
 }
 
@@ -6,34 +7,37 @@
     <div class="container">
         <div class="title">@contactInfo.Title</div>
 
-        <form novalidate>
+        <form asp-controller="Contact" asp-action="Index" method="post">
+
+            @Html.AntiForgeryToken()
+
             <div class="name form-group">
                 <label for="name">@contactInfo.NameLabel</label>
-                <input id="name" type="text" class="invalid" required>
-                <span class="error">@contactInfo.NameError</span>
+                <input asp-for="Name" id="name" type="text" required>
+                <span asp-validation-for="Name" class="text-danger"></span>
             </div>
             <div class="email form-group">
                 <label for="email">@contactInfo.EmailLabel</label>
-                <input id="email" type="email" class="invalid" required>
-                <span class="error">@contactInfo.EmailError</span>
+                <input asp-for="Email" id="email" type="email" required>
+                <span asp-validation-for="Email" class="text-danger"></span>
             </div>
             <div class="phoneNumber form-group">
                 <label for="phone">Phone Number (optional)</label>
-                <input id="phone" type="text">
+                <input asp-for="PhoneNumber" id="phone" type="text">
             </div>
             <div class="companyName form-group">
                 <label for="company">@contactInfo.CompanyNameLabel</label>
-                <input id="company" type="text">
+                <input asp-for="CompanyName" id="company" type="text">
             </div>
             <div class="message form-group">
                 <label for="message">@contactInfo.MessageLabel</label>
-                <textarea id="message" class="invalid" required></textarea>
-                <span class="error">@contactInfo.MessageError</span>
+                <textarea asp-for="Message" id="message" required></textarea>
+                <span asp-validation-for="Message" class="text-danger"></span>
             </div>
             <div class="terms form-checkbox-group">
                 <label class="custom-checkbox">
                     @contactInfo.SaveUserInfoLabel
-                    <input type="checkbox" checked="checked">
+                    <input asp-for="SaveUserInfo" type="checkbox" checked="checked">
                     <span class="checkmark"></span>
                 </label>
             </div>

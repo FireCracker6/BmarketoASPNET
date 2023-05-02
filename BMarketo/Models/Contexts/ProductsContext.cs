@@ -19,7 +19,10 @@ public class ProductsContext : DbContext
     public DbSet<AdditionalInfoEntity> AdditionalInfo { get; set; }
     public DbSet<ReviewsEntity> Reviews { get; set; }
     public DbSet<ShoppingDeliveryEntity> ShoppingDelivery { get; set; }
-    
+
+    public DbSet<ContactSubmissionEntity> ContactSubmissions { get; set; }
+
+
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
