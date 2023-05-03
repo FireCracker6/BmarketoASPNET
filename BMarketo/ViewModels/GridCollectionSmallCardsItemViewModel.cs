@@ -1,8 +1,10 @@
-﻿namespace BMarketo.ViewModels
+﻿namespace BMarketo.ViewModels;
+
+public class GridCollectionSmallCardsItemViewModel
 {
-    public class GridCollectionSmallCardsItemViewModel
-    {
-        public string Id { get; set; } = null!;
-        public string ImageUrl { get; set; } = null!;
-    }
+    public string Id { get; set; } = null!;
+    public byte[] Image { get; set; }
+    public string MimeType { get; set; } = null!;
+
+
 }

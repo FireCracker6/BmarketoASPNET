@@ -6,7 +6,7 @@ namespace BMarketo.ViewModels
 {
     public class GridCollectionItemViewModel
     {
-        public string Id { get; set; } = null!;
+        public int Id { get; set; } 
         public string ImageUrl { get; set; } = null!;
         public byte[]? Image { get; set; } = null!;
         public string MimeType { get; set; } = null!;
@@ -19,6 +19,7 @@ namespace BMarketo.ViewModels
         public string? Description { get; set; } = "";
         public string? AdminPosts { get; set; } = null!;
 		public string? Comments { get; set; } = null!;
+        public int CommentsCount { get; set; }
         public List<string> Tags { get; set; } = null!;
 
         public string HeaderTitle { get; set; } = "";

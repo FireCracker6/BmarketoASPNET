@@ -1,4 +1,5 @@
-﻿using BMarketo.Models.Entities.Products;
+﻿using BMarketo.Models.Entities;
+using BMarketo.Models.Entities.Products;
 using Microsoft.EntityFrameworkCore;
 using static BMarketo.Models.Entities.Products.ReviewsEntity;
 
@@ -21,7 +22,7 @@ public class ProductsContext : DbContext
     public DbSet<ShoppingDeliveryEntity> ShoppingDelivery { get; set; }
 
     public DbSet<ContactSubmissionEntity> ContactSubmissions { get; set; }
-
+    public DbSet<NewsletterSubscription> NewsletterSubscriptions { get; set; }
 
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)

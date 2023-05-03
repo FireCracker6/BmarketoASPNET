@@ -1685,16 +1685,21 @@ header .toggle {
     padding: 20px;
   }
 }
-.small_cards .container .card {
+.small_cards .container a.gridcollection-item {
+  width: 100%;
+  height: auto;
+}
+.small_cards .container a.gridcollection-item .card {
   border: none;
   margin: 0;
   background-color: #FAFAFA;
 }
-.small_cards .container .card img {
-  width: 100%;
-  height: auto;
+.small_cards .container a.gridcollection-item .card img {
+  width: 285px;
+  height: 100px;
   border: none;
   border-radius: 0;
+  object-fit: contain;
   filter: grayscale(40%);
   filter: hue-rotate(20%);
 }

@@ -13,7 +13,7 @@ public class IdentityContext : IdentityDbContext<AppUser>
     }
     public DbSet<AddressEntity> AspNetAddresses { get; set; }
     public DbSet<UserAddressEntity> AspNetUserAddresses { get; set; }
-
+    public DbSet<NewsletterSubscription> NewsletterSubscriptions { get; set; }
 
     /*
 

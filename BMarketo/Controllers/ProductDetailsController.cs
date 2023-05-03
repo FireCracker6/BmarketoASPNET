@@ -22,7 +22,15 @@ public class ProductDetailsController : Controller
         var productDetailEntity = await _productRepository.GetByIdAsync(id);
         var productImages = await _productRepository.GetProductImagesAsync(id);
         byte[] mainImageBytes = await _productRepository.GetMainImageAsync(id);
+        // Fetch random products (you can replace 4 with the desired number of products)
+        var randomProducts = await _productRepository.GetRandomProductsAsync(4);
 
+        // Create view models for the random products
+        var smallCards = randomProducts.Select(p => new GridCollectionSmallCardsItemViewModel
+        {
+            Id = p.Id.ToString(),
+            Image = p.Image
+        }).ToList();
         var viewModel = new ProductDetailViewModel
         {
             ProductDetailTitle = productDetailEntity.Title,
@@ -40,10 +48,17 @@ public class ProductDetailsController : Controller
             UnderImage3 = productImages.Skip(2).FirstOrDefault()?.Image,
             UnderImage4 = productImages.Skip(3).FirstOrDefault()?.Image,
 
+            SmallCards = new GridCollectionViewModel()
+            {
+                GridItemsSmall = smallCards
+            }
+
         };
-
-
        
+
+
+
+
 
         return View(viewModel);
     }
@@ -51,27 +66,8 @@ public class ProductDetailsController : Controller
 
 
 
+    
 
-
-    //   public IActionResult Index()
-    //{
-    //       var viewModel = new ,
-    //       {
-    //           RelatedProducts = new RelatedProductsViewModel
-    //           {
-    //               Title = "Related Products",
-
-    //               GridItems = new List<GridCollectionItemViewModel>
-    //               {
-    //                   new GridCollectionItemViewModel { Id = "1", Title = "Apple Watch Series", Price = 10, ImageUrl = "images/mc-clothing/Xena-Jacket.webp" },
-    //                   new GridCollectionItemViewModel { Id = "2", Title = "Apple Watch Series", Price = 20, ImageUrl = "images/mc-clothing/Xena-Jacket.webp" },
-    //                   new GridCollectionItemViewModel { Id = "3", Title = "Apple Watch Series", Price = 30, ImageUrl = "images/mc-clothing/Xena-Jacket.webp" },
-    //                   new GridCollectionItemViewModel { Id = "4", Title = "Apple Watch Series", Price = 40, ImageUrl = "images/mc-clothing/Xena-Jacket.webp" },
-
-
-
-    //               }
-    //           },
     //SmallCards = new GridCollectionViewModel()
     //{
     //    GridItemsSmall = new List<GridCollectionSmallCardsItemViewModel>

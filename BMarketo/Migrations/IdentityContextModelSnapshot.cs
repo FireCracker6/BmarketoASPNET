@@ -141,7 +141,7 @@ namespace BMarketo.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("AspNetAddresses");
+                    b.ToTable("AspNetAddresses", (string)null);
                 });
 
             modelBuilder.Entity("BMarketo.Models.Entities.UserAddressEntity", b =>
@@ -156,7 +156,7 @@ namespace BMarketo.Migrations
 
                     b.HasIndex("AddressId");
 
-                    b.ToTable("AspNetUserAddresses");
+                    b.ToTable("AspNetUserAddresses", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>

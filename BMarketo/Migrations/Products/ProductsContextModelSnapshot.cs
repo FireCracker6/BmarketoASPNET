@@ -22,6 +22,23 @@ namespace BMarketo.Migrations.Products
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("BMarketo.Models.Entities.NewsletterSubscription", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("NewsletterSubscriptions");
+                });
+
             modelBuilder.Entity("BMarketo.Models.Entities.Products.AdditionalInfoEntity", b =>
                 {
                     b.Property<int>("Id")

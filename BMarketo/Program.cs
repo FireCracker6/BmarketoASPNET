@@ -23,6 +23,7 @@ builder.Services.AddScoped<UserAddressRepository>();
 builder.Services.AddScoped<AuthenticationService>();
 builder.Services.AddScoped<AddressService>();
 builder.Services.AddScoped<ProductsRepository>();
+builder.Services.AddScoped<NewsletterSubscriptionRepository>();
 
 
 builder.Services.Configure<FormOptions>(x => x.MultipartBodyLengthLimit = 8000000000);

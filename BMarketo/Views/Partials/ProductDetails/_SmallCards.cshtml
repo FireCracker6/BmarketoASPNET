@@ -1,5 +1,11 @@
 ﻿@model GridCollectionViewModel
 <section class="small_cards">
+<div class="container">
+@await Html.PartialAsync("/Views/Partials/_GridCollectionSmallCardsItem.cshtml", Model.GridItemsSmall)
+</div>
+</section>
+
+@*<section class="small_cards">
 
     <div class="container">
 
@@ -19,4 +25,4 @@
        
 
     </div>
-</section>
+</section>*@

@@ -18,6 +18,8 @@ namespace BMarketo.ViewModels
         public string Category { get; set; }
         public int ProductId { get; set; }
 
+        public RelatedProductsViewModel RelatedProducts { get; set; } = new RelatedProductsViewModel();
+        public GridCollectionViewModel SmallCards { get; set; }
     }
 
 }

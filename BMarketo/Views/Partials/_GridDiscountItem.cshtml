@@ -19,7 +19,9 @@
             </p>
             <div class="posts">
                 <h4><a href="@Url.Action("ProductComments", "Products", new { Id = Model.Id })" class="nested-link">POSTS BY ADMIN</a></h4>
-                <h4><a href="@Url.Action("ProductComments", "Products", new { Id = Model.Id })" class="nested-link">COMMENTS</a></h4>
+                <h4><a href="@Url.Action("ProductComments", "Products", new { Id = Model.Id })" class="nested-link">COMMENTS (@Model.CommentsCount)</a></h4>
+
+
             </div>
         </div>
     </div>

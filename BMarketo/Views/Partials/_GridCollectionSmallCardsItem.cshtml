@@ -1,9 +1,10 @@
-﻿@model GridCollectionSmallCardsItemViewModel
+﻿@model List<GridCollectionSmallCardsItemViewModel>
 
-<a asp-controller="products" asp-action="details" asp-route-id="@Model.Id" class="gridcollection-item">
-    <div class="card">
-        <img src="@Model.ImageUrl" class="card-img-top" alt="...">
-
-
-    </div>
-</a>
+@foreach (var item in Model)
+{
+    <a asp-route-id="@item.Id" class="gridcollection-item">
+        <div class="card">
+            <img src="data:image/png;base64,@Convert.ToBase64String(item.Image)" class="card-img-top" alt="...">
+        </div>
+    </a>
+}

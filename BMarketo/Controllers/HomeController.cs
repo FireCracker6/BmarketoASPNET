@@ -17,9 +17,11 @@ public class HomeController : Controller
   
     public async Task<IActionResult> Index()
     {
-        var products = await _productRepository.GetByTagAsync("BestCollection");
-        var topSellingProducts = await _productRepository.GetByTagAsync("TopSelling");
-        var discountProducts = await _productRepository.GetByTagAsync("Discounted");
+
+        var products = await _productRepository.GetByTagWithCommentsAsync("BestCollection");
+        var topSellingProducts = await _productRepository.GetByTagWithCommentsAsync("TopSelling");
+        var discountProducts = await _productRepository.GetByTagWithCommentsAsync("Discounted");
+
 
         var viewModel = new HomeIndexViewModel
         {
@@ -29,7 +31,7 @@ public class HomeController : Controller
                 Title = "Best Collection",
                 GridItems = products.Select(p => new GridCollectionItemViewModel
                 {
-                    Id = p.Id.ToString(),
+                    Id = p.Id,
                     Title = p.Title,
                     Price = (decimal)p.Price,
                     Image = p.Image
@@ -42,18 +44,20 @@ public class HomeController : Controller
                 Title = "Top Selling products in this Week",
                 GridItems = topSellingProducts.Select(p => new GridCollectionItemViewModel
                 {
-                    Id = p.Id.ToString(),
+                    Id = p.Id,
                     Title = p.Title,
                     Price = (decimal)p.Price,
-                    Image = p.Image
+                    Image = p.Image,
+                    CommentsCount = p.Comments.Count, // Set the CommentsCount property
                 }).ToList(),
 
                 GridDiscountItems = topSellingProducts.Select(p => new GridCollectionItemViewModel
                 {
-                    Id = p.Id.ToString(),
+                    Id = p.Id,
                     Title = p.Title,
                     Price = (decimal)p.Price,
-                    Image = p.Image
+                    Image = p.Image,
+                    CommentsCount = p.Comments.Count, // Set the CommentsCount property
                 }).ToList(),
             },
          
@@ -61,10 +65,12 @@ public class HomeController : Controller
             {
                 GridItems = discountProducts.Select(p => new GridCollectionItemViewModel
                 {
-                    Id = p.Id.ToString(),
+                    Id = p.Id,
                     Title = p.Title,
                     Price = (decimal)p.Price,
-                    Image = p.Image
+                    Image = p.Image,
+
+                    CommentsCount = p.Comments.Count, // Set the CommentsCount property
                 }).ToList()
             },
             //        {

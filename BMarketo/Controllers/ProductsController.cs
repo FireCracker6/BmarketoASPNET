@@ -1,4 +1,5 @@
 ﻿using BMarketo.Models.Contexts;
+using BMarketo.Models.Entities;
 using BMarketo.Models.Entities.Products;
 using BMarketo.Services.Repositories;
 using BMarketo.ViewModels;
@@ -14,11 +15,14 @@ public class ProductsController : Controller
 {
 	private readonly ProductsContext _context;
     private readonly ProductsRepository _repository;
+    private readonly NewsletterSubscriptionRepository _newsletterSubscriptionRepository;
+
     private readonly List<IFormFile> images = new List<IFormFile>();
-    public ProductsController(ProductsContext context, ProductsRepository repository)
+    public ProductsController(ProductsContext context, ProductsRepository repository, NewsletterSubscriptionRepository newsletterSubscriptionRepository)
     {
         _context = context;
         _repository = repository;
+        _newsletterSubscriptionRepository = newsletterSubscriptionRepository;
     }
     [HttpGet]
     public async Task<IActionResult> Index(int selectedCategoryId = 0)
@@ -48,13 +52,13 @@ public class ProductsController : Controller
                 Title = "All Products",
                 GridItems = filteredProducts.Select(product => new GridCollectionItemViewModel
                 {
-                    Id = product.Id.ToString(),
+                    Id = product.Id,
                     Image = product.Image,
                     Title = product.Title,
                     OldPrice = product.OldPrice,
                     Price = product.Price ?? 0,
                     Category = product.Category!.CategoryName,
-
+                  
                 }).ToList(),
                 Categories = categories.Select(category => category.CategoryName!),
                 CategoriesSelected = categories.Select(category => new SelectListItem
@@ -82,6 +86,18 @@ public class ProductsController : Controller
         var product = await _repository.GetByIdAsync(id);
         var productImages = await _repository.GetProductImagesAsync(id);
         // Create a ProductDetailViewModel instance.
+
+        // Fetch random products (you can replace 4 with the desired number of products)
+        var randomProducts = await _repository.GetRandomProductsAsync(4);
+
+        // Create view models for the random products
+        var smallCards = randomProducts.Select(p => new GridCollectionSmallCardsItemViewModel
+        {
+            Id = p.Id.ToString(),
+            Image = p.Image
+        }).ToList();
+
+
         var viewModel = new ProductDetailViewModel
         {
             ProductId = id,
@@ -96,6 +112,12 @@ public class ProductsController : Controller
             UnderImage2 = productImages.Skip(1).FirstOrDefault()?.Image ?? null!,
             UnderImage3 = productImages.Skip(2).FirstOrDefault()?.Image ?? null!,
             UnderImage4 = productImages.Skip(3).FirstOrDefault()?.Image ?? null!,
+
+
+            SmallCards = new GridCollectionViewModel()
+            {
+                GridItemsSmall = smallCards
+            }
         };
 
 
@@ -106,7 +128,28 @@ public class ProductsController : Controller
         //// Retrieve the product's related products.
         //viewModel.RelatedProducts = await _repository.GetRelatedProductsAsync(product);
 
+        // Fetch related products
+        var relatedProducts = await GetRelatedProducts(id);
+
+        var relatedProductsViewModel = new RelatedProductsViewModel
+        {
+            Title = "Related Products",
+            GridItems = relatedProducts.Select(p => new GridCollectionItemViewModel
+            {
+                Id = p.Id,
+                Title = p.Title,
+                Image = p.Image,
+                Description = p.Description,
+                Price = (decimal)p.Price,
+            }).ToList()
+        };
+
+        viewModel.RelatedProducts = relatedProductsViewModel;
+
+
         return View(viewModel);
+
+
     }
 
 
@@ -531,6 +574,53 @@ public class ProductsController : Controller
 
         // Pass the comments to the view
         return View(comments);
+    }
+
+    // Should be a service 
+    private async Task<IEnumerable<ProductsEntity>> GetRelatedProducts(int productId)
+    {
+        // Get the main product's category
+        var mainProductCategory = await _context.Products
+            .Where(p => p.Id == productId)
+            .Select(p => p.CategoryId)
+            .FirstOrDefaultAsync();
+
+        Console.WriteLine($"Main product category: {mainProductCategory}");
+
+        if (mainProductCategory == null)
+        {
+            return new List<ProductsEntity>();
+        }
+
+        // Fetch all products in the category to check if there are any products
+        var allProductsInCategory = await _context.Products
+            .Where(p => p.CategoryId == mainProductCategory && p.Id != productId)
+            
+            .ToListAsync();
+
+        // Get the related products based on the category
+        var relatedProducts = await _context.Products
+            .Where(p => p.CategoryId == mainProductCategory && p.Id != productId)
+            .Take(4)
+            .ToListAsync();
+
+       
+
+        return relatedProducts;
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> Subscribe(string email)
+    {
+        if (string.IsNullOrEmpty(email))
+        {
+            return BadRequest();
+        }
+
+        var subscription = new NewsletterSubscription { Email = email };
+        await _newsletterSubscriptionRepository.AddAsync(subscription);
+
+        return RedirectToAction("Index");
     }
 
 

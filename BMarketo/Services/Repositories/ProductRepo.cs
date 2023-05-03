@@ -69,6 +69,14 @@ public abstract class ProductRepo<TEntity> where TEntity : class
             .Where(p => p.Tags.Any(t => t.TagName == tagName))
             .ToListAsync();
     }
+    public async Task<IEnumerable<ProductsEntity>> GetByTagWithCommentsAsync(string tagName)
+    {
+        return await _context.Products
+            .Include(p => p.Comments) // Include comments
+            .Where(p => p.Tags.Any(t => t.TagName == tagName))
+            .ToListAsync();
+    }
+
     public virtual async Task<TEntity> GetByIdAsync(int id)
     {
         return await _context.Set<TEntity>().FindAsync(id);
@@ -92,6 +100,15 @@ public abstract class ProductRepo<TEntity> where TEntity : class
 
         return product.Image;
     }
+
+    public async Task<IEnumerable<ProductsEntity>> GetRandomProductsAsync(int count)
+    {
+        return await _context.Products
+            .OrderBy(r => Guid.NewGuid()) // Order randomly
+            .Take(count) // Limit the number of products
+            .ToListAsync();
+    }
+
 
 
 

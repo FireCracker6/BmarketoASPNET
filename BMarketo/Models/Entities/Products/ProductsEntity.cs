@@ -22,8 +22,9 @@ public class ProductsEntity
     public List<TagEntity> Tags { get; set; } = new List<TagEntity>();
 
 
-    public virtual ICollection<CommentsEntity> Comments { get; set; } = null!;
+    public virtual ICollection<CommentsEntity> Comments { get; set; } = new List<CommentsEntity>();
 
+  
 
     public virtual DescriptionEntity AdditionalDescription { get; set; } = null!;
     public virtual AdditionalInfoEntity AdditionalInfo { get; set; } = null!;
