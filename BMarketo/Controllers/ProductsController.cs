@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using static BMarketo.Models.Entities.Products.ReviewsEntity;
 
 namespace BMarketo.Controllers;
@@ -79,26 +80,41 @@ public class ProductsController : Controller
         return View(viewModel);
     }
 
-
     [HttpGet]
     public async Task<IActionResult> ProductDetails(int id)
     {
-      //  ViewBag.ProductId = id; // Set the product ID to the ViewBag
-        // Retrieve the selected product from the repository.
         var product = await _repository.GetByIdAsync(id);
         var productImages = await _repository.GetProductImagesAsync(id);
-        // Create a ProductDetailViewModel instance.
 
-        // Fetch random products (you can replace 4 with the desired number of products)
-        var randomProducts = await _repository.GetRandomProductsAsync(4);
+        // Define an array of image URLs for the small card view model.
+        string[] imageUrls = new string[] {
+        "https://saxeit.se/images/mc-clothing/Touratech.webp",
+          "https://saxeit.se/images/mc-clothing/Touratech.webp",
+          "https://saxeit.se/images/mc-clothing/Touratech.webp",
+        "https://saxeit.se/images/mc-clothing/Touratech.webp"
+    };
 
-        // Create view models for the random products
-        var smallCards = randomProducts.Select(p => new GridCollectionSmallCardsItemViewModel
+        var smallCards = new List<GridCollectionSmallCardsItemViewModel>();
+
+        for (int i = 0; i < imageUrls.Length; i++)
         {
-            Id = p.Id.ToString(),
-            Image = p.Image
-        }).ToList();
+            // Fetch images for the small card view model.
+            var smallCardsImages = await GetSmallCardsImages(new string[] { imageUrls[i] });
 
+            // Create a GridCollectionSmallCardsItemViewModel instance.
+            var smallCardsItem = new GridCollectionSmallCardsItemViewModel
+            {
+                Id = (i + 1).ToString(),
+                Images = smallCardsImages,
+                Url = "https://example.com/item" + (i + 1)
+            };
+
+            // Add the GridCollectionSmallCardsItemViewModel instance to the list of small card view models.
+            smallCards.Add(smallCardsItem);
+        }
+
+        // Add the GridCollectionSmallCardsItemViewModel instance to the list of small card view models.
+      //  var smallCards = new List<GridCollectionSmallCardsItemViewModel> { smallCardsItem };
 
         var viewModel = new ProductDetailViewModel
         {
@@ -109,28 +125,22 @@ public class ProductsController : Controller
             SKUNumber = product?.SKUNumber ?? "",
             Category = product?.Category?.CategoryName ?? "",
             Images = productImages.ToList(),
-
             UnderImage1 = productImages.FirstOrDefault()?.Image ?? null!,
             UnderImage2 = productImages.Skip(1).FirstOrDefault()?.Image ?? null!,
             UnderImage3 = productImages.Skip(2).FirstOrDefault()?.Image ?? null!,
             UnderImage4 = productImages.Skip(3).FirstOrDefault()?.Image ?? null!,
-
-
             SmallCards = new GridCollectionViewModel()
             {
                 GridItemsSmall = smallCards
             }
         };
-
-
-        //// Retrieve the main image for the product.
+        // Get the main image for the product.
         var mainImageBytes = await _repository.GetMainImageAsync(id);
         viewModel.MainImage = mainImageBytes;
 
-        //// Retrieve the product's related products.
-        //viewModel.RelatedProducts = await _repository.GetRelatedProductsAsync(product);
+       
 
-        // Fetch related products
+        // Get related products
         var relatedProducts = await GetRelatedProducts(id);
 
         var relatedProductsViewModel = new RelatedProductsViewModel
@@ -369,6 +379,9 @@ public class ProductsController : Controller
 
         return File(product.Image, "image/jpeg");
     }
+
+
+
     public async Task<IActionResult> GetMainImage(int id)
     {
         var product = await _context.Products.FindAsync(id);
@@ -632,6 +645,23 @@ public class ProductsController : Controller
         return relatedProducts;
     }
 
+    private static async Task<List<byte[]>> GetSmallCardsImages(string[] urls)
+    {
+        var images = new List<byte[]>();
+        using var httpClient = new HttpClient();
+        foreach (var url in urls)
+        {
+            var response = await httpClient.GetAsync(url);
+            if (response.IsSuccessStatusCode)
+            {
+                var bytes = await response.Content.ReadAsByteArrayAsync();
+                images.Add(bytes);
+            }
+        }
+        return images;
+    }
+
+
     [HttpPost]
     public async Task<IActionResult> Subscribe(string email)
     {
@@ -645,14 +675,5 @@ public class ProductsController : Controller
 
         return RedirectToAction("Index");
     }
-
-
-
-
-
-
-
-
-
 
 }

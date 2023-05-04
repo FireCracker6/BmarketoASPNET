@@ -4,6 +4,7 @@ public class ProductImagesEntity
 {
     public int Id { get; set; }
     public byte[] Image { get; set; } = null!;
+
     public string MimeType { get; set; } = null!;
     public int ProductId { get; set; }
     

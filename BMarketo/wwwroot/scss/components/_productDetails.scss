@@ -589,9 +589,39 @@
             padding: 20px;
         }
 
+        a.smallcards_collection {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            height: auto;
+            display: flex;
+
+            .card {
+                border: none;
+                margin: 0;
+                background-color: $color-dark-5;
+                display: block;
+                width: 100%;
+                height: auto;
+
+
+
+                img {
+                    width: 100%;
+                    height: auto;
+                    border: none;
+                    border-radius: 0;
+                    object-fit: contain;
+                    filter: grayscale(40%);
+                    filter: hue-rotate(20%);
+                }
+            }
+        }
+
         a.gridcollection-item {
             width: 100%;
             height: auto;
+            display: flex;
 
 
 
@@ -599,6 +629,7 @@
                 border: none;
                 margin: 0;
                 background-color: $color-dark-5;
+
 
 
                 img {

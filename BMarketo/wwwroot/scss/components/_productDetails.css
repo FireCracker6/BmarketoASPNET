@@ -487,9 +487,34 @@
     padding: 20px;
   }
 }
+.small_cards .container a.smallcards_collection {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+.small_cards .container a.smallcards_collection .card {
+  border: none;
+  margin: 0;
+  background-color: #FAFAFA;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.small_cards .container a.smallcards_collection .card img {
+  width: 100%;
+  height: auto;
+  border: none;
+  border-radius: 0;
+  object-fit: contain;
+  filter: grayscale(40%);
+  filter: hue-rotate(20%);
+}
 .small_cards .container a.gridcollection-item {
   width: 100%;
   height: auto;
+  display: flex;
 }
 .small_cards .container a.gridcollection-item .card {
   border: none;

@@ -9,9 +9,9 @@
     <div class="content container">
         @if (Model.GridItems != null)
         {
-          
 
-                @foreach (var item in Model.GridItems)
+
+            @foreach (var item in Model.GridItems.Take(6))
                 {
                     <partial name="/Views/Partials/_GridCollectionItem.cshtml" model="item" />
                 }
