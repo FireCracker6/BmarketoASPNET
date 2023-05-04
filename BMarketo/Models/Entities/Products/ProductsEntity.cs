@@ -20,7 +20,7 @@ public class ProductsEntity
 
     // Tags
     public List<TagEntity> Tags { get; set; } = new List<TagEntity>();
-
+    public List<ProductTag> ProductTag { get; set; }
 
     public virtual ICollection<CommentsEntity> Comments { get; set; } = new List<CommentsEntity>();
 

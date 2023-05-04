@@ -23,6 +23,7 @@ public class ProductFormViewModel
     public IEnumerable<CategoryEntity> Categories { get; set; } = new List<CategoryEntity>(); // Add this property
 
     public IEnumerable<TagEntity> TagsItems { get; set; } = new List<TagEntity>();
+    public List<string> SelectedTagNames { get; set; } = new List<string>();
 
     public IEnumerable<ProductImagesEntity> Images { get; set; } = new List<ProductImagesEntity>();
 

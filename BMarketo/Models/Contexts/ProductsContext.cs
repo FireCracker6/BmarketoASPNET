@@ -15,6 +15,7 @@ public class ProductsContext : DbContext
     public DbSet<ProductImagesEntity> ProductImages { get; set; }
     public DbSet<CategoryEntity> Categories { get; set; }
     public DbSet<TagEntity> Tags { get; set; }
+   
     public DbSet<CommentsEntity> Comments { get; set; }
     public DbSet<DescriptionEntity> AdditionalDescription { get; set; }
     public DbSet<AdditionalInfoEntity> AdditionalInfo { get; set; }

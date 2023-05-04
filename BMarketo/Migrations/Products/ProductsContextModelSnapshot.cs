@@ -208,6 +208,29 @@ namespace BMarketo.Migrations.Products
                     b.ToTable("ProductImages", (string)null);
                 });
 
+            modelBuilder.Entity("BMarketo.Models.Entities.Products.ProductTag", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TagId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.HasIndex("TagId");
+
+                    b.ToTable("ProductTag");
+                });
+
             modelBuilder.Entity("BMarketo.Models.Entities.Products.ProductsEntity", b =>
                 {
                     b.Property<int>("Id")
@@ -400,6 +423,25 @@ namespace BMarketo.Migrations.Products
                     b.Navigation("Product");
                 });
 
+            modelBuilder.Entity("BMarketo.Models.Entities.Products.ProductTag", b =>
+                {
+                    b.HasOne("BMarketo.Models.Entities.Products.ProductsEntity", "Product")
+                        .WithMany("ProductTags")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("BMarketo.Models.Entities.Products.TagEntity", "Tag")
+                        .WithMany("ProductTags")
+                        .HasForeignKey("TagId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Product");
+
+                    b.Navigation("Tag");
+                });
+
             modelBuilder.Entity("BMarketo.Models.Entities.Products.ProductsEntity", b =>
                 {
                     b.HasOne("BMarketo.Models.Entities.Products.CategoryEntity", null)
@@ -469,11 +511,18 @@ namespace BMarketo.Migrations.Products
 
                     b.Navigation("ProductImages");
 
+                    b.Navigation("ProductTags");
+
                     b.Navigation("Reviews")
                         .IsRequired();
 
                     b.Navigation("ShoppingDelivery")
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("BMarketo.Models.Entities.Products.TagEntity", b =>
+                {
+                    b.Navigation("ProductTags");
                 });
 #pragma warning restore 612, 618
         }

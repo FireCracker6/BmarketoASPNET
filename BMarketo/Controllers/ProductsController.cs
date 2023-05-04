@@ -1,9 +1,11 @@
-﻿using BMarketo.Models.Contexts;
+﻿using System.Linq;
+using BMarketo.Models.Contexts;
 using BMarketo.Models.Entities;
 using BMarketo.Models.Entities.Products;
 using BMarketo.Services.Repositories;
 using BMarketo.ViewModels;
 using BMarketo.ViewModels.CRUD;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -163,7 +165,8 @@ public class ProductsController : Controller
 
 
     [HttpGet]
-    public async Task<IActionResult> AddProducts()
+	[Authorize(Policy = "AdminOnly")]
+	public async Task<IActionResult> AddProducts()
     {
         // Retrieve categories from the database
         var categories = await _context.Categories.ToListAsync();
@@ -189,7 +192,8 @@ public class ProductsController : Controller
     }
 
     [HttpPost]
-    public async Task<IActionResult> AddProducts(ProductFormViewModel model)
+	[Authorize(Policy = "AdminOnly")]
+	public async Task<IActionResult> AddProducts(ProductFormViewModel model)
     {
         if (ModelState.IsValid)
         {
@@ -335,7 +339,8 @@ public class ProductsController : Controller
 
 
     [HttpGet]
-    public IActionResult ProductList()
+	[Authorize(Policy = "AdminOnly")]
+	public IActionResult ProductList()
     {
       //  var products = _context.Products.ToList();
         var products = _context.Products.Include(p => p.Tags).ToList(); // Include the tags
@@ -390,7 +395,8 @@ public class ProductsController : Controller
 
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Delete(int id)
+	[Authorize(Policy = "AdminOnly")]
+	public async Task<IActionResult> Delete(int id)
     {
         var product = await _context.Products.FindAsync(id);
         if (product == null)
@@ -402,8 +408,8 @@ public class ProductsController : Controller
         await _context.SaveChangesAsync();
         return RedirectToAction(nameof(Index));
     }
-
-    public async Task<IActionResult> Edit(int id)
+	[Authorize(Policy = "AdminOnly")]
+	public async Task<IActionResult> Edit(int id)
     {
         var product = await _context.Products.Include(p => p.Tags).Include(p => p.Category).FirstOrDefaultAsync(p => p.Id == id);
         if (product == null)
@@ -441,7 +447,8 @@ public class ProductsController : Controller
 
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Edit(int id, ProductFormViewModel viewModel)
+	[Authorize(Policy = "AdminOnly")]
+	public async Task<IActionResult> Edit(int id, ProductFormViewModel viewModel)
     {
         if (ModelState.IsValid)
         {
@@ -457,7 +464,8 @@ public class ProductsController : Controller
             product.Description = viewModel.Description;
             product.Price = viewModel.Price;
             product.OldPrice = viewModel.OldPrice;
-          //  product.CategoryId = viewModel.CategoryId;
+            product.CategoryId = viewModel.SelectedCategoryId;
+          //  product.Tags = viewModel.AvailableTags.ToList();
         
 
             // Update the product image if a new one was uploaded
@@ -467,7 +475,21 @@ public class ProductsController : Controller
                 viewModel.ImageFile.CopyTo(ms);
                 product.Image = ms.ToArray();
             }
+            // Remove existing tags not present in viewModel.SelectedTagIds
+            var tagsToRemove = product.Tags.Where(t => !viewModel.SelectedTagIds.Contains((int)t.Id)).ToList();
+            foreach (var tag in tagsToRemove)
+            {
+                product.Tags.Remove(tag);
+            }
 
+            // Add new tags present in viewModel.SelectedTagIds
+            var tagsToAdd = viewModel.SelectedTagIds.Where(t => !product.Tags.Any(pt => pt.Id == t)).ToList();
+            foreach (var tagId in tagsToAdd)
+            {
+                var tag = await _context.Tags.FindAsync(tagId);
+                product.Tags.Add(tag!);
+
+            }
 
             // Update the main image
             if (viewModel.ImageFile != null)
@@ -476,6 +498,7 @@ public class ProductsController : Controller
                 viewModel.ImageFile.CopyTo(ms);
                 product.Image = ms.ToArray();
             }
+
 
             // Add more under images
             if (viewModel.UnderImageFiles != null && viewModel.UnderImageFiles.Any())

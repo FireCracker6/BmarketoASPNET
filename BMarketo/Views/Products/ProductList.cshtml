@@ -1,7 +1,15 @@
 ﻿@using BMarketo.Models.Entities.Products;
 @model List<ProductListItemViewModel>
-
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
 <div class="container">
+    <h1 class="my-5">Products List</h1>
+    <div class="row mb-3">
+        <div class="col d-grid">
+            <a href="@Url.Action("AddProducts", "Products")" class="btn btn-success">Add Product</a>
+        </div>
+    </div>
     <table id="product-list" class="table">
         <thead>
             <tr>
@@ -9,7 +17,13 @@
                 <th scope="col">Title</th>
                 <th scope="col">Description</th>
                 <th scope="col">Price</th>
-                <th scope="col">Tags</th>
+                <th scope="col">
+
+
+
+
+
+                </th>
                 <th scope="col">Actions</th>
             </tr>
         </thead>

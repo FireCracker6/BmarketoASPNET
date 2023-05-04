@@ -1,0 +1,41 @@
+﻿@using BMarketo.ViewModels;
+@model List<NewsletterSubscriptionListItemViewModel>
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="container">
+    <table id="subscribers-list" class="table">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Email</th>
+                <th scope="col">Remove</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var subscriber in Model)
+            {
+                <tr>
+                    <td>@subscriber.Id</td>
+                    <td>@subscriber.Email</td>
+                    <td>
+                        <form method="post" asp-action="DeleteSubscriber" style="display:inline;">
+                            @Html.AntiForgeryToken()
+                            <input type="hidden" name="id" value="@subscriber.Id" />
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+</div>
+
+@section Scripts {
+        <script>
+            $(document).ready(function () {
+                $('#subscribers-list').DataTable();
+            });
+        </script>
+}
