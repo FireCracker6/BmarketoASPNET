@@ -1,12 +1,15 @@
+using System.Security.Claims;
 using BMarketo.Migrations.Products;
 using BMarketo.Models.Contexts;
 using BMarketo.Models.Contexts.Identity;
-using BMarketo.Models.Entities.Identity;
+
 using BMarketo.Models.Entities.Products;
 using BMarketo.Services;
 using BMarketo.Services.Authorization;
 using BMarketo.Services.Repositories;
 using BMarketo.ViewModels.CRUD;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authorization.Infrastructure;
 using Microsoft.AspNetCore.Http.Features;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -25,10 +28,15 @@ builder.Services.AddScoped<AddressService>();
 builder.Services.AddScoped<ProductsRepository>();
 builder.Services.AddScoped<NewsletterSubscriptionRepository>();
 
+
 builder.Services.AddAuthorization(options =>
 {
     options.AddPolicy("AdminOnly", policy => policy.RequireRole("Admin"));
 });
+
+
+
+
 
 builder.Services.Configure<FormOptions>(x => x.MultipartBodyLengthLimit = 8000000000);
 
@@ -77,22 +85,31 @@ using (var scope = app.Services.CreateScope())
         logger.LogError(ex, "An error occurred seeding the categories.");
     }
 }
+ builder = WebApplication.CreateBuilder(args);
+
+builder.Host.ConfigureLogging(logging =>
+{
+    logging.ClearProviders();
+    logging.AddConsole();
+});
 
 app.UseHsts();
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
+app.UseAuthentication();
 app.UseAuthorization();
 app.UseEndpoints(endpoints =>
 {
     endpoints.MapControllerRoute(
         name: "default",
-        pattern: "{controller=Home}/{action=Index}/{id?}");
-    endpoints.MapControllerRoute(
-        name: "productDetails",
-        pattern: "ProductDetails",
-        defaults: new { controller = "ProductDetails", action = "Index" });
+        pattern: "{controller=Home}/{action=Index}/{id?}",
+        defaults: new { controller = "Home", action = "Index" },
+        constraints: null,
+        dataTokens: new { LoggerFactory = app.Services.GetRequiredService<ILoggerFactory>() });
 });
+
+
 
 app.MapControllerRoute(
     name: "default",

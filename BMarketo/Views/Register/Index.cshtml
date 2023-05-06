@@ -81,9 +81,9 @@
             </div>
 
             <div class="userImage form-group">
-                <label asp-for="ImageFile"></label>
-                <input asp-for="ImageFile" />
-                <small><span asp-validation-for="ImageFile" class="error"></span></small>
+                <label for="ProfileImage">Profile Image:</label>
+                <input type="file" id="ProfileImage" name="ProfileImage" />
+                <small><span asp-validation-for="ProfileImage" class="error"></span></small>
             </div>
 
             <div class="terms form-checkbox-group">

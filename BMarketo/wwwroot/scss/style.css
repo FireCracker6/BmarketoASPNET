@@ -12,6 +12,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600;700;900&family=Roboto:wght@300;400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600;700;900&family=Roboto:wght@300;400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600;700;900&family=Roboto:wght@300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600;700;900&family=Roboto:wght@300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600;700;900&family=Roboto:wght@300;400;500;700;900&display=swap");
 a:hover {
   text-decoration: none;
 }
@@ -2037,6 +2039,94 @@ input:not([type=checkbox]):focus {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+}
+
+.manage-roles th {
+  background-color: #FA3150;
+  color: #ffffff;
+}
+.manage-roles tr:nth-child(even) {
+  background-color: #BDBDBD;
+}
+.manage-roles tr:nth-child(odd) {
+  background-color: e3e3e3;
+}
+.manage-roles h2 {
+  margin-bottom: 30px;
+}
+.manage-roles .mr-list {
+  display: block;
+  justify-content: space-between;
+  border: 1px solid black;
+  align-items: center;
+}
+.manage-roles .mr-list .m-r-label {
+  border: 1px solid red;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+}
+.manage-roles .mr-list .mr-userlabel {
+  width: 150px;
+  white-space: nowrap;
+}
+.manage-roles .mr-list .mr-roleslabel {
+  width: 150px;
+  text-align: left;
+  white-space: nowrap;
+}
+.manage-roles button {
+  background-color: #000000;
+  color: #AEAEAE;
+  border: none;
+  padding: 10px;
+  height: 40px;
+  width: 120px;
+}
+.manage-roles select {
+  background-color: #000000;
+  color: #AEAEAE;
+  border: none;
+  height: 40px;
+  width: 120px;
+  line-height: 30px;
+}
+
+.header-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 100px;
+}
+
+.info-container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 50px;
+}
+.info-container button,
+.info-container .button {
+  font-family: "Poppins", sans-serif;
+  border: 1px solid #636363;
+  background-color: transparent;
+  color: #000000;
+  transition: all 0.2s;
+  padding: 10px 30px;
+  text-align: center;
+  margin: 5px;
+}
+.info-container button:hover,
+.info-container .button:hover {
+  background-color: #000000;
+  color: #ffffff;
+  text-decoration: none;
 }
 
 .map iframe {

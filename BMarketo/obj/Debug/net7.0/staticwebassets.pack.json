@@ -109,6 +109,14 @@
       "PackagePath": "staticwebassets\\images\\placeholders\\starshoes.jpg"
     },
     {
+      "Id": "C:\\Users\\Svart\\Source\\Repos\\Webbutveckling\\ViewsAndPartialViews\\BMarketo\\wwwroot\\images\\profiles\\11780f18-e688-4074-971d-1f12de323491_Jacket-Xena3-Ladies.webp",
+      "PackagePath": "staticwebassets\\images\\profiles\\11780f18-e688-4074-971d-1f12de323491_Jacket-Xena3-Ladies.webp"
+    },
+    {
+      "Id": "C:\\Users\\Svart\\Source\\Repos\\Webbutveckling\\ViewsAndPartialViews\\BMarketo\\wwwroot\\images\\profiles\\173ba057-cb97-4469-9dbf-1adc3ff18f96_Jacket-Xena3-Ladies.webp",
+      "PackagePath": "staticwebassets\\images\\profiles\\173ba057-cb97-4469-9dbf-1adc3ff18f96_Jacket-Xena3-Ladies.webp"
+    },
+    {
       "Id": "C:\\Users\\Svart\\Source\\Repos\\Webbutveckling\\ViewsAndPartialViews\\BMarketo\\wwwroot\\js\\contact-form.js",
       "PackagePath": "staticwebassets\\js\\contact-form.js"
     },
@@ -203,6 +211,18 @@
     {
       "Id": "C:\\Users\\Svart\\Source\\Repos\\Webbutveckling\\ViewsAndPartialViews\\BMarketo\\wwwroot\\scss\\components\\_loginform.scss",
       "PackagePath": "staticwebassets\\scss\\components\\_loginform.scss"
+    },
+    {
+      "Id": "C:\\Users\\Svart\\Source\\Repos\\Webbutveckling\\ViewsAndPartialViews\\BMarketo\\wwwroot\\scss\\components\\_manageroles.css",
+      "PackagePath": "staticwebassets\\scss\\components\\_manageroles.css"
+    },
+    {
+      "Id": "C:\\Users\\Svart\\Source\\Repos\\Webbutveckling\\ViewsAndPartialViews\\BMarketo\\wwwroot\\scss\\components\\_manageroles.min.css",
+      "PackagePath": "staticwebassets\\scss\\components\\_manageroles.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Svart\\Source\\Repos\\Webbutveckling\\ViewsAndPartialViews\\BMarketo\\wwwroot\\scss\\components\\_manageroles.scss",
+      "PackagePath": "staticwebassets\\scss\\components\\_manageroles.scss"
     },
     {
       "Id": "C:\\Users\\Svart\\Source\\Repos\\Webbutveckling\\ViewsAndPartialViews\\BMarketo\\wwwroot\\scss\\components\\_map.scss",

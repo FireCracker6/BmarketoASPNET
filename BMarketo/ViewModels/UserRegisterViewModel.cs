@@ -55,18 +55,20 @@ public class UserRegisterViewModel
 	[Compare(nameof(Password), ErrorMessage = "Your password does not match, please try again")]
 	public string ConfirmPassword { get; set; } = null!;
 
-	[Display(Name = "Upload Profile Image (optional)")]
-	[DataType(DataType.Upload)]
-	public IFormFile? ImageFile { get; set; }
+    [Display(Name = "Upload Profile Image (optional)")]
+    [DataType(DataType.Upload)]
+    public IFormFile? ProfileImage { get; set; }
 
 
-	[Display(Name = "I have read and accept the terms and conditions.")]
+    [Display(Name = "I have read and accept the terms and conditions.")]
 	[Required(ErrorMessage = "You must agree to the terms and conditions.")]
 	public bool TermsAndConditions { get; set; } = false;
 
+    [Display(Name = "Upload Profile Image (optional)")]
+    [DataType(DataType.Upload)]
+    
 
-
-	public static implicit operator AppUser(UserRegisterViewModel viewModel)
+    public static implicit operator AppUser(UserRegisterViewModel viewModel)
 	{
 		return new AppUser
 		{
@@ -75,7 +77,8 @@ public class UserRegisterViewModel
 			LastName = viewModel.LastName,
 			Email = viewModel.Email,
 			PhoneNumber = viewModel.Mobile,
-			CompanyName = viewModel.Company
+			CompanyName = viewModel.Company,
+			//ImageUrl = viewModel.ProfileImage
 		};
 	}
 

@@ -1,11 +1,7 @@
-﻿using System.Security.Claims;
-using BMarketo.Models.Contexts.Identity;
+﻿using BMarketo.Models.Contexts.Identity;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
-
-namespace BMarketo.Models.Entities.Identity;
-
+using System.Security.Claims;
 
 public class CustomClaimsPrincipalFactory : UserClaimsPrincipalFactory<AppUser>
 {
@@ -27,26 +23,11 @@ public class CustomClaimsPrincipalFactory : UserClaimsPrincipalFactory<AppUser>
 
         claimsIdentity.AddClaim(new Claim("DisplayName", $"{user.FirstName} {user.LastName}"));
 
-        // Check if there is only one user in the database.
-        if (await _userManager.Users.CountAsync() == 1)
+        // Get the user roles and add them as claims.
+        var roles = await _userManager.GetRolesAsync(user);
+        foreach (var role in roles)
         {
-            // Ensure the "Admin" role exists and add the role claim.
-            if (!await _roleManager.RoleExistsAsync("Admin"))
-            {
-                await _roleManager.CreateAsync(new IdentityRole("Admin"));
-            }
-            await _userManager.AddToRoleAsync(user, "Admin");
-            claimsIdentity.AddClaim(new Claim(ClaimTypes.Role, "Admin"));
-        }
-        else
-        {
-            // Ensure the "User" role exists and add the role claim.
-            if (!await _roleManager.RoleExistsAsync("User"))
-            {
-                await _roleManager.CreateAsync(new IdentityRole("User"));
-            }
-            await _userManager.AddToRoleAsync(user, "User");
-            claimsIdentity.AddClaim(new Claim(ClaimTypes.Role, "User"));
+            claimsIdentity.AddClaim(new Claim(ClaimTypes.Role, role));
         }
 
         return claimsIdentity;

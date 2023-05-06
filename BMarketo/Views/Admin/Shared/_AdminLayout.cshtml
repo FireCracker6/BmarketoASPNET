@@ -32,11 +32,15 @@
 
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" asp-controller="Admin" asp-action="UserList">Users</a>
+                    <a class="nav-link" asp-controller="Admin" asp-action="ManageRoles">Users</a>
 
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="@Url.Action("Subscribers", "Admin")">Subscribers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="@Url.Action("Admin", "Profile")">Profile</a>
+
                 </li>
             </ul>
         </div>

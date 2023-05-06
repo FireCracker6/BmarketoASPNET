@@ -1,0 +1,70 @@
+@import '../core/_colors.scss';
+@import '../core/_mixins.scss';
+@import '../core/_fonts.scss';
+
+.manage-roles {
+    th {
+        background-color: $color-theme-1;
+        color: $color-white;
+    }
+
+    tr:nth-child(even) {
+        background-color: #BDBDBD;
+    }
+
+    tr:nth-child(odd) {
+        background-color: e3e3e3;
+    }
+
+    h2 {
+        margin-bottom: 30px;
+    }
+
+    .mr-list {
+        display: block;
+        justify-content: space-between;
+        border: 1px solid black;
+        align-items: center;
+
+
+        .m-r-label {
+            border: 1px solid red;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .mr-userlabel {
+            width: 150px;
+            white-space: nowrap;
+        }
+
+        .mr-roleslabel {
+            width: 150px;
+            text-align: left;
+            white-space: nowrap;
+        }
+    }
+
+    button {
+        background-color: $color-dark-1;
+        color: $color-dark-4;
+        border: none;
+        padding: 10px;
+        height: 40px;
+        width: 120px;
+       
+   
+    }
+
+    select {
+        background-color: $color-dark-1;
+        color: $color-dark-4;
+        border: none;
+        height: 40px;
+        width: 120px;
+        line-height: 30px;
+    }
+}

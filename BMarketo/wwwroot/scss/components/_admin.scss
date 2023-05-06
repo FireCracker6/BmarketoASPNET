@@ -1,0 +1,41 @@
+@import '../core/_colors.scss';
+@import '../core/_mixins.scss';
+@import '../core/_fonts.scss';
+
+.header-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 100px;
+}
+
+.info-container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 50px;
+
+    button,
+    .button {
+        font-family: $font-poppins;
+        border: 1px solid $color-dark-3;
+        background-color: transparent;
+        color: $color-dark-1;
+        transition: all 0.2s;
+        padding: 10px 30px;
+        text-align: center;
+       margin: 5px;
+
+        &:hover {
+            background-color: $color-dark-1;
+            color: $color-white;
+            text-decoration: none;
+        }
+    }
+}
+
+

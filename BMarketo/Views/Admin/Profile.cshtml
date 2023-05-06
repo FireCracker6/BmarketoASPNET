@@ -1,0 +1,33 @@
+﻿@using BMarketo.ViewModels
+@model UserProfileViewModel
+
+@{
+    ViewData["Title"] = "Profile";
+    Layout = "~/Views/Admin/Shared/_AdminLayout.cshtml";
+}
+
+<h2>@Model.DisplayName's Profile</h2>
+<form method="post" enctype="multipart/form-data" asp-action="UpdateProfile">
+    <div>
+        <label for="DisplayName">Display Name:</label>
+        <input id="DisplayName" name="DisplayName" value="@Model.DisplayName" />
+    </div>
+    <div>
+        <label for="Email">Email:</label>
+        <input id="Email" name="Email" value="@Model.Email" />
+    </div>
+    <div>
+        <label for="PhoneNumber">Phone Number:</label>
+        <input id="PhoneNumber" name="PhoneNumber" value="@Model.PhoneNumber" />
+    </div>
+    <div>
+        <label for="ProfileImage">Profile Image:</label>
+        <input type="file" id="ProfileImage" name="ProfileImage" />
+    </div>
+    <button type="submit">Update Profile</button>
+</form>
+
+@if (!string.IsNullOrEmpty(Model.ProfileImageUrl))
+{
+        <img src="@Model.ProfileImageUrl" alt="Profile Image" />
+}

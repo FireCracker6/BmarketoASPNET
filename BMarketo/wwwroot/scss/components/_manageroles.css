@@ -1,0 +1,53 @@
+﻿@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600;700;900&family=Roboto:wght@300;400;500;700;900&display=swap");
+.manage-roles th {
+  background-color: #FA3150;
+  color: #ffffff;
+}
+.manage-roles tr:nth-child(even) {
+  background-color: #BDBDBD;
+}
+.manage-roles tr:nth-child(odd) {
+  background-color: e3e3e3;
+}
+.manage-roles h2 {
+  margin-bottom: 30px;
+}
+.manage-roles .mr-list {
+  display: block;
+  justify-content: space-between;
+  border: 1px solid black;
+  align-items: center;
+}
+.manage-roles .mr-list .m-r-label {
+  border: 1px solid red;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+}
+.manage-roles .mr-list .mr-userlabel {
+  width: 150px;
+  white-space: nowrap;
+}
+.manage-roles .mr-list .mr-roleslabel {
+  width: 150px;
+  text-align: left;
+  white-space: nowrap;
+}
+.manage-roles button {
+  background-color: #000000;
+  color: #AEAEAE;
+  border: none;
+  padding: 10px;
+  height: 40px;
+  width: 120px;
+}
+.manage-roles select {
+  background-color: #000000;
+  color: #AEAEAE;
+  border: none;
+  height: 40px;
+  width: 120px;
+  line-height: 30px;
+}

@@ -58,5 +58,10 @@
   {
     "outputFile": "wwwroot/scss/components/_registerForm.css",
     "inputFile": "wwwroot/scss/components/_registerForm.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/components/_
+    .css",
+    "inputFile": "wwwroot/scss/components/_manageroles.scss"
   }
 ]
