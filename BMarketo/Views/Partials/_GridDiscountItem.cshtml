@@ -1,5 +1,5 @@
 ﻿@model GridCollectionItemViewModel
-
+<section class="gridDisount-item">
 <div class="gridcollection-item" onclick="location.href='@Url.Action("ProductDetails", "Products", new { Id = Model.Id })'">
     <div class="card">
         <div class="card-image">
@@ -26,7 +26,7 @@
         </div>
     </div>
 </div>
-
+</section>
 @section Scripts {
     <script>
         $(document).ready(function() {

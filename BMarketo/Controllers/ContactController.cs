@@ -45,7 +45,7 @@ public class ContactController : Controller
             _productsContext.ContactSubmissions.Add(contactSubmission);
             await _productsContext.SaveChangesAsync();
 
-            // You can add a TempData message to show a success message after submission.
+          
             TempData["SuccessMessage"] = "Your contact form submission was successful!";
             return RedirectToAction("Index");
         }
@@ -54,7 +54,7 @@ public class ContactController : Controller
             // Log or display the validation errors.
             foreach (var error in ModelState.Values.SelectMany(v => v.Errors))
             {
-                // Log the error messages to the console or any logging system you prefer.
+               
                 Console.WriteLine(error.ErrorMessage);
             }
         }

@@ -465,105 +465,112 @@
 
     .container {
         display: block;
-      justify-content: center;
+        justify-content: center;
 
         @include lg {
             display: block;
         }
     }
+
     .header {
         margin-top: 30px;
         display: flex;
         width: 100%;
         border-top: 1px solid $color-dark-4;
-       
+
         h5 {
             margin-top: 30px;
             text-align: left;
         }
     }
-    ._cards {
+
+    ._cards_related {
         margin-top: 30px;
         display: flex;
         justify-content: space-between;
-
     }
+
     .card {
         border: none;
         font-family: $font-poppins;
         position: relative;
         margin: 0 0 20px;
-      
+
+
+
         @include lg {
             display: flex;
-          }
-        
-          &:hover {
+        }
+
+        &:hover {
             .shopping-cart-icon {
-              display: inline;
-    
-           
+                display: inline;
             }
-           
-          }
+        }
+
+
+        .card-image {
+            display: inline-block;
+            padding: 5px;
+
+            @include md {
+                padding: 5px;
+            }
+
+            @include lg {
+            }
+
+
+            img {
+                width: 100%;
+                max-height: 300px;
+               object-fit: scale-down;
+               
+            }
+        }
+
+        .shopping-cart-icon {
+            display: none;
+            position: absolute;
+            font-size: 24px;
+            bottom: 15px;
+            right: 15px;
+
+            @include md {
+                display: none;
+            }
+        }
+
+        .card-title {
+            margin: -10px 0 -0 -10px !important;
+            font-size: 15px;
+            color: $color-dark-1;
+        }
+
+        .card-body {
+            p {
+                display: none;
+            }
+
+            @include lg {
+                p {
+                    display: block;
+                }
+            }
+        }
+
+        .card-price {
+            margin: 5px 0 0 -10px !important;
+            font-size: 14px;
+            color: $color-dark-2;
+        }
+
+        @include mobile {
+            &:hover .shopping-cart-icon {
+                display: none;
+            }
+        }
     }
-    .card-image {
-        display: inline-block;
-        padding: 5px;
-        @include md {
-          padding: 5px;
-        }
-        @include lg {
-         
-        }
-   
-    
-        img {
-          width: 100%;
-          height: auto;
-        }
-      }
-      .shopping-cart-icon {
-        display: none;
-        position: absolute;
-        font-size: 24px;
-        bottom: 15px;
-        right: 15px;
-
-        @include md {
-          display: none;
-        }
-
-      }
-    
-      .card-title {
-        margin: -10px 0 -0 -10px !important;
-        font-size: 15px;
-        color: $color-dark-1;
-      }
-      .card-body {
-        p {
-          display: none;
-        }
-        @include lg {
-          p {
-            display: block;
-          }
-        }
-      }
-    
-      .card-price {
-        margin: 5px 0 0 -10px !important;
-        font-size: 14px;
-        color: $color-dark-2;
-      }
-      @include mobile {
-        &:hover .shopping-cart-icon {
-          display: none;
-        }
-      }
-
-     
 }
 
 /* End Related Products Section */
@@ -622,6 +629,7 @@
             width: 100%;
             height: auto;
             display: flex;
+            cursor: pointer;
 
 
 

@@ -117,6 +117,10 @@
       "PackagePath": "staticwebassets\\images\\profiles\\173ba057-cb97-4469-9dbf-1adc3ff18f96_Jacket-Xena3-Ladies.webp"
     },
     {
+      "Id": "C:\\Users\\Svart\\Source\\Repos\\Webbutveckling\\ViewsAndPartialViews\\BMarketo\\wwwroot\\images\\profiles\\6450d4cc-7e44-4ce2-b355-aa3791cb161f_MCSuiteWoman.webp",
+      "PackagePath": "staticwebassets\\images\\profiles\\6450d4cc-7e44-4ce2-b355-aa3791cb161f_MCSuiteWoman.webp"
+    },
+    {
       "Id": "C:\\Users\\Svart\\Source\\Repos\\Webbutveckling\\ViewsAndPartialViews\\BMarketo\\wwwroot\\js\\contact-form.js",
       "PackagePath": "staticwebassets\\js\\contact-form.js"
     },

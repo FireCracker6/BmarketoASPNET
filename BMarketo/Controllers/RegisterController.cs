@@ -72,7 +72,7 @@ public class RegisterController : Controller
                     await _userManager.AddToRoleAsync(user, "User");
                 }
 
-             //   await _signInManager.SignInAsync(user, isPersistent: false);
+              // await _signInManager.SignInAsync(user, isPersistent: false);
                 return RedirectToAction("Index", "Login");
             }
            // AddErrors(result);

@@ -1,18 +1,10 @@
-using System.Security.Claims;
-using BMarketo.Migrations.Products;
 using BMarketo.Models.Contexts;
 using BMarketo.Models.Contexts.Identity;
-
-using BMarketo.Models.Entities.Products;
 using BMarketo.Services;
 using BMarketo.Services.Authorization;
 using BMarketo.Services.Repositories;
-using BMarketo.ViewModels.CRUD;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Authorization.Infrastructure;
 using Microsoft.AspNetCore.Http.Features;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -54,6 +46,8 @@ builder.Services.ConfigureApplicationCookie(x =>
     x.LoginPath = "/login";
     x.LogoutPath = "/";
     x.AccessDeniedPath = "/denied";
+    x.ExpireTimeSpan = TimeSpan.FromDays(30);  
+    x.SlidingExpiration = true;
 
 });
 
@@ -87,11 +81,11 @@ using (var scope = app.Services.CreateScope())
 }
  builder = WebApplication.CreateBuilder(args);
 
-builder.Host.ConfigureLogging(logging =>
-{
-    logging.ClearProviders();
-    logging.AddConsole();
-});
+//builder.Host.ConfigureLogging(logging =>
+//{
+//    logging.ClearProviders();
+//    logging.AddConsole();
+//});
 
 app.UseHsts();
 app.UseHttpsRedirection();
@@ -99,15 +93,27 @@ app.UseStaticFiles();
 app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
-app.UseEndpoints(endpoints =>
-{
-    endpoints.MapControllerRoute(
-        name: "default",
-        pattern: "{controller=Home}/{action=Index}/{id?}",
-        defaults: new { controller = "Home", action = "Index" },
-        constraints: null,
-        dataTokens: new { LoggerFactory = app.Services.GetRequiredService<ILoggerFactory>() });
-});
+
+//app.UseEndpoints(endpoints =>
+//{
+//    endpoints.MapControllerRoute(
+//        name: "default",
+//        pattern: "{controller=Home}/{action=Index}/{id?}",
+//        defaults: new { controller = "Home", action = "Index" },
+//        constraints: null,
+//        dataTokens: new { LoggerFactory = app.Services.GetRequiredService<ILoggerFactory>() });
+//});
+
+//app.UseEndpoints(endpoints =>
+//{
+//    endpoints.MapControllerRoute(
+//        name: "default",
+//        pattern: "{controller=Home}/{action=Index}/{id?}",
+//        defaults: new { controller = "Home", action = "Index" },
+//        constraints: null,
+//        dataTokens: new { LoggerFactory = app.Services.GetRequiredService<ILoggerFactory>() });
+
+//});
 
 
 

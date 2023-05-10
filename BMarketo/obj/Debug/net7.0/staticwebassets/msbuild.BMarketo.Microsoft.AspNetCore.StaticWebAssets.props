@@ -464,6 +464,22 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\profiles\173ba057-cb97-4469-9dbf-1adc3ff18f96_Jacket-Xena3-Ladies.webp))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\profiles\6450d4cc-7e44-4ce2-b355-aa3791cb161f_MCSuiteWoman.webp))">
+      <SourceType>Package</SourceType>
+      <SourceId>BMarketo</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/BMarketo</BasePath>
+      <RelativePath>images/profiles/6450d4cc-7e44-4ce2-b355-aa3791cb161f_MCSuiteWoman.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\profiles\6450d4cc-7e44-4ce2-b355-aa3791cb161f_MCSuiteWoman.webp))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\js\contact-form.js))">
       <SourceType>Package</SourceType>
       <SourceId>BMarketo</SourceId>

@@ -23,14 +23,14 @@ public class AccountController : Controller
 
     public async Task<IActionResult> Index()
     {
-        // Replace "userId" with the actual user ID you want to get the profile for.
+        
         var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-        var user = await _userManager.FindByIdAsync(userId);
+        var user = await _userManager.FindByIdAsync(userId!);
 
         var model = new UserProfileViewModel
         {
-            DisplayName = $"{user.FirstName} {user.LastName}",
-            Email = user.Email,
+            DisplayName = $"{user!.FirstName} {user.LastName}",
+            Email = user.Email!,
             PhoneNumber = user.PhoneNumber,
             ProfileImageUrl = $"/images/profiles/{user.ImageUrl}" // Set the correct path here
         };
@@ -92,7 +92,7 @@ public class AccountController : Controller
             _logger.LogInformation($"User: {user?.UserName}");
 
             // Update user properties
-            user.FirstName = model.DisplayName.Split(' ')[0];
+            user!.FirstName = model.DisplayName.Split(' ')[0];
             user.LastName = model.DisplayName.Split(' ')[1];
             user.Email = model.Email;
             user.PhoneNumber = model.PhoneNumber;
@@ -144,7 +144,7 @@ public class AccountController : Controller
 
     private async Task<string> SaveProfileImageAsync(IFormFile profileImage)
     {
-        // Set your desired image folder here
+        // Image location
         string imageFolder = "wwwroot/images/profiles";
         string uniqueFileName = Guid.NewGuid().ToString() + "_" + profileImage.FileName;
         string filePath = Path.Combine(imageFolder, uniqueFileName);

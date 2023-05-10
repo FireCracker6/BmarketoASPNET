@@ -33,7 +33,7 @@ public class AdminController : Controller
 
         var rolesClaim = user.FindAll(ClaimTypes.Role).Select(c => c.Value).ToList();
         var rolesString = string.Join(", ", rolesClaim);
-        return Content($"User: {user.Identity.Name}, Roles: {rolesString}");
+        return Content($"User: {user.Identity!.Name!}, Roles: {rolesString}");
     }
 
 
@@ -55,7 +55,7 @@ public class AdminController : Controller
     public IActionResult ProductList()
     {
         // Fetch and display a list of products from the database.
-        // You can reuse the logic from the ProductsController.
+    
         return View();
     }
 
@@ -65,12 +65,7 @@ public class AdminController : Controller
         return View();
     }
 
-    //[HttpPost]
-    //public IActionResult UpdateProduct(int id, ProductViewModel model)
-    //{
-    //    // Validate and update the product in the database.
-    //    return RedirectToAction("ProductList");
-    //}
+ 
 
     public IActionResult AddProduct()
     {
@@ -98,9 +93,9 @@ public class AdminController : Controller
         var userProfileViewModel = new UserProfileViewModel
         {
             DisplayName = $"{user.FirstName} {user.LastName}",
-            Email = user.Email,
+            Email = user.Email!,
             PhoneNumber = user.PhoneNumber,
-            ProfileImageUrl = "" // Set the ProfileImageUrl based on where you store your images
+            ProfileImageUrl = "" 
         };
 
         // Return the view with the UserProfileViewModel
@@ -233,9 +228,9 @@ public class AdminController : Controller
                 Id = user.Id,
                 FirstName = user.FirstName,
                 LastName = user.LastName,
-                Email = user.Email,
-                PhoneNumber = user.PhoneNumber,
-                CompanyName = user.CompanyName,
+                Email = user.Email!,
+                PhoneNumber = user.PhoneNumber!,
+                CompanyName = user.CompanyName!,
                 Roles = roles
             });
         }

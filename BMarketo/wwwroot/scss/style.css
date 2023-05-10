@@ -610,7 +610,8 @@ header .toggle {
 }
 ._collection .card .card-image img {
   width: 100%;
-  height: auto;
+  max-height: 300px;
+  object-fit: scale-down;
 }
 ._collection .card .shopping-cart-icon {
   display: none;
@@ -1595,7 +1596,7 @@ header .toggle {
   margin-top: 30px;
   text-align: left;
 }
-._relatedProducts ._cards {
+._relatedProducts ._cards_related {
   margin-top: 30px;
   display: flex;
   justify-content: space-between;
@@ -1614,20 +1615,21 @@ header .toggle {
 ._relatedProducts .card:hover .shopping-cart-icon {
   display: inline;
 }
-._relatedProducts .card-image {
+._relatedProducts .card .card-image {
   display: inline-block;
   padding: 5px;
 }
 @media (min-width: 768px) {
-  ._relatedProducts .card-image {
+  ._relatedProducts .card .card-image {
     padding: 5px;
   }
 }
-._relatedProducts .card-image img {
+._relatedProducts .card .card-image img {
   width: 100%;
-  height: auto;
+  max-height: 300px;
+  object-fit: scale-down;
 }
-._relatedProducts .shopping-cart-icon {
+._relatedProducts .card .shopping-cart-icon {
   display: none;
   position: absolute;
   font-size: 24px;
@@ -1635,30 +1637,30 @@ header .toggle {
   right: 15px;
 }
 @media (min-width: 768px) {
-  ._relatedProducts .shopping-cart-icon {
+  ._relatedProducts .card .shopping-cart-icon {
     display: none;
   }
 }
-._relatedProducts .card-title {
+._relatedProducts .card .card-title {
   margin: -10px 0 0 -10px !important;
   font-size: 15px;
   color: #000000;
 }
-._relatedProducts .card-body p {
+._relatedProducts .card .card-body p {
   display: none;
 }
 @media (min-width: 992px) {
-  ._relatedProducts .card-body p {
+  ._relatedProducts .card .card-body p {
     display: block;
   }
 }
-._relatedProducts .card-price {
+._relatedProducts .card .card-price {
   margin: 5px 0 0 -10px !important;
   font-size: 14px;
   color: #292929;
 }
 @media (max-width: 767px) {
-  ._relatedProducts:hover .shopping-cart-icon {
+  ._relatedProducts .card:hover .shopping-cart-icon {
     display: none;
   }
 }
@@ -1715,6 +1717,7 @@ header .toggle {
   width: 100%;
   height: auto;
   display: flex;
+  cursor: pointer;
 }
 .small_cards .container a.gridcollection-item .card {
   border: none;

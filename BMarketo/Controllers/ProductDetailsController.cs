@@ -26,7 +26,7 @@ namespace BMarketo.Controllers
             var productImages = await _productRepository.GetProductImagesAsync(id);
             byte[] mainImageBytes = await _productRepository.GetMainImageAsync(id);
 
-            // Fetch random products (you can replace 4 with the desired number of products)
+            // Fetch random products 
             var randomProducts = await _productRepository.GetRandomProductsAsync(4);
 
             var smallCards = new List<GridCollectionSmallCardsItemViewModel>();
@@ -34,7 +34,7 @@ namespace BMarketo.Controllers
             var viewModel = new ProductDetailViewModel
             {
                 ProductDetailTitle = productDetailEntity.Title,
-                Description = productDetailEntity.Description,
+                Description = productDetailEntity.Description!,
                 Price = (decimal)productDetailEntity.Price!,
                 SKUNumber = productDetailEntity.SKUNumber!,
                 MainImage = mainImageBytes,

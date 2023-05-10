@@ -97,7 +97,8 @@
 }
 ._collection .card .card-image img {
   width: 100%;
-  height: auto;
+  max-height: 300px;
+  object-fit: scale-down;
 }
 ._collection .card .shopping-cart-icon {
   display: none;
